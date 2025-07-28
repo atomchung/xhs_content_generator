@@ -1,0 +1,16 @@
+# ====================================
+# Python cache / venv
+__pycache__/
+*.py[cod]
+.venv/
+
+# Local environment variables & API keys
+.env
+
+# CrewAI run artifacts (can be huge & contain logs)
+runs/
+
+# OS & Editor miscellany
+.DS_Store
+.idea/
+.vscode/

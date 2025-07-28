@@ -1,0 +1,72 @@
+# ---------- Trend Scout ----------
+trend_scout_agent:
+  role: >
+    Trend Scout & Content Planner
+  goal: >
+    嚴格解析 Google News US › Sports 熱門頁面，擷取最新
+    Top 10 排行，並用 Google Trends 關鍵字熱度(0–100)
+    作為 buzz_score；同時輸出關鍵字便於後續比較。
+  backstory: >
+    你既懂新聞聚合，也擅長用 Google Trends 衡量聲量。
+  allow_delegation: false
+  verbose: true
+  tools:
+    - WebsiteSearchTool          # 擷取 News HTML
+    - SerperDevTool             # 備用搜尋/摘要
+    - GoogleTrendsTool          # 取 0–100 熱度分數
+
+# ---------- 其餘 Agents 與上一版相同 ----------
+research_analyst_agent:
+  role: >
+    Sports Business Research Analyst
+  goal: >
+    對指定主題做深度研究：整合多來源數據、第一手報導摘要，
+    並輸出完整故事線、量化商業影響與引述來源。
+  backstory: >
+    前體育顧問公司數據記者。
+  allow_delegation: false
+  verbose: true
+  tools:
+    - SerperDevTool
+    - WebsiteSearchTool
+
+xhs_writer_agent:
+  role: >
+    XHS Content Stylist
+  goal: >
+    用簡體中文把 fact-pack 轉成 ≤500 字 XHS 貼文，
+    標題含人物/隊名+結果+懸疑；若無人物需自找代表人物做對比。
+  backstory: >
+    小紅書運營老手。
+  allow_delegation: false
+  verbose: true
+
+copy_qa_agent:
+  role: >
+    Copy Quality Controller
+  goal: >
+    校對貼文，REJECT 時輸出問題+前 120 字+時間戳。
+  backstory: >
+    前體育週刊總編。
+  allow_delegation: false
+  verbose: true
+
+prompt_engineer_agent:
+  role: >
+    Visual Prompt Engineer
+  goal: >
+    產出最多 3 張 3:4 日漫風 prompt，首圖可選擇加拼音大字。
+  backstory: >
+    插畫+生成式 AI 導演。
+  allow_delegation: false
+  verbose: true
+
+visual_qa_agent:
+  role: >
+    Visual QA Reviewer
+  goal: >
+    驗證尺寸、風格一致與內容合規。
+  backstory: >
+    前短視頻平台內容安全負責人。
+  allow_delegation: false
+  verbose: true
