@@ -2,44 +2,107 @@
 generate_topics:
   agent: trend_scout_agent
   description: >
-    【唯一資料源】
-    https://news.google.com/topics/CAAqJggKIiBDQkFTRWdvSUwyMHZNRFp1ZEdvU0FtVnVHZ0pWVXlnQVAB?hl=en-US&gl=US&ceid=US:en
-    解析此頁面 <article> 標籤的前 10 條，忽略其他來源。
+    目標：僅從以下 **Google News Topic** 頁抓取新聞卡片，產出最近 60 天的 10 條熱門運動商業新聞。
+    固定入口（不可改動、不可附加其他查詢）：
+      https://news.google.com/topics/CAAqJggKIiBDQkFTRWdvSUwyMHZNRFp1ZEdvU0FtVnVHZ0pWVXlnQVAB?hl=en-US&gl=US&ceid=US:en
 
-    【流程】
-    0. 確保新聞日期是最新的
-    1. 擷取 Top 10 標題與對應 URL；標題不得修改除去副標可縮寫 ≤15 字。
-    2. 從標題中萃取 1~3 組關鍵字 (人名/隊伍/事件名)。
-    3. 使用 GoogleTrendsTool 以「US」地區查每組關鍵字最近 7 天平均值
-       (0–100)，若多關鍵字取最高值，作為 buzz_score（四捨五入整數）。
-    4. 確保這 10 條至少涵蓋 ≥3 種運動 (NBA, MLB, NFL, UFC, Tennis …)。
-       若不足，從排行 11–30 向下尋找其他運動替補並重算排名。
-    5. 生成 Markdown 表格：
-       | topic_title | topic_id(URL) | sport_type | buzz_score | keywords | data_angle |
-       - **sport_type**：NBA / MLB / UFC / Tennis / Football…
-       - **keywords**：用逗號列關鍵字
-       - **data_angle**：給出可以量化的商業/統計切點
-         (如獎金、轉播觀看數、門票漲幅、社媒互動)
+
+    【抓取與解析（只能使用 WebsiteSearchTool）】
+    1) 以 WebsiteSearchTool 讀取上述 URL，解析頁面中的 **<article>** 卡片（取前 20 個作候選）：
+       - 標題：優先取卡片內的 <h3>/<h4> 或包含標題文字的 <a>。
+       - 相對/絕對時間：取卡片內的 <time datetime="...">；若只有「x hours ago」也暫存，但後續必須到原文頁取得絕對日期。
+       - 文章連結：
+          • 若為相對連結（以 "./articles/" 或 "./read/" 開頭），請補齊為 "https://news.google.com" + href。
+          • 點開該連結（WebsiteSearchTool）後，**跟隨跳轉** 找到原出版方的最終 URL（通常於 meta refresh 或頁面中的第一個外鏈）。
+    2) 對每條最終 URL（原出版方頁面），抽取 **publish_date**（缺一不可）：
+       - 優先解析：<meta property="article:published_time">、<meta name="pubdate">、<time datetime="...">、
+         或 ld+json 的 "datePublished"；解析不到 → 丟棄此候選。
+       - 正規化為 YYYY-MM-DD，計算 age_days = 今天 - publish_date。
+    3) 從標題萃取 1–3 個 keywords（人名/隊名/事件）；用 GoogleTrendsTool（US，最近 7 天）取得熱度，
+       多關鍵字取最高值，四捨五入為整數，作為 buzz_score。
+    4) 過濾與排序：
+       - 僅保留 age_days ≤ 60 的候選；優先保留 age_days ≤ 30。
+       - 覆蓋運動類型 ≥ 3 種（NBA/MLB/NFL/WNBA/UFC/Tennis…）；不足則由剩餘候選補齊後再排序。
+       - 依（publish_date DESC, buzz_score DESC）排序，取前 10。
+
+    【只允許以下輸出（禁止任何說明句）】
+    先輸出 Markdown 表格（恰 10 列）：
+    | topic_title | topic_id | sport_type | publish_date | age_days | buzz_score | keywords | data_angle |
+
+    表格之後緊接 "### References" 區，逐行列出 10 條 **topic_id** URL（即原出版方最終 URL）。
+ 
+    【DEBUG（便於排查；上線可移除）】
+      - extracted_from: Google News Topic
+      - cards_parsed: <數字>
+        - dropped_no_date: <數字>
+        - dropped_older_than_60d: <數字>
+
+    【錯誤模式（嚴禁自然語言敘述）】
+      若卡片解析不到、或最終無法湊滿 10 條，輸出（頂格）：
+      ERROR:
+        code: NO_TOPICS_FROM_GOOGLE_NEWS_TOPIC
+        reason: "<如 'no <article> found' 或 'publish_date parse failed'>"
+        attempts:
+          - topic_fetch: "<ok|fail>"
+          - card_count: <解析到的卡片數>
+          - final_urls_with_dates: <成功取得日期的最終 URL 數>
+          - trends_score: "<ok|fail>"
 
   expected_output: >
-    Markdown 表格 (10 列) + References 區 (列出實際 10 條 URL) + 新聞日期 (YYYY-MM-DD)
+    二選一：
+    1) 上述表格（10 列） + "### References" + "### DEBUG"；
+    2) 上述 ERROR: YAML 區塊（含 attempts 結構）。
   output_file: topics.md
+
+# ---------- Select Topic for XHS ----------
+select_topic:
+  agent: xhs_topic_selector_agent
+  context: [generate_topics]
+  description: >
+    你會拿到上一個步驟產生的 topics.md（Markdown 表格，列含：
+    topic_title, topic_id, sport_type, publish_date, age_days, buzz_score, keywords, data_angle）。
+    任務：挑出一個最適合在小紅書爆紅的主題（繁體中文受眾），並提供可落地的內容框架。
+
+    請對每一列計算 xhs_score（0–100），依下列準則加權：
+      • 近新度（age_days 越小越好）—— 30
+      • 視覺性（天然畫面：球星/賽場/數據圖可視化）—— 20
+      • 教程化（能否做「攻略/清單/對比卡」模板）—— 15
+      • 互動性（可設計提問/投票/活動挑戰）—— 15
+      • 安全性（避開違規/高爭議領域）—— 10
+      • 商業度（贊助/收視/票價/粉絲增長等可量化角度）—— 10
+
+    只允許以下輸出（禁止其他敘述文字）：
+    YAML:
+      SELECTED_TOPIC: "<topic_title>"
+      SELECTED_URL: "<topic_id>"
+      SPORT_TYPE: "<sport_type>"
+      XHS_SCORE: <0-100 整數>
+      WHY: ["要點1","要點2","要點3"]
+      HOOKS: ["開場鉤子1","開場鉤子2"]
+      OUTLINE: ["段落1","段落2","段落3"]
+      MATERIALS: ["需要的畫面/數據素材1","素材2"]
+      HASHTAGS: ["#WNBA", "#女子籃球", "#數據解析"]
+
+    若 topics.md 行數 < 5 或全部 age_days > 60，或來源不全，請輸出（頂格）：
+    ERROR:
+      code: NO_VIABLE_TOPIC
+      reason: "<原因（例如：all candidates older than 60 days）>"
+
+  expected_output: selected_topic_yaml
+  output_file: selected_topic.md
 
 
 # ---------- Research ----------
 research_topic:
   agent: research_analyst_agent
-  context: [generate_topics]   # Runner 若跳過 generate_topics 會動態移除
+  context: [select_topics]   # Runner 若跳過 generate_topics 會動態移除
   description: >
-   你將收到單一字串 **{topic}**。請先對該字串做 NLP 分析以判斷：
-
-      1. 所屬運動領域 (sport) ─ 例如 NBA、WNBA、UFC、EPL…
-      2. 主要關係人 (entities) ─ 從人名 / 隊名 / 組織中擷取最多 2 位
-         ‑ 若只偵測到 1 位則為「單主角」主題
-         ‑ 偵測到 2 位則自動啟用「雙主角比較」模式
+    研究主題來源邏輯：
+      • 若 CLI 提供了 {topic}（非空），優先以 {topic} 研究。
+      • 否則，從上一個任務 select_topic 的 YAML 讀取 `SELECTED_TOPIC` 作為研究主題；
+        並把 `SELECTED_URL` 視為第一優先參考來源。
 
     接著生成 research_pack（Markdown），結構如下：
-
     ① timeline ‧ 至少 6 行 ‧ 倒序  
        | 日期 | 利害關係人 | 關鍵動作 | 商業數字 | 影響 | 出處 |
        - **利害關係人**：須覆蓋 3 角度 → (a) 管理機構/聯賽、(b) 運動員/經紀方、(c) 俱樂部/贊助商  
@@ -50,8 +113,6 @@ research_topic:
        | 指標 | 數值 | 單位 | 年份 | 出處 |
       ‑ 來源階層：官方聯盟 > Nielsen/Stathead/Sportico > 主流媒體
       ‑ 數據不夠可信時，留空並加註「缺官方資料」
-
-
 
     ③ article_summaries  
        - 精選 **5 篇** 來源文章，每篇 100–150 字摘要，說明內容亮點
@@ -85,8 +146,9 @@ draft_xhs_post:
         - 寫作風格：親切熱情，适当使用专业术语，力保持通俗易懂，仿佛好友分享。
         - 分点式结构（如"3步搞定通勤妆"）
         - 极简时间轴 + 符号化叙事突出关键年份和成就  
-        - 加入数据统计和具体数字，增强内容可信度和信息密度
+        - 至少嵌入 3 個具體數字，增强内容可信度和信息密度 （來自 research_topic 的 stats/timeline）
         - 透過 emoji 作為每模塊開頭，也可適當在句尾添加，但避免過度重複堆
+        - 包含和主題相關的人物敘事，並免客觀事實或數據堆積，要讓人想閱讀
       3. 內文
         - 內容結構：基於找到的切腳說明對應的運動成就和商業價值 、添加一到兩個互動關鍵，三個模塊以內
         - 字數 500 字內
