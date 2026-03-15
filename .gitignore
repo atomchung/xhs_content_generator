@@ -17,3 +17,17 @@ runs/
 
 # Local vector store
 db/
+
+# Local skill repo clone / scratch work
+xhs_skills/
+tmp/
+demo_posts/
+
+# Generated working artifacts
+topics.md
+selected_topic.md
+research.md
+post.md
+qa_post.md
+prompts.md
+qa_prompts.md

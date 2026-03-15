@@ -1,1 +1,0 @@
-The search for the top sports news articles from Google News unfortunately failed to yield specific results, leading to no distinct list of articles being captured. Further investigation or access to a more reliable source may be necessary to complete this task accurately.

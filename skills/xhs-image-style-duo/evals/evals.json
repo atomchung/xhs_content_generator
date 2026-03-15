@@ -1,0 +1,23 @@
+{
+  "skill_name": "xhs-image-style-duo",
+  "evals": [
+    {
+      "id": 1,
+      "prompt": "给我一个关于大谷翔平赛前蓄力挥棒的封面图 prompt，并拆成两种风格：动漫名场面封面风和 Q 版棒球吉祥物风。背景要能后续单独改。",
+      "expected_output": "输出应包含 story atoms、subject anchor prompt、background prompt 和 final prompt，而不是只给两个整句 prompt。",
+      "files": []
+    },
+    {
+      "id": 2,
+      "prompt": "我想做一个 Netflix x 大谷 x WBC 的小红书首图，动漫风背景不要太满，Q 版请更像实况野球和小红薯。",
+      "expected_output": "动漫风应强调封面式动作张力和干净背景；Q 版应转成吉祥物风，而不是普通 chibi。",
+      "files": []
+    },
+    {
+      "id": 3,
+      "prompt": "请帮我把这个 prompt 做成两种图，而且告诉我如果背景经常改，应该先生成哪一层。",
+      "expected_output": "输出应明确建议先锁人物锚点，再试背景，最后合成 final cover。",
+      "files": []
+    }
+  ]
+}
