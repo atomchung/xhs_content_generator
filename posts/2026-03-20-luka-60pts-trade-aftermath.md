@@ -163,23 +163,30 @@
 
 **先说一个让分析师皱眉的数字**
 
-湖人奺冠赔率：+6500。
+湖人奺冠赔率：+6500。（来源：DraftKings，本周早些时候数据）
 
-雷霆 +135，凯尔特人 +550，掘金 +700，马刺 +800。
+解释一下这个数字是什么意思：美式赔率里，+6500 代表你押 100 元，赢了到手 6500 元——也就是 65 赔 1。这不是在说「湖人有机会」，这是在说「湖人基本没机会，但如果你押对了，恭喜你」。
 
-湖人排在第10位，赔率区间跟骑士、尼克斯是同一档的。
+对比看一下同一份赌盘：雷霆 +135，凯尔特人 +550，掘金 +700，马刺 +800。
+
+湖人排在第10位，跟骑士、尼克斯是同一档。
 
 这是系统在说：湖人，你们拿不了冠军。
 
 ---
 
-**但书商在同一时间做了另一件事**
+**但赔率这周已经开始松动了**
 
-他们把湖人列为「全联盟最大赔付风险」之一。
+就在湖人这波连胜期间，赔率悄悄动了。
 
-湖人持有全联盟13.3%最高投注额——也就是说，所有押注NBA总冠军的钱里，超过八分之一押在了湖人身上。
+8连胜之前：+6500（约65赔1）
+8连胜之后：部分书商已缩短至 +5000（约50赔1）（来源：Covers.com）
 
-分析师说他们赢不了。散户在大量买入。
+短短一周，赔率收窄了23%——这在期货市场里是相当明显的信号。
+
+与此同时，书商把湖人列为「全联盟最大赔付风险」之一。BetMGM 数据显示湖人持有 13.3% 投注额，仅次于雷霆的 17.9%，排名第二——也就是说，所有押注 NBA 总冠军的钱里，超过八分之一押在了湖人身上。
+
+分析师说他们赢不了。散户在用真钱反驳。
 
 这种分裂，在体育博彩里有个名字：定价失误。
 
@@ -223,17 +230,17 @@
 
 ---
 
-**+6500，你怎么看**
+**赔率从 +6500 缩到 +5000，你怎么看**
 
-书商的系统说：湖人拿冠军赔你65倍。
+一周前书商说：湖人拿冠军，赔你 65 倍。
 
-散户的直觉说：这个赔率太便宜了。
+8连胜之后，这个数字缩到了 50 倍。
 
-昨晚卢卡砍了60分，老詹说「卢卡是收尾人」。
+散户的钱在推着赔率往里走。昨晚卢卡砍了 60 分，老詹说「卢卡是收尾人」。
 
-你站哪边？
+这趋势——你站哪边？
 
-🅐 买——+6500赔率低估了老詹转型的价值
+🅐 买——赔率还在往下走，现在上车不晚
 🅑 不买——雷霆太强，湖人防守是硬伤
 🅒 看季后赛第一轮再说
 
@@ -246,7 +253,8 @@
 - Yahoo Sports: *LeBron James confirms that Luka Doncic and Austin Reaves are the Lakers' closers*
 - Yardbarker: *Ex-NBA Star Explains Why LeBron James Has 'Fully Accepted' New Role at the Lakers*
 - ESPN: *LeBron James to Luka Doncic: Inside the most delicate superstar transition in NBA history*
-- ESPN / FanDuel: *2026 NBA Championship Odds*
+- DraftKings / Covers.com: *2026 NBA Championship Odds & Line Movement*
+- sportsbetting.legal: *Luka's 60+ Performance Shifts NBA Odds In Lakers' Favor*
 - Lake Show Life: *LeBron James' role is finally matching his production level in 2026*
 
 ---
