@@ -100,50 +100,59 @@
   湖人的夜晚又回来了
   ```
 - **画面说明：** 动漫风，卢卡持球高举，背景湖人紫金色，隐约有科比球衣轮廓虚化，情绪基调为「传承」而非「炫技」
-- **prompt说明：** 交给 xhs-image-style-duo 处理
-- **需要人提供什么：** 确认情绪基调——走「传承」路线还是走「压倒性」路线
+- **生图 prompt：**
+  ```
+  Anime sports illustration, Luka Doncic in Lakers purple and gold jersey,
+  dynamic pose holding basketball raised above head, dramatic upward angle,
+  background dark with bokeh lights in purple and gold tones, faint ghostly
+  silhouette of Kobe Bryant's jersey number 24 dissolved into background
+  light haze, emotional "legacy passed" atmosphere, cinematic rim lighting,
+  Japanese sports manga cover style, high detail linework, vertical portrait
+  composition --ar 3:4 --style raw
+  ```
 
-#### 图 2 · 历史名单图（生图/信息图）
-- **任务：** 讲机制（湖人历史坐标）
-- **素材类型：** 生图（信息图，简洁排列）
+#### 图 2 · 科比传承图（生图）
+- **任务：** 传承叙事核心一击
+- **素材类型：** 生图（双人情绪图）
 - **图上文案：**
   ```
-  湖人队史60分俱乐部
-  乔治·米肯 / 杰里·韦斯特 / 埃尔金·贝勒 ×4
-  威尔特·张伯伦 ×2 / 沙克 / 科比 ×6
-  ——
-  2026年3月19日，卢卡·东契奇
+  24号的灯灭了
+  77号把它点回来了
   ```
-- **画面说明：** 纵向时间轴或卡片网格，每人配球衣号码，底部卢卡单独高亮
-- **需要人提供什么：** 无，可直接生图
+- **画面说明：** 科比灵魂/光影形态将手搭在卢卡肩上，卢卡抬头回望，两人之间有光流传递，背景隐约是湖人主场轮廓
+- **生图 prompt：**
+  ```
+  Anime illustration, split emotional scene: translucent ghost spirit of Kobe
+  Bryant in white gold light gently placing hand on Luka Doncic's shoulder
+  from behind, Luka looking back over shoulder with expression of quiet
+  determination, soft glowing light flowing between them like a torch being
+  passed, purple and gold color palette, misty ethereal fog, faint Crypto.com
+  Arena arena silhouette in background, sacred solemn mood, Japanese sports
+  anime style, vertical composition, cinematic lighting --ar 3:4 --style raw
+  ```
 
-#### 图 3 · 数据升级对比图（生图）
-- **任务：** 立证据（近期统治力）
-- **素材类型：** 生图（双柱/折线对比图）
+#### 图 3 · 赔率变动图（Q版队徽）
+- **任务：** 视觉化赔率排名与湖人上升
+- **素材类型：** 生图（Q版信息图）
 - **图上文案：**
   ```
-  卢卡·东契奇 · 2025-26赛季
-  赛季场均：32.9分
-  8连胜期间：40.9分
-  ↑ 不是爆发，是升级
+  全联盟夺冠赔率排名
+  #1 雷霆  #2 凯尔特人  #3 马刺
+  ……
+  #8 湖人  +6500 → +5000 ↑
   ```
-- **画面说明：** 左右对比柱状图，左侧偏蓝（常规），右侧亮金（连胜），简洁干净
-- **需要人提供什么：** 无，可直接生图
-
-#### 图 4 · 互动收口（生图）
-- **任务：** 引互动
-- **素材类型：** 生图（赌盘风卡片，制造「定价 vs 直觉」张力）
-- **图上文案：**
+- **画面说明：** Q版卡通队徽排排站，湖人队徽在最右下角，有明显向上箭头和赔率数字变动，其他球队队徽偏小，湖人用金边框高亮
+- **生图 prompt：**
   ```
-  湖人奺冠赔率 +6500
-  但押注额全联盟第一
-  你站哪边？
-  A 买——赔率低估了老詹转型
-  B 不买——雷霆防守是天花板
-  C 看季后赛第一轮再说
+  Cute chibi kawaii style NBA team logo rankings infographic, 8 adorable
+  round Q-version team mascot icons arranged in numbered ranking list,
+  top row: Thunder (#1) Celtics (#2) Spurs (#3) each with small odds numbers,
+  bottom right: Lakers chibi logo (#8) highlighted with gold border and
+  glowing aura, bold green upward arrow beside Lakers, two numbers shown:
+  "+6500" crossed out in red, "+5000" in bright green below, clean white
+  background, flat design illustration, pastel accent colors, infographic
+  layout, square format --ar 1:1 --style raw
   ```
-- **画面说明：** 赌盘风格界面，左侧「系统定价+6500」偏冷色，右侧「市场押注13.3%」偏暖色，对比感强
-- **需要人提供什么：** 无，可直接生图
 
 ---
 
