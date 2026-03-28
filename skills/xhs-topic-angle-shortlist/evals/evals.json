@@ -1,0 +1,23 @@
+{
+  "skill_name": "xhs-topic-angle-shortlist",
+  "evals": [
+    {
+      "id": 1,
+      "prompt": "帮我看最近有什么体育商业热点适合这个账号，先别写正文。",
+      "expected_output": "应先复看账号，再给至少5个候选题目，每题至少3个切角，并要求人类拍板。",
+      "files": []
+    },
+    {
+      "id": 2,
+      "prompt": "我想做一个长期系列，先帮我想方向。",
+      "expected_output": "应识别这更适合 explorations，而不是直接按单篇贴文 shortlist 输出。",
+      "files": []
+    },
+    {
+      "id": 3,
+      "prompt": "账号页面今天打不开，但我还是想先筛几个题。",
+      "expected_output": "应说明限制，并退回到本地账号 DNA 或用户提供的信息，不应假装实时读取成功。",
+      "files": []
+    }
+  ]
+}
