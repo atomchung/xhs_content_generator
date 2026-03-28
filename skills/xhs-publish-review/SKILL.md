@@ -25,7 +25,7 @@ description: 对比真实发帖版本和草稿版本，整理差异、归因和�
 - 如果公开笔记页打不开，但有截图：
   先做 `截图版复盘`，明确说明证据只来自可见页面
 - 如果没有草稿文件，但有对话或 post workspace：
-  先重建"原草稿意图"，再和发布版比
+  先重建”原草稿意图”，再和发布版比
 - 如果只有发布版，没有草稿也没有截图：
   先做 `单边复盘`，重点放在发布版结构和可改进点，不要假装知道修改过程
 
@@ -74,6 +74,19 @@ description: 对比真实发帖版本和草稿版本，整理差异、归因和�
   - 原草稿想讲什么
   - 发布版最后讲成了什么
   - 下次该提前在哪一步锁住"只讲一个故事"
+
+### 6. 已发布历史要和复盘绑定
+
+- `published-history.md` 不是单独维护的流水账，必须在复盘完成后一起更新
+- 每次至少补齐这些字段：
+  - publish date
+  - title
+  - public note URL
+  - note id
+  - local workspace
+  - durable review path
+- 如果这篇还没有本地 post workspace，要在历史表里明确写 `待补本地 post workspace`
+- 如果这篇已经有 workspace，优先保证 `published-history.md`、`reviews/`、`demo_posts/<slug>/reviews/` 三者能互相对上
 
 ### 6. 已发布历史要和复盘绑定
 
