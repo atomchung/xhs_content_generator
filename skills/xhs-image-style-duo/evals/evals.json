@@ -3,20 +3,20 @@
   "evals": [
     {
       "id": 1,
-      "prompt": "给我一个关于大谷翔平赛前蓄力挥棒的封面图 prompt，并拆成两种风格：动漫名场面封面风和 Q 版棒球吉祥物风。背景要能后续单独改。",
-      "expected_output": "输出应包含 story atoms、subject anchor prompt、background prompt 和 final prompt，而不是只给两个整句 prompt。",
+      "prompt": "给我一张克拉克薪资暴涨题的首图，要从两种风格里挑：欧美游戏动画电影感和体育商业杂志拼贴。背景后面还可能改。",
+      "expected_output": "输出应包含共享故事骨架，以及两套风格各自的 subject anchor、background prompt 和 final prompt，而不是只给两个整句 prompt。",
       "files": []
     },
     {
       "id": 2,
-      "prompt": "我想做一个 Netflix x 大谷 x WBC 的小红书首图，动漫风背景不要太满，Q 版请更像实况野球和小红薯。",
-      "expected_output": "动漫风应强调封面式动作张力和干净背景；Q 版应转成吉祥物风，而不是普通 chibi。",
+      "prompt": "我想做一个 WNBA 加薪解释图，给我两种风格：体育商业杂志拼贴和极简数据海报，重点是数字变化清楚。",
+      "expected_output": "输出应能区分两种风格的任务差异，并保持数字和结构可读，而不是都做成人物海报。",
       "files": []
     },
     {
       "id": 3,
-      "prompt": "请帮我把这个 prompt 做成两种图，而且告诉我如果背景经常改，应该先生成哪一层。",
-      "expected_output": "输出应明确建议先锁人物锚点，再试背景，最后合成 final cover。",
+      "prompt": "请帮我把这个 prompt 做成两种图，一个主风格，一个备选风格，而且告诉我如果背景经常改，应该先生成哪一层。",
+      "expected_output": "输出应明确建议先锁人物锚点，再试背景，最后合成 final cover，并说明为什么选这两种风格。",
       "files": []
     }
   ]
