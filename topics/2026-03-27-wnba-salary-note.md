@@ -247,3 +247,141 @@ C. 都 2028 年一起到
 - **NBA 比較**：已全部移除，確認不需要加回？
 - **圖數**：5 張全上，還是去掉圖 3（人物介紹），壓縮成 4 張？
 - **Clark 條款爭議**：已全部拿掉，確認不需要加回？
+
+---
+
+## v3 圖組 Prompt（混知風格改版）
+
+> 改版邏輯：從「信息圖 + 文字說明」→「視覺比喻 + 角色情緒 + 疊字」
+> 每張圖圖內文字接近零，所有數字透過 overlay_cover_text.py 疊加
+
+### 混知 vs 原版核心差異
+
+| 維度 | 原版 | 混知風改版 |
+|------|------|-----------|
+| 角色 | 無（純圖表）| 每張都有簡筆角色表達情緒 |
+| 比喻 | 無（直接列數字）| 建築高度 / 水庫 / 薪資袋 |
+| 文字量 | 每張 30-60 字 | 每張圖內 0 字，全靠 overlay |
+| 情緒 | 中性 | 圖1驚喜 / 圖2震撼 / 圖3憤怒 / 圖4解脫 |
+
+---
+
+### 圖 1 封面 — 新 Prompt
+
+```
+Simple Hunzhi-style two-panel black and white line illustration,
+minimal flat design, oval-faced cartoon characters, thick clean outlines,
+no background, white space dominant.
+
+Left panel: two female athletes (different hairstyles) standing side by side,
+both holding identical small money bags, bags labeled with almost identical
+tiny numbers. The two figures look exactly equal, both smiling confidently.
+The panel is simple and symmetrical.
+
+Right panel: same two women pointing at each other's money bags,
+one character's expression: shocked open mouth, pointing at a tiny coin
+on top of the other's bag. The coin is comically small.
+A bold arrow points at the coin with exaggerated emphasis lines.
+
+Style: minimal, expressive faces, 2-3 lines per character, chibi-proportioned,
+flat clean coloring, single orange accent on the coin only, all else black
+and white. No readable text in image. Vertical 9:16, generous white margins,
+clean panel borders.
+```
+
+**Overlay 疊字**：封面大字「打了一整年球」／小字「差距只有 $765」
+
+---
+
+### 圖 2 薪資對比 — 新 Prompt
+
+```
+Simple Hunzhi-style single-panel black and white line illustration,
+minimal flat design, white background.
+
+Visual metaphor: two buildings side by side, left building short (4 floors),
+right building dramatically taller (about 12 floors, 3x left).
+
+Left building labeled "2025": ground floor = minimum salary level,
+top floor = supermax level. Both floors marked with horizontal lines.
+
+Right building labeled "2026+": its ground floor is at exactly the same
+height as the left building's top floor — this is the key visual insight.
+Right building's top floor towers far above.
+
+A small cartoon character stands between the buildings, looking up at the
+right building with open-mouth expression, one hand shielding eyes.
+Character height roughly equals the full left building height.
+
+Single orange/red accent line connecting left-building top floor to
+right-building ground floor, showing they are at equal height.
+No text in image. Vertical 9:16, large white sky area at top.
+```
+
+**Overlay 疊字**：左建築「舊超頂薪 $249K」／右建築底「新最低薪 $270K」／大字「新的地板 = 舊的天花板」
+
+---
+
+### 圖 3 兩人對比 — 新 Prompt
+
+```
+Simple Hunzhi-style two-panel black and white line illustration,
+minimal flat design, oval-faced expressive cartoon characters.
+
+Left panel: female basketball player in dynamic dribbling pose, confident
+skilled expression. Below her feet: a small pile of coins, visually tiny.
+Motion lines around her show great athletic performance.
+
+Right panel: female basketball player in different uniform holding a trophy,
+other hand raised. Below her feet: an identical tiny coin pile, same size
+as the left panel. Her expression: confident but looking at the coin pile
+with a tilted-head "really?" look.
+
+Between panels: a simple balance scale showing the two coin piles perfectly
+equal. The equality of the coin piles is the punchline.
+
+Single yellow accent on trophies and coin piles. Vertical 9:16.
+No text in image. Clean white background.
+```
+
+**Overlay 疊字**：左「年薪 $78,066」／右「年薪 $78,831」／中「差距 $765」／底「聯盟虧了 29 年——這才是真正的原因」
+
+---
+
+### 圖 4 為什麼能漲 — 新 Prompt
+
+```
+Simple Hunzhi-style single-panel black and white line illustration,
+minimal flat design, water reservoir/dam visual metaphor.
+
+Main image: a large dam structure, clear simple lines. Three pipes flow
+into the reservoir from above, each with a simple icon:
+- Pipe 1 (largest): TV broadcast tower icon, most water flowing in
+- Pipe 2 (medium): stadium/building icon
+- Pipe 3 (small): upward arrow + connected figures icon
+
+Reservoir water level: about 75% full, visible "NEW LEVEL" waterline.
+An old low waterline marked on the dam wall showing previous level.
+
+At the bottom outflow: a small cartoon player silhouette standing in the
+outflow stream, arms raised in celebration, relieved happy expression.
+
+Single blue accent on all water elements. Structure in black and white.
+Vertical 9:16, clean composition, no clutter. No text in image.
+```
+
+**Overlay 疊字**：管1「版權費 $6000萬→$2億」／管2「擴張費 $10億」／管3「收入分潤」／水位「第29年，水庫滿了」／出水口「球員薪水 $270K+」
+
+---
+
+## 留言 & 收藏鉤子升級
+
+### 收藏鉤子
+- 圖2 疊字末加：「2028 年這張圖左邊的樓會繼續長」→ 讓人存下來等驗證
+- 圖4 水庫比喻直覺感強，適合截圖傳「原來如此」
+
+### 留言鉤子
+- **標題改問句**：「她打出 44 分新人紀錄，聯盟給她 $78,000——這公平嗎？」
+- **圖3 底部疊字**：「你知道 $78,000 是什麼概念嗎？」（不回答，讓讀者說）
+- **最後互動**：「Clark 🏀 還是 Bueckers ✨ 誰先到頂薪？」（emoji 比 A/B/C 留言率高）
+- **封面副標**：「差距只有 $765——但這不是好事」（反常識，帶著問題點進來）
