@@ -128,16 +128,24 @@
 5. 正文第 1 段有没有先给总判断
 6. 正文是不是 `3 段内` 就能让小白跟上
 
-## 六、以后和 skills 的顺序
+## 六、这份说明如何影响 skills
 
-默认流程：
+这份说明不定义完整流程。
 
-1. `xhs-topic-angle-shortlist`（锁角度）
-2. `xhs-note-assembly`（成稿 + 封面提取 + 图组预设）
-3. `xhs-image-style-duo`（封面生图 + 配图延伸）
+完整生产流程以仓库根目录 `README.md` 为准。
 
-只在例外情况启用：
-- `xhs-visual-asset-mix`：素材选择确实复杂时
-- `xhs-cover-template`：封面偏离预设结构时
+这份说明只给 skills 提供当前账号的默认假设：
 
-封面从成稿长出来，不再单独先跑。
+- `xhs-note-assembly`
+  默认按这里的 `3 段` 介绍结构写正文，并默认从成稿提取封面信息。
+- `xhs-visual-asset-mix`
+  默认把图 `1` 当成生图封面，把真人图 / 官方截图优先放到后续页。
+- `xhs-cover-template`
+  只有当帖子不适合这里的默认人物封面结构时，才单独启用。
+- `xhs-image-style-duo`
+  接到首图 brief 时，应默认继承这里的标题安全区、人物主角、场景背景和字体限制。
+
+也就是说：
+
+- 这里定义的是 `账号默认`
+- 不是 `完整 workflow`

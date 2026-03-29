@@ -16,8 +16,9 @@ It is meant to answer:
 Treat the repo as three layers:
 
 1. workflow tools
-2. per-post working folders
-3. durable learning artifacts
+2. cross-post backlog and explorations
+3. per-post working folders
+4. durable learning artifacts
 
 Do not mix these layers together.
 
@@ -34,8 +35,8 @@ Current pipeline:
 1. `xhs-topic-angle-shortlist`
 2. `xhs-fact-pack`
 3. `research/story_spine.md` checkpoint
-4. `xhs-visual-asset-mix`
-5. `xhs-note-assembly`
+4. `xhs-note-assembly`
+5. `xhs-visual-asset-mix`
 6. `xhs-image-style-duo`
 7. `xhs-publish-review`
 
@@ -48,12 +49,26 @@ Use `scripts/` for reusable automation.
 Current important scripts:
 
 - `scripts/scaffold_post_folder.py`
-- `scripts/generate_images_from_post.py`
+- `scripts/generate_images_from_post.py` - export web-ready prompt files from `post.md`, no API image generation
 - `scripts/overlay_cover_text.py`
 
 If a repeated workflow still requires manual shell steps every time, consider promoting it into `scripts/`.
 
-## Layer 2: Per-Post Working Folders
+## Layer 2: Cross-Post Backlog And Explorations
+
+### `explorations/backlog/`
+
+Use this folder for:
+
+- topic ideas that can feed many future posts
+- possible angles that are not yet one final story line
+- importance updates and next-review dates
+
+When one topic becomes one active post, move downstream into:
+
+- `demo_posts/<date>-<slug>/`
+
+## Layer 3: Per-Post Working Folders
 
 ### `demo_posts/<date>-<slug>/`
 
@@ -65,7 +80,6 @@ Recommended structure:
 demo_posts/<date>-<slug>/
 ├── README.md
 ├── research/
-│   ├── research.md
 │   ├── fact_pack.md
 │   └── story_spine.md
 ├── text/
@@ -87,23 +101,23 @@ python3 scripts/scaffold_post_folder.py --date YYYY-MM-DD --slug <slug> --title 
 
 ### What each file is for
 
-#### `research/research.md`
-
-- angle exploration
-- title options
-- source map
-- open questions
-
 #### `research/fact_pack.md`
 
-- verified numbers
-- argument chain
-- risk notes
-- terms that need translation for non-experts
+This is the main per-post research file.
+
+Use it for:
+
+- what happened
+- why now
+- must-know facts
+- key numbers
+- source map
+- risks and unresolved points
+- visual and story raw material
 
 #### `research/story_spine.md`
 
-This is the most important new checkpoint.
+This is the story-line checkpoint that turns research into one chosen story.
 
 Write here before drafting:
 
@@ -133,7 +147,8 @@ If the post cannot be summarized cleanly here, do not draft yet.
 
 #### `images/`
 
-- generated images
+- manually generated images
+- curated screenshots / photos
 - edited exports
 - final deliverables
 
@@ -143,7 +158,7 @@ If the post cannot be summarized cleanly here, do not draft yet.
 - image-sequence observations
 - postmortem notes tied to this one case
 
-## Layer 3: Durable Learning Artifacts
+## Layer 4: Durable Learning Artifacts
 
 These should be git-tracked because they are useful beyond one post.
 
@@ -218,8 +233,8 @@ That means:
 ## Recommended End-to-End Flow
 
 1. Choose a topic with `xhs-topic-angle-shortlist`.
-2. Immediately scaffold `demo_posts/<date>-<slug>/`.
-3. Fill `research/research.md`.
+2. Update `explorations/backlog/` with active, watch-later, or parked ideas.
+3. Scaffold `demo_posts/<date>-<slug>/`.
 4. Build `research/fact_pack.md`.
 5. Lock the story in `research/story_spine.md`.
 6. Draft the post in `text/post.md`.

@@ -12,24 +12,25 @@ This folder is the workspace for one Xiaohongshu post.
 
 ## Folder layout
 
-- `research/research.md`
-  Topic framing, title options, angle notes, source map.
 - `research/fact_pack.md`
-  Verified numbers, argument chain, risk notes.
+  Main per-post research file: facts, numbers, source map, visual raw material, and open questions.
 - `research/story_spine.md`
-  One-story framing: core question, conflict, why now, why care, and parked side angles.
+  Story-line checkpoint: one-sentence story, governing question, chosen angle, and parked side angles.
 - `text/post.md`
-  Final note copy for publishing.
+  Drafting workspace for the final note.
 - `prompts/`
-  Prompt drafts and per-style prompt files.
+  Web-ready prompt drafts and per-page prompt files.
 - `images/`
-  Generated images and edited deliverables.
+  Manually generated images, curated screenshots, and edited deliverables.
 - `reviews/`
   Publish reviews, postmortems, and iteration notes.
 
 ## Post metadata
 
 - Slug: `{slug}`
+- Status: `draft`
+- Public note URL:
+- Upstream backlog entry:
 """
 
 
@@ -57,20 +58,66 @@ def main() -> None:
 
     files = {
         root / "README.md": build_readme(args.title, args.slug),
-        research_dir / "research.md": "# Research\n",
-        research_dir / "fact_pack.md": "## Fact Pack\n",
+        research_dir / "fact_pack.md": """## Fact Pack
+
+- Topic candidate:
+- Why this is worth researching now:
+- Current research status:
+
+## What happened
+- ...
+
+## Why now
+- ...
+
+## Terms to translate
+- ...
+
+## Must-know facts
+- ...
+
+## Key numbers and context
+- ...
+
+## Source map
+- Primary sources:
+- Strong secondary sources:
+- Open questions:
+
+## Risks and unresolved
+- ...
+
+## Visual and story raw material
+- Best scenes:
+- Strongest protagonist:
+- Possible tensions:
+- Side angles to park:
+""",
         research_dir / "story_spine.md": """## Story Spine
 
 - One-sentence story:
 - This post answers:
+- Chosen angle:
 - Main character or focal point:
 - Central tension or conflict:
 - Why now:
 - Why the reader should care:
-- Evidence ladder:
+- What to keep:
 - Side angles to park:
 """,
-        text_dir / "post.md": "## 标题候选\n",
+        text_dir / "post.md": """## Working Brief
+
+- One-sentence story:
+- Title direction:
+
+## 标题候选
+
+## 正文
+
+## 图组分工
+
+## 来源尾注
+""",
     }
 
     for path, content in files.items():
