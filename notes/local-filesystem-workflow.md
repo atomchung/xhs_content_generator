@@ -13,7 +13,7 @@ It is meant to answer:
 
 ## Guiding Idea
 
-Treat the repo as three layers:
+Treat the repo as four layers:
 
 1. workflow tools
 2. cross-post backlog and explorations
