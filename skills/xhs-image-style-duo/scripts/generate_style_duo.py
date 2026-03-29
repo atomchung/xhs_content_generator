@@ -2,17 +2,9 @@
 from __future__ import annotations
 
 import argparse
-import base64
-import json
-import os
 import re
-import urllib.request
-from dataclasses import asdict, dataclass
-from datetime import datetime, timezone
+from dataclasses import dataclass
 from pathlib import Path
-
-from dotenv import load_dotenv
-from openai import OpenAI
 
 
 STYLE_SPECS = {
@@ -28,14 +20,14 @@ STYLE_SPECS = {
         ],
         "anchor_prefix": (
             "Anime key visual character sheet, cover-worthy sports protagonist, strong facial appeal, "
-            "loaded batting stance, visible torso twist, pre-impact tension, clean hero silhouette. "
+            "explosive sports action pose, visible torso twist, peak-tension timing, clean hero silhouette. "
         ),
         "background_prefix": (
             "Background layer for an anime cover, clean and graphic, only a few symbolic world-building elements, "
             "no main character, no clutter, preserve clear negative space around the center. "
         ),
         "final_prefix": (
-            "Anime cover illustration, transformed from a famous sports-anime climax frame, dynamic loaded batting pose, "
+            "Anime cover illustration, transformed from a famous sports-anime climax frame, dynamic explosive sports pose, "
             "strong hero angle, clean energetic composition, background supporting the hero rather than competing with the hero. "
         ),
         "style_suffix": (
@@ -195,16 +187,6 @@ class StylePacket:
     cute_elements: list[str]
 
 
-def load_env_from_workspace(start: Path) -> None:
-    candidates = [start] + list(start.parents)
-    for base in candidates:
-        env_path = base / ".env"
-        if env_path.exists():
-            load_dotenv(env_path)
-            return
-    load_dotenv()
-
-
 def normalize_prompt(raw_prompt: str) -> str:
     prompt = " ".join(raw_prompt.strip().split())
     if not prompt:
@@ -235,6 +217,10 @@ def infer_story_atoms(raw_prompt: str) -> StoryAtoms:
         if candidate in prompt or candidate in raw_prompt:
             protagonist = "Shohei Ohtani"
             break
+    for candidate in ["yu darvish", "darvish", "达比修有", "達比修有"]:
+        if candidate in prompt or candidate in raw_prompt:
+            protagonist = "Yu Darvish"
+            break
     for candidate in ["caitlin clark", "clark", "克拉克"]:
         if candidate in prompt or candidate in raw_prompt:
             protagonist = "Caitlin Clark"
@@ -255,6 +241,11 @@ def infer_story_atoms(raw_prompt: str) -> StoryAtoms:
         action_moment = "mid-sprint burst with strong forward momentum"
     elif has_any(prompt, ["jump", "扣", "jump shot", "灌篮", "投篮"]):
         action_moment = "pre-jump explosive sports moment"
+    elif has_any(prompt, ["pitch", "pitching", "throw", "投球", "投手", "投出", "棒球"]):
+        action_moment = (
+            "explosive baseball pitching motion with strong torso rotation, powerful stride, "
+            "high glove-side tension, and a frame that feels like the peak split-second before release"
+        )
 
     if has_any(prompt, ["crouch", "lower stance", "low-angle", "低机位", "压低"]) and has_any(prompt, ["baseball", "棒球", "swing", "挥棒", "揮棒"]):
         action_moment = (
@@ -419,6 +410,8 @@ def build_style_packets(raw_prompt: str) -> tuple[StoryAtoms, list[StylePacket]]
 
 def recommend_style_ids(raw_prompt: str) -> list[str]:
     prompt = raw_prompt.lower()
+    if has_any(prompt, ["ace of diamond", "diamond no ace", "钻石王牌", "鑽石王牌", "sports anime", "热血运动动画", "熱血運動動畫", "anime", "动画封面", "動畫封面"]):
+        return ["anime_cover", "game_cinematic"]
     if has_any(prompt, ["mascot", "cute", "q版", "q 版", "chibi", "吉祥物", "可爱", "可愛"]):
         return ["mascot_q", "anime_cover"]
     if has_any(prompt, ["salary", "薪资", "薪水", "工资", "加薪", "broadcast", "rights", "转播", "版权", "版权费", "expansion", "扩军", "加盟费", "platform", "平台", "商业", "商業"]):
@@ -445,136 +438,91 @@ def explain_style_selection(style_id: str, raw_prompt: str) -> str:
     return "这套风格更适合当前这张图的主任务。"
 
 
+def write_internal_layers(lines: list[str], packet: StylePacket) -> None:
+    lines.extend(
+        [
+            "- Subject anchor prompt:",
+            "```text",
+            packet.subject_anchor_prompt,
+            "```",
+            "- Background prompt:",
+            "```text",
+            packet.background_prompt,
+            "```",
+            "",
+        ]
+    )
+
+
 def write_outputs(
     output_dir: Path,
     raw_prompt: str,
-    atoms: StoryAtoms,
     packets: list[StylePacket],
+    include_internals: bool,
 ) -> None:
     output_dir.mkdir(parents=True, exist_ok=True)
-    payload = {
-        "raw_prompt": raw_prompt,
-        "story_atoms": asdict(atoms),
-        "styles": [asdict(packet) for packet in packets],
-        "generation_order": [
-            "subject_anchor_prompt",
-            "background_prompt",
-            "final_prompt",
-        ],
-    }
-    (output_dir / "style_prompts.json").write_text(
-        json.dumps(payload, ensure_ascii=False, indent=2),
-        encoding="utf-8",
-    )
-
     lines = [
-        "# Style Duo",
+        "# Web-Ready Image Prompts",
         "",
-        "## Raw Prompt",
+        "These prompts are written for direct use in ChatGPT / Gemini style web UIs.",
+        "This script does not call any image-generation API.",
+        "",
+        "## Raw Brief",
         raw_prompt,
         "",
-        "## Story Atoms",
-        f"- 主角：{atoms.protagonist}",
-        f"- 动作瞬间：{atoms.action_moment}",
-        f"- 情绪冲突：{atoms.emotional_conflict}",
-        f"- 背景符号：{', '.join(atoms.background_symbols)}",
-        "",
-        "## Generation Order",
-        "1. subject_anchor_prompt",
-        "2. background_prompt",
-        "3. final_prompt",
-        "",
     ]
-    for packet in packets:
+    if len(packets) == 1:
+        packet = packets[0]
+        prompt_path = output_dir / "final_prompt.txt"
+        prompt_path.write_text(packet.final_prompt, encoding="utf-8")
         lines.extend(
             [
-                f"## {packet.label}",
-                f"- Summary: {packet.summary}",
+                "## Recommended Style",
+                f"- 风格：{packet.label}",
                 f"- Why selected: {packet.selection_reason}",
-                f"- Keywords: {', '.join(packet.keywords)}",
-            ]
-        )
-        if packet.cute_elements:
-            lines.append(f"- Cute elements: {', '.join(packet.cute_elements)}")
-        lines.extend(
-            [
-                "- Subject anchor prompt:",
-                "```text",
-                packet.subject_anchor_prompt,
-                "```",
-                "- Background prompt:",
-                "```text",
-                packet.background_prompt,
-                "```",
-                "- Final prompt:",
+                f"- Summary: {packet.summary}",
+                "",
+                "## Final Prompt",
                 "```text",
                 packet.final_prompt,
                 "```",
                 "",
             ]
         )
-    (output_dir / "style_prompts.md").write_text("\n".join(lines), encoding="utf-8")
+        if include_internals:
+            lines.extend(["## Internal Layers"])
+            write_internal_layers(lines, packet)
+        markdown_path = output_dir / "web_prompts.md"
+        markdown_path.write_text("\n".join(lines), encoding="utf-8")
+        print(f"saved {prompt_path}")
+        print(f"saved {markdown_path}")
+        return
 
-
-def generate_images(
-    output_dir: Path,
-    packets: list[StylePacket],
-    model: str,
-    size: str,
-    quality: str,
-    output_format: str,
-) -> None:
-    api_key = os.environ.get("OPENAI_API_KEY")
-    if not api_key:
-        raise RuntimeError("OPENAI_API_KEY is required to generate images")
-
-    client = OpenAI(api_key=api_key)
-    manifest = {
-        "generated_at": datetime.now(timezone.utc).isoformat(),
-        "provider": "openai",
-        "model": model,
-        "size": size,
-        "quality": quality,
-        "output_format": output_format,
-        "images": [],
-    }
-
-    for packet in packets:
-        response = client.images.generate(
-            model=model,
-            prompt=packet.final_prompt,
-            size=size,
-            quality=quality,
-            output_format=output_format,
+    for index, packet in enumerate(packets, start=1):
+        prompt_path = output_dir / f"style_{index}_final_prompt.txt"
+        prompt_path.write_text(packet.final_prompt, encoding="utf-8")
+        lines.extend(
+            [
+                f"## Style {index}",
+                f"- 风格：{packet.label}",
+                f"- Why selected: {packet.selection_reason}",
+                f"- Summary: {packet.summary}",
+                "",
+                f"### Final Prompt {index}",
+                "```text",
+                packet.final_prompt,
+                "```",
+                "",
+            ]
         )
-        data_item = response.data[0]
-        image_path = output_dir / f"{packet.style_id}.{output_format}"
-        image_data = getattr(data_item, "b64_json", None)
-        image_url = getattr(data_item, "url", None)
-        revised_prompt = getattr(data_item, "revised_prompt", None)
-        if image_data:
-            image_path.write_bytes(base64.b64decode(image_data))
-        elif image_url:
-            with urllib.request.urlopen(image_url) as remote:
-                image_path.write_bytes(remote.read())
-        else:
-            raise RuntimeError(f"No image data returned for style {packet.style_id}")
+        if include_internals:
+            lines.extend([f"### Internal Layers {index}"])
+            write_internal_layers(lines, packet)
+        print(f"saved {prompt_path}")
 
-        manifest["images"].append(
-            {
-                "style_id": packet.style_id,
-                "file": str(image_path),
-                "final_prompt": packet.final_prompt,
-                "revised_prompt": revised_prompt,
-            }
-        )
-        print(f"saved {image_path}")
-
-    (output_dir / "manifest.json").write_text(
-        json.dumps(manifest, ensure_ascii=False, indent=2),
-        encoding="utf-8",
-    )
-    print(f"saved {output_dir / 'manifest.json'}")
+    markdown_path = output_dir / "web_prompts.md"
+    markdown_path.write_text("\n".join(lines), encoding="utf-8")
+    print(f"saved {markdown_path}")
 
 
 def main() -> None:
@@ -582,15 +530,21 @@ def main() -> None:
     parser.add_argument("--prompt", help="Base prompt text")
     parser.add_argument("--prompt-file", type=Path, help="Path to a text file containing the base prompt")
     parser.add_argument("--output-dir", type=Path, required=True)
-    parser.add_argument("--generate-images", action="store_true")
+    parser.add_argument(
+        "--mode",
+        choices=["single", "duo"],
+        default="single",
+        help="Default is single: export one recommended final prompt. Use duo only when you explicitly want two style options.",
+    )
     parser.add_argument(
         "--styles",
         help="Comma-separated style ids to keep, e.g. game_cinematic,editorial_collage",
     )
-    parser.add_argument("--model", default="gpt-image-1.5")
-    parser.add_argument("--size", default="1024x1536")
-    parser.add_argument("--quality", default="high")
-    parser.add_argument("--output-format", default="png")
+    parser.add_argument(
+        "--include-internals",
+        action="store_true",
+        help="Also include subject/background internal layers for debugging. Default output only includes web-ready final prompts.",
+    )
     args = parser.parse_args()
 
     if not args.prompt and not args.prompt_file:
@@ -602,30 +556,24 @@ def main() -> None:
     assert raw_prompt is not None
 
     output_dir = args.output_dir.resolve()
-    load_env_from_workspace(output_dir.parent)
-    atoms, packets = build_style_packets(raw_prompt)
+    _, packets = build_style_packets(raw_prompt)
+    packet_map = {packet.style_id: packet for packet in packets}
     if args.styles:
-        wanted = {item.strip() for item in args.styles.split(",") if item.strip()}
+        wanted = [item.strip() for item in args.styles.split(",") if item.strip()]
     else:
-        wanted = set(recommend_style_ids(raw_prompt))
-    packets = [packet for packet in packets if packet.style_id in wanted]
+        recommended = recommend_style_ids(raw_prompt)
+        wanted = recommended[:1] if args.mode == "single" else recommended[:2]
+    packets = [packet_map[style_id] for style_id in wanted if style_id in packet_map]
     if not packets:
         raise ValueError("No matching styles selected")
     for packet in packets:
         packet.selection_reason = explain_style_selection(packet.style_id, raw_prompt)
-    write_outputs(output_dir, raw_prompt.strip(), atoms, packets)
-    print(f"saved {output_dir / 'style_prompts.md'}")
-    print(f"saved {output_dir / 'style_prompts.json'}")
-
-    if args.generate_images:
-        generate_images(
-            output_dir=output_dir,
-            packets=packets,
-            model=args.model,
-            size=args.size,
-            quality=args.quality,
-            output_format=args.output_format,
-        )
+    write_outputs(
+        output_dir=output_dir,
+        raw_prompt=raw_prompt.strip(),
+        packets=packets,
+        include_internals=args.include_internals,
+    )
 
 
 if __name__ == "__main__":

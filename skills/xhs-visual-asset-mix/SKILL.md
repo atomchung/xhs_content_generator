@@ -110,8 +110,9 @@ description: 素材路由器（非默认步骤）。只在用户明确纠结”�
 
 如果图 1 最终是生图：
 
-- 先用 `xhs-cover-template` 锁大人物大字模板
-- 再用 `xhs-image-style-duo` 选主风格和备选风格
+- 默认先沿用 `xhs-note-assembly` 已经提取好的封面结构
+- 只有默认封面结构不适用时，才回到 `xhs-cover-template`
+- 再用 `xhs-image-style-duo` 输出网页可直接使用的最终 prompt
 
 ### 4. 这一关的人工介入
 
