@@ -58,6 +58,7 @@ description: 对比真实发帖版本和草稿版本，整理差异、归因和�
 - 这次哪一步应该更早做
 - 这次哪一步非人来不可
 - 这次哪一步可以独立成 skill
+- 如果要把经验写回 skill，默认优先修改现有 `SKILL.md`，不要先扩出新的 `.md` 说明文件
 
 ### 5. 复盘必须存档
 
@@ -74,19 +75,6 @@ description: 对比真实发帖版本和草稿版本，整理差异、归因和�
   - 原草稿想讲什么
   - 发布版最后讲成了什么
   - 下次该提前在哪一步锁住"只讲一个故事"
-
-### 6. 已发布历史要和复盘绑定
-
-- `published-history.md` 不是单独维护的流水账，必须在复盘完成后一起更新
-- 每次至少补齐这些字段：
-  - publish date
-  - title
-  - public note URL
-  - note id
-  - local workspace
-  - durable review path
-- 如果这篇还没有本地 post workspace，要在历史表里明确写 `待补本地 post workspace`
-- 如果这篇已经有 workspace，优先保证 `published-history.md`、`reviews/`、`demo_posts/<slug>/reviews/` 三者能互相对上
 
 ### 6. 已发布历史要和复盘绑定
 
@@ -129,6 +117,11 @@ description: 对比真实发帖版本和草稿版本，整理差异、归因和�
 
 ## 必须人工介入的点
 - ...
+
+## 需要改 skill 的点
+- `skill 名`
+  - 要改什么：
+  - 为什么：
 
 ## 假设更新
 - 新增：

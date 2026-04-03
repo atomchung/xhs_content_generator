@@ -1,0 +1,4 @@
+interface:
+  display_name: "Sync Skills"
+  short_description: "Sync local skill changes to GitHub on a fresh branch with clean commits"
+  default_prompt: "Use $sync-skills to sync local skill-related changes to GitHub on a new clean branch, keep commits intentionally small, and avoid mixing post work."
