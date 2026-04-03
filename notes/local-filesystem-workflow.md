@@ -35,10 +35,11 @@ Current pipeline:
 1. `xhs-topic-angle-shortlist`
 2. `xhs-fact-pack`
 3. `research/story_spine.md` checkpoint
-4. `xhs-note-assembly`
-5. `xhs-visual-asset-mix`
-6. `xhs-image-style-duo`
-7. `xhs-publish-review`
+4. `xhs-note-assembly` - default `publish-ready copy` plus a minimum per-page storyboard
+5. `xhs-cover-template` quick cover check - escalate only when the default cover system does not fit
+6. `xhs-visual-asset-mix` - only when remaining pages still need material routing
+7. `xhs-image-style-duo`
+8. `xhs-publish-review`
 
 Do not put one-off post outputs in `skills/`.
 
