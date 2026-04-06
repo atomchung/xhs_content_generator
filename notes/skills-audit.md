@@ -1,6 +1,6 @@
 # Skills Audit
 
-更新时间：2026-03-29
+更新时间：2026-04-03
 
 这份文件是当前 XHS skills 的维护台账。
 
@@ -46,11 +46,11 @@
 | --- | --- | --- | --- | --- |
 | `xhs-topic-angle-shortlist` | 发想题目、可能切角，维护跨 post backlog，并选出本轮先研究哪个题 | 部分对齐 | 还需要继续观察 backlog 维护是否会和单篇 post workspace 混淆 | 用真实案例校正 backlog 更新动作 |
 | `xhs-fact-pack` | 单篇帖子的主研究文件，承载完整事实依据，再交给 `story_spine` 收成故事 | 部分对齐 | 需要继续验证“完整研究”与“不要偷写成稿”之间的边界 | 用真实案例校正研究深度和 handoff 质量 |
-| `xhs-note-assembly` | 默认主线 skill，负责把 `fact_pack + story_spine` 变成成稿、图组任务和封面提取 | 基本对齐 | 仍需持续观察是否会绕过 `fact_pack` 直接内部补完一切 | 继续用真实案例校正输入依赖和输出长度 |
-| `xhs-visual-asset-mix` | 素材路由器，只在真人图 / 截图 / 生图真的难选时启用 | 基本对齐 | 仍要观察是否会把例外步骤重新说成默认步骤 | 保持例外处理定位，补更多真人图建议样例 |
-| `xhs-cover-template` | 封面结构例外处理器，只处理默认封面不适用的情况 | 基本对齐 | 仍要观察是否会被误用成每篇都跑的模板层 | 保持和账号默认封面规则一致，不再外扩默认流程 |
+| `xhs-note-assembly` | 默认主线 skill，负责把 `fact_pack + story_spine` 变成 `publish-ready copy`、最小图组任务和封面提取 | 基本对齐 | 仍需持续观察是否会绕过 `fact_pack` 直接内部补完一切，或把输出重新写回研究稿口气 | 继续用真实案例校正输入依赖、发布口语化和减页判断 |
+| `xhs-visual-asset-mix` | 素材路由器，只在真人图 / 截图 / 生图真的难选，或多页 storyboard 说不清时启用 | 基本对齐 | 仍要观察是否会把例外步骤重新说成默认步骤 | 保持例外处理定位，重点校正 `任务 / 场面 / 新增信息` gate |
+| `xhs-cover-template` | 首图结构检查器；默认先做 quick cover check，只有默认封面不适配时才展开替代封面探索 | 基本对齐 | 仍要观察 quick check 会不会再次膨胀成每篇都跑的重模板 | 保持和账号默认封面规则一致，不再外扩新的默认流程 |
 | `xhs-image-style-duo` | 默认交付是 `一个推荐风格 + 一条可直接贴到网页的 final prompt`；只有明确要求时才双风格 | 基本对齐 | 还需要继续观察风格推荐是否稳定、prompt 是否足够贴近具体人物动作 | 用真实封面 brief 持续校正推荐和 prompt 质量 |
-| `xhs-publish-review` | 发布后复盘、回写工作流、同步历史记录 | 基本对齐 | 文档里仍有重复段落等小问题 | 清理重复段落，继续补真实复盘样本 |
+| `xhs-publish-review` | 发布后复盘、回写工作流、同步历史记录，并明确哪些经验应回写现有 skill | 基本对齐 | 还需要继续观察“复盘结论 -> skill 修改”是否真的形成闭环 | 继续补真实复盘样本，并检查回写动作是否足够具体 |
 
 ## Related Script Checks
 
@@ -75,12 +75,13 @@
 ### P2
 
 - 校正 `xhs-note-assembly` 的真实输出样本
+- 校正 `xhs-cover-template` 的 quick cover check 是否足够轻，不会重新变成重步骤
+- 校正 `xhs-visual-asset-mix` 的减页判断是否稳定
 - 检查 `scaffold_post_folder.py` 是否已完全反映新的 per-post 研究结构
 - 决定 backlog 应该继续用单文件，还是拆成多主题文件
 
 ### P3
 
-- 清理 `xhs-publish-review` 的重复段落
 - 决定哪些账号专属规则该留在本 repo，哪些可以毕业回 `xhs_skills`
 
 ## 维护规则

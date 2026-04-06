@@ -24,20 +24,22 @@ Default user-facing flow:
    - chosen angle
    - core tension
    - what to keep and what to park
-5. Turn `fact_pack + story_spine` into the publishable post:
-   - title
-   - body copy
-   - page `1-4` on-image copy
-   - default body shape: total judgment, necessary background, conflict / hook
-6. Lock the cover before doing the rest of the images:
-   - cover structure
-   - cover title text
-   - one recommended style by default
-   - one ready-to-paste final prompt
-7. After the cover direction is locked, finish the remaining pages:
-   - recommend real images / official screenshots when they are better
-   - otherwise give ready-to-paste final prompts
-8. After publishing, run publish review and sync durable learning back into `reviews/` and `hypo.md`.
+5. Turn `fact_pack + story_spine` into the publishable post with `xhs-note-assembly`:
+   - default delivery is `publish-ready copy`, not a research-sounding draft
+   - commercial posts should usually open with `result / biggest number / shortest why`
+   - decide page `1-4` duties inside the same step
+   - if an inner page does not have its own task, scene, and new information, cut the page count
+6. Run a fast cover check before image generation:
+   - `main character / action / tension / background symbol`
+   - stay in the default cover system when this is clear
+   - only expand into alternate cover exploration when the default cover system does not fit
+7. Only branch into `xhs-visual-asset-mix` when the remaining pages are genuinely unclear:
+   - real image vs official screenshot vs generated image
+   - or when inner pages still fail the minimum storyboard check
+8. Use `xhs-image-style-duo` only for the pages that truly need generated-image prompts:
+   - one recommended web-ready final prompt by default
+   - only compare multiple prompt directions when explicitly requested
+9. After publishing, run publish review and sync durable learning back into `reviews/` and `hypo.md`.
 
 Core workflow skills:
 
@@ -46,18 +48,28 @@ Core workflow skills:
 - `xhs-fact-pack`
   Use as the main per-post research layer after one topic is chosen, before the final story line is locked.
 - `xhs-note-assembly`
-  Use after `fact_pack + story_spine` are ready and the team wants the publishable post.
+  Use after `fact_pack + story_spine` are ready and the team wants the publishable post, defaulting to `publish-ready copy`, a minimum page storyboard, and publish polish.
+- `xhs-cover-template`
+  Always do the quick `cover check` mindset for the first card; only expand this skill into alternate cover exploration when the default cover system does not fit.
 
 Optional skill branches:
 
 - `xhs-visual-asset-mix`
-  Only when `real image vs screenshot vs generated image` is genuinely unclear.
-- `xhs-cover-template`
-  Only when the default cover system does not fit the post.
+  Only when `real image vs screenshot vs generated image` is genuinely unclear, or when a multi-page post still cannot explain each page's task, scene, and new information.
 - `xhs-image-style-duo`
   Use when a page needs a generated-image prompt; default to one web-ready final prompt, and switch to two prompts only when the user explicitly wants a comparison.
 - `xhs-publish-review`
-  Only after publishing.
+  Only after publishing; use it to explain what changed, why it changed, and which existing skill rules should be tightened.
+
+## Recent workflow update
+
+2026-04-03 update:
+
+- A real publish review showed that `strong cover + short body + no weak inner pages` beat a fuller but softer multi-image draft.
+- `xhs-note-assembly` was too good at assembling research and not strict enough about outputting platform-ready copy.
+- `xhs-cover-template` was too exception-oriented; the first card still needs a default structural check even when we stay inside the account preset.
+- `xhs-visual-asset-mix` needed a harder rule: inner pages cannot be just cover-style copies with different numbers.
+- These changes were written back into existing skill docs instead of creating new process notes, to keep the workflow minimal.
 
 ## Global content guardrails
 
