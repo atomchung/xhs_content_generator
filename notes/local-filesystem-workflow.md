@@ -231,6 +231,40 @@ That means:
 - detailed post work can live there
 - final reusable lessons should be copied into tracked files
 
+### Cloud / remote session exception
+
+When a session is running in the cloud (Claude Code on the web, remote
+agent, any environment where the user cannot open local files), the
+`demo_posts/` ignore rule creates a real problem: the agent writes files
+the user can never see.
+
+Rule for those sessions:
+
+- Do NOT edit `.gitignore`. Keep `demo_posts/` ignored by default.
+- After finishing a working step (fact pack, story spine, post draft, cover
+  prompts, etc.), force-add the text artifacts of the current post workspace
+  to the active working branch:
+
+  ```bash
+  git add -f demo_posts/<date>-<slug>/{README.md,research,text,prompts}
+  git commit -m "draft: <short title>"
+  git push -u origin <current-branch>
+  ```
+
+- Do NOT force-add `images/` or any binary / large asset. Only the text
+  layer (`README.md`, `research/`, `text/`, `prompts/`).
+- Do NOT open a pull request and do NOT merge the working branch into
+  `main`. The branch is the delivery surface; `main` stays clean of
+  per-post drafts.
+- Reply to the user with direct GitHub URLs to the pushed files on that
+  branch so they can read the actual content from phone or web.
+- When the post is actually published, the durable summary still goes to
+  tracked `reviews/YYYY-MM-DD-<slug>.md` via a normal PR flow, same as
+  local sessions.
+
+This keeps `.gitignore` history clean, keeps `main` free of draft noise,
+and still lets the user see everything the cloud agent produced.
+
 ## Recommended End-to-End Flow
 
 1. Choose a topic with `xhs-topic-angle-shortlist`.
