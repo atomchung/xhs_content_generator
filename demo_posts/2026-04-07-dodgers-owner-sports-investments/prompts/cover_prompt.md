@@ -144,6 +144,187 @@ remain secondary to the man in the suit.
 
 ---
 
+## Version B-Sequence — 4-frame 石之海战斗连拍
+
+**用途**：在 Version B（石之海彩色风 + 真实球员）基础上，拆成 4 张连贯分镜，之后作为影片生成的关键帧参考。
+
+**叙事弧**：召唤 → 指令 → 出击 → 胜势。沃尔特从不亲自动手，他是「替身使者」，所有进攻都由他名下的球员（大谷 / LeBron / 山本 / Palmer 样貌的切尔西小将 / Cadillac F1 车手）完成。
+
+### Style lock（4 张共用，必须严格复用）
+
+所有 4 张 prompt **头部先复制一遍这段**，保证视觉连贯性：
+
+```
+Vertical 3:4 full-color anime illustration, JoJo's Bizarre Adventure Stone
+Ocean (Part 6) anime style by David Production, Hirohiko Araki color
+aesthetic, bold ink outlines, high-contrast cel shading, hyper-saturated
+Stone Ocean palette — electric violet, neon magenta, tropical teal, lemon
+yellow, deep cobalt blue, hot pink and orange rim lights against deep
+indigo shadow, multi-colored god rays, swirling ink motifs.
+
+Main character consistency across all frames: the same older American
+businessman, early 60s, sharp charcoal three-piece suit, white shirt, dark
+tie, thin rectangular glasses, short combed grey hair, calm confident
+expression, clean shaven, composed authoritative bearing. He never fights
+directly — he is a stand user commanding his athletes as stands.
+
+Athlete cast consistency across all frames (faithful JoJo anime portraits
+with real player likeness):
+- Shohei Ohtani in Los Angeles Dodgers home white pinstripe uniform with
+  royal blue cap, bat in hand
+- LeBron James in Los Angeles Lakers purple and gold jersey, muscular
+  frame, headband, recognizable beard
+- Yoshinobu Yamamoto in the same Dodgers uniform, Japanese pitcher
+- a young European footballer resembling Cole Palmer in Chelsea royal blue
+  home kit
+- a Formula 1 driver in Cadillac black and red racing suit with matching
+  helmet
+
+Shared negatives: no text, no captions, no letters, no Japanese characters,
+no onomatopoeia, no logos, no watermark, no jersey numbers, no team
+wordmarks, single central subject dominant, athletes must remain secondary
+to the man in the suit, keep the same face, suit and glasses for the
+businessman across all four frames.
+```
+
+---
+
+### Frame 1 — 召唤 / Summon（起势）
+
+**节拍**：沃尔特独立于画面中央，缓缓推起眼镜；身后深色烟雾里，五位球员的**剪影**开始从地面浮现，尚未清晰，能量聚拢。镜头中景正面略仰。
+
+**Unique action block**
+
+```
+[INSERT STYLE LOCK ABOVE]
+
+Frame 1 of 4 — summoning. The businessman stands alone at dead center of
+the frame in a wide empty dark plaza, three-quarter body, slightly
+low-angle, right hand lifted and pushing his rectangular glasses up with a
+single index finger, left hand still in his trouser pocket, chin slightly
+lifted, eyes calm and half-closed, faint knowing smile just beginning.
+Behind him, five tall athlete-shaped silhouettes are just beginning to
+emerge from swirling dark indigo and violet ink smoke rising out of the
+ground, backlit by emerging magenta and teal energy, faces still half
+obscured by the smoke, bodies only half formed, their outlines matching
+Shohei Ohtani with a bat, LeBron James rising to full height, Yoshinobu
+Yamamoto with arm cocked back, a Chelsea footballer resembling Cole Palmer
+in royal blue, and a Formula 1 driver in a Cadillac helmet.
+Energy is gathering, not yet released. Radial speed lines softly converging
+on the businessman, glowing stand aura building around his shoulders.
+Composition: man isolated center, athlete silhouettes symmetric behind in
+an arc, empty foreground.
+```
+
+---
+
+### Frame 2 — 指令 / Command（下令）
+
+**节拍**：沃尔特右手抬起，食指向前方一指；五位球员在烟雾中**完全显形**，同步朝画面右前方蓄力起势，球棒 / 拳头 / 脚 / 引擎都处于「尚未出手」的极限张力瞬间。镜头略低、侧后方。
+
+**Unique action block**
+
+```
+[INSERT STYLE LOCK ABOVE]
+
+Frame 2 of 4 — command. The businessman stands front-center in the same
+plaza, body now subtly turned to the right, his right arm extended forward
+and slightly upward, index finger pointing off-frame to the right like
+issuing an order, left hand still in his pocket, jaw set, eyes wide open
+and sharp, faint smile gone, coat tails flaring backward from an unseen
+wind. The five athletes are now fully revealed out of the ink smoke,
+standing close behind and around him in a tight arc, each captured at the
+peak of a wind-up about to strike in the same direction he is pointing:
+Shohei Ohtani at the top of a swing with bat held high behind his right
+shoulder, LeBron James bending his knees gathering power to leap forward,
+Yoshinobu Yamamoto at the apex of his pitching wind-up with leg lifted,
+the Chelsea footballer resembling Cole Palmer planting one foot and
+cocking the other leg back for a shot, the Cadillac F1 driver helmet on,
+one hand gripping an invisible steering wheel with engine exhaust glow
+behind him. Every figure is coiled, frozen one frame before release.
+Energy lines converge on the direction the businessman is pointing.
+Composition: businessman center-left, athletes tightly arrayed behind him,
+all force pointed toward the right edge of the frame.
+```
+
+---
+
+### Frame 3 — 出击 / Strike（爆发）
+
+**节拍**：全员同时出手。大谷挥棒完成接触、LeBron 腾空扣杀、山本投出火球轨迹、Palmer 凌空抽射、F1 赛车冲出烟雾；沃尔特保持原位微微后仰、外套被冲击波吹起，眼镜反光掩去眼神。镜头换为侧面全身 + 强透视。
+
+**Unique action block**
+
+```
+[INSERT STYLE LOCK ABOVE]
+
+Frame 3 of 4 — strike. Same plaza, same businessman, but now shot from a
+dynamic side angle with strong perspective, the businessman standing his
+ground left-of-center in his charcoal suit, coat tails and tie blown
+violently backward by a shockwave of released energy, glasses catching a
+flat white light reflection that hides his eyes, mouth a thin calm line,
+right hand still extended having just flicked forward. To his right, all
+five athletes are exploding into simultaneous strikes directed at the
+right edge of the frame: Shohei Ohtani at the exact contact point of a
+home-run swing, the bat meeting a burning magenta energy ball with a
+shockwave ring of violet sparks; LeBron James mid-air at maximum elevation
+bringing both hands down in a thunder dunk through a hoop of teal light;
+Yoshinobu Yamamoto releasing a searing yellow-white fastball trailing
+helical stand energy; the Chelsea footballer resembling Cole Palmer
+striking an airborne volley with his boot wrapped in cobalt flame; the
+Cadillac F1 car screaming forward out of the smoke with orange exhaust
+plumes and hot tire trails. A massive shockwave of layered color rings
+erupts from the combined impact point just off the right edge of frame.
+Radial speed lines at maximum density. All action locked on a single beat
+of release.
+Composition: businessman anchored left, five simultaneous strikes forming
+a diagonal wedge driving from lower-left to upper-right out of frame.
+```
+
+---
+
+### Frame 4 — 胜势 / Aftermath（收势）
+
+**节拍**：能量烟散去。五位球员缓慢回收动作，列阵在沃尔特身后（和 Frame 1 的剪影位置完全对称），沃尔特低头用一只手扣上西装第二颗纽扣，嘴角微微一笑。远处暗色敌影正在崩解为粒子。镜头拉回中景正面。
+
+**Unique action block**
+
+```
+[INSERT STYLE LOCK ABOVE]
+
+Frame 4 of 4 — aftermath. Back to a front-facing three-quarter medium shot
+of the same empty plaza, the businessman standing dead center again in the
+exact same framing as Frame 1 for visual symmetry, head tilted slightly
+down, calm faint satisfied smile, his right hand now lowered and casually
+buttoning the second button of his suit jacket, left hand still in his
+trouser pocket, coat settling back from the earlier shockwave. Behind him,
+the five athletes are standing in the same arc formation as Frame 1 but
+now fully visible and lit, relaxed in their victory aftermath poses:
+Shohei Ohtani lowering his bat and watching the horizon, LeBron James
+landing from his dunk and exhaling, Yoshinobu Yamamoto lowering his
+pitching arm, the Chelsea footballer resembling Cole Palmer standing with
+arms spread wide in quiet celebration, the Formula 1 driver removing his
+Cadillac helmet and tucking it under one arm with a nod toward the
+businessman. In the distant background, dark ink silhouettes of defeated
+shadow enemies are dissolving into drifting violet and magenta particles.
+The colored god rays have softened to a warm afterglow.
+Composition: mirror of Frame 1 — man isolated at dead center, athletes
+symmetric behind in an arc, same camera distance and angle, same horizon
+line, designed so the two frames can loop or bookend a video cut.
+```
+
+---
+
+### 生成与剪辑提示
+
+- **跑图顺序**：先跑 Frame 1 定 Walter + 场景风格 → 用该图作为 Frame 2/3/4 的 reference image（img2img / style reference），保证脸和风格一致
+- **相机连贯**：1 和 4 共用中景正面（bookend），2 切侧后方，3 切侧面强透视；影片剪辑节奏建议 1.5s → 1.2s → 1.0s → 2.0s，最后一格留长
+- **动作差异锚点**：每一帧**都**必须看到沃尔特的右手在做不同动作（推眼镜 → 指 → 蓄力后的自然垂 → 扣纽扣），这是最小成本的人物连贯信号
+- **剪辑建议**：Frame 1 配环境音渐入 → Frame 2 一声指弹 → Frame 3 一次重击音效 + 白闪 → Frame 4 呼吸声 + 标题浮现（标题文字仍走 `overlay_cover_text.py` 后期）
+- **用哪版球员模板**：都沿用 Version B 的真实球员命名；若被生成器拒绝，把 "Shohei Ohtani / LeBron James" 改为 "a Japanese baseball player resembling Shohei Ohtani / a basketball player resembling LeBron James"
+
+---
+
 ## Version C — 文艺复兴油画 / 君王登基
 
 **梗**：把沃尔特画成巴洛克风格的「体育之王」，坐在用奖杯堆出的王座上，球星像宫廷随从一样列在两侧。这一版最适合「洛杉矶体育之王」这条副标。
