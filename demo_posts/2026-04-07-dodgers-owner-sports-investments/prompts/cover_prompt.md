@@ -196,11 +196,158 @@ block, single central subject dominant.
 
 ---
 
+## Version E — X-Men / 教授 X 沃尔特
+
+**梗**：把沃尔特画成 Charles Xavier（X 教授），坐在悬浮椅 / 轮椅上戴着 Cerebro 头盔，整个 X-Men 战队就是他名下的球星。大谷 = 他的「万磁王级」王牌，LeBron = Colossus 钢人，切尔西球员 = 闪电身法的 Quicksilver，F1 头盔人 = 赛博感突变体。
+
+**画面定位**
+- 沃尔特居中，悬浮椅上正坐，微微前倾，一手搭扶手，一手轻抬至太阳穴做「读取心智」手势
+- 戴一副简化版 Cerebro 头盔（金属半罩 + 发光电极，不要过度未来感）
+- 身后弧形排列 4–5 名「突变体形态」的球星：道奇大谷握棒、湖人巨人夸张肌肉、切尔西身影被蓝色电光包裹、F1 头盔冒出能量
+- 背景：X 战警会议室 / Cerebro 穹顶，墙面是发光的地球全息 + 浮动数据点（代表 12 个联赛坐标）
+
+**Prompt**
+```
+Vertical 3:4 cinematic illustration, X-Men comic movie key art aesthetic,
+Marvel Studios cinematic realism with a comic-book edge.
+Center: a calm, composed older American businessman in a sharp charcoal
+suit and thin rectangular glasses, short combed grey hair, faint knowing
+smile, seated upright in a sleek high-tech hover chair, one hand resting on
+the armrest, the other hand raised with two fingers lightly touching his
+temple in a mind-reading gesture. He wears a simplified minimal Cerebro-style
+metallic half-helmet with soft glowing blue electrodes along the sides,
+understated and elegant, not bulky. He is the unmistakable focal point, sharp
+and well-lit.
+Around him: four to five athlete figures arranged in a shallow arc behind
+and slightly above the chair, each rendered like a distinct X-Men team
+member with their own power aura. A Japanese baseball player in Dodgers home
+white pinstripes mid-swing with faint motion trails, a towering muscular
+African-American basketball player in Lakers purple and gold mid-dunk with
+metallic skin highlights like a powerhouse, a young European footballer in
+Chelsea royal blue surrounded by crackling electric blue energy, a WNBA
+player in Sparks purple and yellow shooting with kinetic glow, a Formula 1
+driver in a Cadillac black and red helmet emitting thin red energy lines.
+The athletes are slightly desaturated and smaller than the central man,
+framed like loyal team members.
+Background: a circular high-tech command chamber, dark chrome walls with
+softly glowing blue circuitry, a massive translucent holographic globe
+floating behind the man, scattered floating data points marking major cities,
+atmospheric volumetric light rays.
+Lighting: cool blue rim light from the Cerebro helmet, warm key light on
+the businessman's face, dramatic cinematic contrast, subtle lens flare.
+Color palette: deep charcoal, cool electric blue, accent warmth on the
+central face, team colors visible on each athlete.
+Mood: "the professor who commands them all", calm godlike control.
+Aspect ratio 3:4 vertical. No text, no captions, no letters, no numbers, no
+logos, no watermark, no jersey numbers, no team wordmarks, no crowd, single
+central subject dominant.
+```
+
+---
+
+## Version F — JoJo 真人电影版 / live-action JoJo cinematic
+
+**梗**：参考 2017 三池崇史《JoJo 的奇妙冒险：钻石不灭》真人电影 —— 真人演员 + 超饱和电影调色 + 舞台剧式夸张 pose + 超现实光感。和 B 版（黑白漫画）拉开：这版是彩色、真人质感、更多角色、更像电影海报。
+
+**画面定位**
+- 沃尔特站在画面正中偏前，JoJo 式站姿：髋部一扭、下巴一抬、一手插袋一手轻推眼镜
+- 背后密集排列 6–7 名球星，每人一个 JoJo 经典 pose（反手指天、扭腰回眸、交叉双臂、单膝）
+- 光是一束束彩色「纸灯笼」风格的强光从上方斜射，暗影厚、饱和度拉满
+- 镜头略仰，强透视，所有人脸都朝观众
+
+**Prompt**
+```
+Vertical 3:4 hyper-saturated cinematic live-action film still, inspired by
+Takashi Miike's live-action JoJo's Bizarre Adventure Diamond Is Unbreakable,
+theatrical bizarre poses, photoreal actors with surreal lighting and
+exaggerated color grade.
+Foreground center: an older American businessman in a sharp charcoal
+three-piece suit, thin rectangular glasses, short grey hair, calm intense
+expression, striking a dramatic JoJo-style pose — hips twisted, chin lifted,
+one hand in his trouser pocket, the other hand slowly pushing his glasses up
+with the index finger, shoulders strong and angular, three-quarter body shot.
+Behind him, six to seven athletes arranged in a tight dramatic group, each
+frozen in their own exaggerated JoJo-style theatrical pose, all facing the
+camera: a Japanese baseball player in Dodgers home white pinstripes with bat
+raised over his head, a Japanese pitcher in the same Dodgers uniform with
+arms crossed, a tall African-American basketball player in Lakers purple and
+gold flexing with one arm pointing skyward, a European footballer in Chelsea
+royal blue kneeling on one knee with head turned back over shoulder, a WNBA
+player in Sparks purple and yellow balancing on the balls of her feet arms
+spread wide, a Formula 1 driver in a Cadillac black and red racing suit
+holding his helmet under one arm with the other hand on his hip, all frozen
+like a bizarre stage ensemble.
+Lighting: harsh theatrical colored spotlights from above, hard shadows,
+beams of magenta, cyan and gold cutting across the scene like stained glass,
+deep contrast, glossy skin highlights, Miike-style surreal realism.
+Color palette: over-saturated magenta, cyan, gold, royal blue, Lakers
+purple, Chelsea blue, deep black shadows.
+Background: abstract dark stage with blurred neon geometry, faint Italianate
+architectural arches, cinematic smoke.
+Mood: "his bizarre stand has many faces", theatrical, operatic, loud.
+Aspect ratio 3:4 vertical. No text, no captions, no letters, no Japanese
+characters, no onomatopoeia, no logos, no watermark, no jersey numbers,
+no team wordmarks, single central subject dominant.
+```
+
+---
+
+## Version G — Q 版人偶 / 实况野球 Power Pros 风
+
+**梗**：所有球员都变成 Konami《实况野球》Power Pros 那种 2 头身、大头、圆点眼、无嘴或一字嘴的 Q 版人偶；沃尔特也跟着 Q 化，站在陈列柜 / 桌面玩具场景正中，像个收藏家把一整套公仔摆好。最可爱、信息量也最密。
+
+**画面定位**
+- 沃尔特 Q 版 2 头身，西装眼镜灰发保留识别特征，双手叉腰或一手轻抚下巴
+- 他脚边和身后是一圈 Q 版球员人偶：道奇大谷挥棒、山本投球、湖人巨人扣篮、切尔西小人踢球、F1 小车、Sparks 女篮投篮
+- 全部站在一个木质 / 亚克力展示台上，背景是模糊的玩具架子 + 柔和暖光
+- 整体色调明亮、糖果色、微型摄影质感（tilt-shift）
+
+**Prompt**
+```
+Vertical 3:4 adorable chibi super-deformed toy diorama illustration,
+Konami Jikkyou Powerful Pro Baseball "Power Pros" mascot aesthetic,
+two-heads-tall proportions, big round heads, tiny bodies, simple dot eyes,
+minimal mouths, soft vinyl toy shading, tilt-shift miniature photography
+feel.
+Center: a chibi version of an older American businessman, two-heads-tall,
+oversized round head, short grey hair, thin rectangular glasses as a tiny
+highlight, calm faint smile, tiny charcoal suit with white shirt and dark
+tie, hands confidently on his hips, standing proudly in the middle of a
+polished wooden display stage. He is the tallest and most centered figure,
+the collector himself turned into a figurine.
+Around him, arranged in a semicircle on the same display stage: a chibi
+Japanese baseball player in Dodgers home white pinstripes and royal blue
+cap mid-swing with a tiny bat, a chibi Japanese pitcher in the same Dodgers
+uniform winding up with one leg lifted, a chibi tall basketball player in
+Lakers purple and gold leaping for a mini dunk, a chibi European footballer
+in Chelsea royal blue kicking a tiny soccer ball, a chibi WNBA player in
+Sparks purple and yellow taking a jumpshot, and a tiny Cadillac Formula 1
+race car in black white and red livery parked at the front of the stage.
+All figures share the same two-heads-tall chibi proportions, vinyl-toy
+finish, soft plastic sheen.
+Background: a softly blurred toy shelf with out-of-focus shelves, warm
+ambient lighting, faint tiny championship trophies in the bokeh, cozy
+collector-room atmosphere.
+Lighting: soft diffused key light from upper front, gentle rim light,
+pastel warm tones, tilt-shift miniature feel, shallow depth of field.
+Color palette: cream background, Dodgers royal blue, Lakers purple and
+gold, Chelsea blue, Cadillac red, all softened to candy tones.
+Mood: "he collected the whole set", wholesome, proud, miniature diorama.
+Aspect ratio 3:4 vertical. No text, no captions, no letters, no numbers, no
+logos, no watermark, no jersey numbers, no team wordmarks, single central
+subject dominant, chibi style consistent across all figures.
+```
+
+---
+
 ## 选稿提示 / 看图时的判断点
 
 - **A 卡册页**：信息密度最高，最适合「12 个联赛」这条主线；风险是 AI 容易把卡片画歪
-- **B JoJo**：风格反差最大，最容易在 XHS 信息流里被截停；风险是 AI 可能把人物画太年轻或脸不像金融人
+- **B JoJo 黑白漫画**：风格反差最大，最容易在 XHS 信息流里被截停；风险是 AI 可能把人物画太年轻或脸不像金融人
 - **C 油画王座**：和「洛杉矶体育之王」副标最契合，氛围最高级；风险是太严肃，不一定适合 XHS 调性
 - **D 电影海报**：最稳、点击率最可预测；风险是缺梗、和其他财经号封面撞型
+- **E X-Men / 教授 X**：「幕后主脑」叙事最贴；风险是 Cerebro 头盔 AI 容易画夸张、脸被遮住
+- **F JoJo 真人电影版**：最有戏剧张力 + 最多球员；风险是 6–7 个角色 AI 容易糊脸或比例崩
+- **G 实况野球 Q 版**：最可爱、和「收藏家」母题完美贴合；风险是 XHS 上可爱风会稀释「体育之王」的重量感
 
 建议先各跑一张，挑 1 主 + 1 备；最终封面文字（标题）仍用 `overlay_cover_text.py` 后期叠，**生图阶段一律不写字**。
