@@ -79,39 +79,67 @@ faces, no blurry main character, single central subject dominant.
 
 ---
 
-## Version B — JoJo 奇妙冒险 / 漫画分镜风
+## Version B — JoJo 奇妙冒险 / 石之海彩色漫画分镜风
 
-**梗**：沃尔特摆 JoJo 经典 pose，背后浮出他的「替身」——一群运动员从光影里冒出来；漫画网点 + 「ゴゴゴ」氛围线（注意：氛围线不是字，是斜向集中线）。
+**梗**：沃尔特摆 JoJo 经典 pose，背后浮出他名下的「替身」——一众真实球员从光影里冒出；参考 JoJo 第六部《石之海》（David Production 动画版）的饱和对比色、强烈光感和厚重线稿。和 F 版（真人电影）拉开：这版仍是**彩色漫画 / 动画质感**，不是真人摄影。
+
+**本轮变更**
+- 球员形象要**尽量贴近真实球员本人的识别度**：大谷翔平、LeBron James、Palmer / Enzo 级的切尔西欧洲面孔、Cadillac F1 车手等
+- 颜色风格从原本「黑白 + 局部彩色」升级为**全彩《石之海》调色**：高饱和蓝紫 / 青绿 / 品红主色，强烈对比，热带监狱式厚光
+- 仍保留 JoJo 戏剧性 pose 和厚重描线
 
 **画面定位**
-- 沃尔特微微侧身，下巴轻抬，一只手插裤袋一只手食指轻推眼镜，jojo 式戏剧性 pose
-- 镜头略仰，强透视
-- 背后多个球员从黑色烟雾 / 能量中半透明显现，重叠成一面「随从墙」
-- 黑白漫画底 + 局部彩色高光（道奇蓝、湖人紫金、切尔西蓝）作为破墨
+- 沃尔特微微侧身居中，下巴轻抬，一只手插裤袋，一只手食指轻推眼镜，低角度仰拍
+- 背后浮出 4–5 名真实球员的 JoJo 化半身像，每人一个经典扭身 pose，排成弧形
+- 《石之海》式彩色能量烟雾包围，替身光环用品红 / 青绿 / 柠檬黄打底
+- 线稿厚重、阴影硬边、色块饱满，画风是动画而非真人
 
 **Prompt**
 ```
-Vertical 3:4 black-and-white manga illustration with selective spot color,
-Hirohiko Araki JoJo's Bizarre Adventure influence, dramatic shonen pose.
-Foreground: an older American businessman in a sharp charcoal three-piece
-suit, thin rectangular glasses, short grey hair, calm intense expression,
-slightly tilted chin, one hand pushing his glasses up with the index finger,
-the other hand in his trouser pocket, dramatic three-quarter pose, low-angle
-hero perspective, exaggerated strong shoulders.
-Background: half-transparent ghostly figures of athletes rising out of dark
-ink smoke and energy, stacked behind him like summoned stands. A Japanese
-baseball player in Dodgers home pinstripes mid-swing, a tall basketball
-player in Lakers purple and gold mid-dunk, a footballer in Chelsea royal blue
-celebrating, a Formula 1 driver in a Cadillac helmet. The figures overlap and
-fade into thick brush ink and screentone dots.
-Style: high-contrast manga linework, halftone screentone shading, bold ink
-brush strokes, dramatic radial speed lines pointing toward the central man,
-selective spot color only on Dodgers royal blue, Lakers purple-gold, and
-Chelsea blue accents, everything else black, white, and grey.
-Mood: menacing, regal, "his stand has many faces".
+Vertical 3:4 full-color anime illustration, JoJo's Bizarre Adventure Stone
+Ocean (Part 6) anime style by David Production, Hirohiko Araki color
+aesthetic, bold ink outlines, high-contrast cel shading, saturated tropical
+and neon palette, dramatic shonen pose.
+Foreground center: an older American businessman in his early 60s in a
+sharp charcoal three-piece suit, thin rectangular glasses, short combed
+grey hair, calm intense expression, slightly tilted chin, one hand pushing
+his glasses up with the index finger, the other hand in his trouser pocket,
+dramatic three-quarter JoJo-style pose with hips twisted and shoulders
+exaggerated, low-angle hero perspective, bold confident silhouette.
+Background: four to five athlete figures drawn in the same JoJo anime
+style, rising out of swirling colored energy smoke and stand aura, arranged
+in a shallow arc behind and above him, each striking a dramatic JoJo pose.
+The athletes should be clearly recognizable as the following real
+professional athletes, rendered as faithful JoJo-style anime portraits with
+their actual facial features, hairstyles, and builds:
+- Shohei Ohtani in a Los Angeles Dodgers home white pinstripe uniform with
+  a royal blue cap, mid-swing follow-through, bat held high
+- LeBron James in a Los Angeles Lakers purple and gold jersey, mid-dunk
+  with one arm raised, muscular frame, headband, recognizable beard
+- Yoshinobu Yamamoto in the same Dodgers uniform, mid wind-up with leg
+  lifted, Japanese pitcher
+- a young European footballer resembling Cole Palmer in a Chelsea royal
+  blue home kit, arms spread celebrating
+- a Formula 1 driver in a Cadillac black and red racing suit holding a
+  matching helmet
+Treat the athletes as summoned stands: slightly translucent at the edges
+where they fade into the colored smoke, but their faces and bodies rendered
+in sharp JoJo anime linework with clear likeness to the real players.
+Style: thick bold outlines, hard cel shading with two or three shadow
+tones, sparkling highlights, dramatic radial energy lines pointing toward
+the central businessman, Araki-style muscular anatomy, Stone Ocean
+iconography of swirling ink and abstract motifs.
+Color palette: hyper-saturated Stone Ocean tones — electric violet, neon
+magenta, tropical teal, lemon yellow, deep cobalt blue, with hot pink and
+orange rim lights, against pools of deep indigo shadow.
+Lighting: multi-colored key lights from above and sides casting hard
+cel-shaded shadows, glowing rim light on every figure, dramatic colored
+god rays slicing the background.
+Mood: "his stand has many faces", regal, menacing, operatic JoJo theatrics.
 Aspect ratio 3:4 vertical. No text, no captions, no letters, no Japanese
-characters, no onomatopoeia text, no logos, no watermark, no jersey numbers,
-no team wordmarks, single central subject dominant.
+characters, no onomatopoeia text, no logos, no watermark, no jersey
+numbers, no team wordmarks, single central subject dominant, athletes must
+remain secondary to the man in the suit.
 ```
 
 ---
