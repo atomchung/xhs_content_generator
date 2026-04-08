@@ -2,6 +2,180 @@
 
 日期：2026-03-29
 
+## 2026-04-08 补记：为什么这一篇一开始没按 skills 走
+
+触发背景：
+
+- 这次做 `2026-04-07-dodgers-owner-sports-investments`（七亿买下大谷的男人 / Walter）
+- 整条 workflow 前半段几乎**完全没调用任何 xhs-* skill**，全靠手写
+- 直到用户连续三次具体指责（正文格式混乱、第 X 图混进正文、刻意 wordplay「名下最便宜」），才回头 Read 对应的 `SKILL.md`
+- 这一节只记录失误、归因、skill 可能的修改方式，不重写流程
+
+### 这次具体踩到的坑
+
+1. **写 `post.md` 发布正文之前没有 Read `xhs-note-assembly/SKILL.md`**
+   - 第一版正文 500+ 字（规范 150–300），7 段而不是 3 段
+   - 没有 number shock 开头，没有二选一收口
+   - 夹了「道奇是他名下最便宜的一支」这种刻意 wordplay，用户直接定性「不通顺」「刻意」
+
+2. **把「图组分工」和「发布正文」混在同一段里**
+   - 第一版 post.md 的发布正文里出现了 `第 1 图 / 第 2 图 / P1 / P2` 字样
+   - 用户直接问：「為什麼文字會有第 x 圖？ 圖片和 post 為啥合再一起了」
+   - 这是 skill 里从没明文禁过的红线被我当成了暗线来猜
+
+3. **230 亿市值数据研究了但没落盘**
+   - 跑了 5 个 WebSearch 拿到 Forbes 2026 估值、Lakers $10B、Cadillac F1 ~$1.2B 等等
+   - 数据只活在 chat 里和 TodoWrite 计划里
+   - 被系统 reminder 打断一次后就完全没写进 `fact_pack.md` 或 `post.md`
+   - 用户问「整合完毕了吗」才发现只是「研究 + 口头规划 + 没真动笔」
+
+4. **封面 prompt 迭代没过 `xhs-cover-template` 自检**
+   - 做了 A/B/C/D/E/F/G 七版 cover prompt + 一组 4 帧视频分镜
+   - 中间完全没跑过「主角 / 动作 / 冲突 / 背景符号」四项检查
+   - 能成立纯粹是因为用户自己在每一版都拍板了方向
+
+5. **Review 被要求时默认只看本地文件**
+   - 用户两次说「review 這篇貼文」
+   - 第一次我直接读本地 `post.md` 做了一次产品侧评审
+   - 用户纠正「文章已經發了，基於線上數據去 review」才想到 `xhs-publish-review` skill 的存在
+   - 这个 skill 的 description 里其实写清楚了触发条件，但我**在用户说「review」时完全没主动搜索 skills 目录**
+
+6. **整合数据阶段卡在「规划 → 中断 → 白干」循环**
+   - 当时模式：研究 → TodoWrite 计划 → 在 chat 里数字数预排版 → 系统 reminder → 没写文件 → 下一轮重来
+   - 根因：我花太多时间在「写之前想完美」，没先把草稿直接 Edit 进文件
+
+### 为什么一开始就没按 skills 走（归因）
+
+**A. skills 不是自动触发的，我需要主动识别**
+
+- Claude Code 里 skill 生效靠两条路径：用户显式 `/skill-name` 或我自己 Read `SKILL.md`
+- 看到「接下来产生 post.md」这类任务，我的默认反射是「直接写」，不是「先 Read 规范」
+- 这不是 skill 写得不好，是**触发语义在我这边太弱**
+
+**B. `scaffold_post_folder.py` 产出的 `post.md` 是空文件**
+
+- scaffold 只建好目录结构，`post.md` 内部是空的
+- 没有骨架 section（「标题」「发布正文」「图组分工」「自检」），所以我直接在空白上即兴发挥
+- 没有顶部 meta 提醒（如「写之前 Read skills/xhs-note-assembly/SKILL.md」）
+- 结果第一版的段落数、字数、区块划分全靠我的短期记忆，而我恰好没读过最新的 SKILL.md
+
+**C. `xhs-note-assembly/SKILL.md` 里没有明文「禁区」段落**
+
+- 里面写了推荐格式、字数区间、emoji 数量
+- 但**没有明文写「正文里禁止出现 Page / 第 X 图 / P1-P8 / 图组标签」**
+- 导致我把工作稿的 per-page 备注留在了正文里
+- 也没写「发布正文」和「图组分工」必须是两个物理上分开的 section
+
+**D. `xhs-fact-pack/SKILL.md` 没规定「研究数据必须先落盘再被引用」**
+
+- 现在的逻辑隐含「fact_pack 是输入，post 是输出」
+- 但没有硬性红线说「WebSearch 结果 → 必须先 Edit 进 fact_pack.md → 再允许在 post.md 里引用」
+- 所以 230 亿这组数据一度只活在 chat context 里
+
+**E. `xhs-publish-review/SKILL.md` description 触发词太窄**
+
+- 现在的 description 关键词是「对比真实发帖版本和草稿」「复盘」「归因」
+- 用户说「review 這篇貼文」时，我的第一反应是「pre-publish review」而不是「post-publish retrospective」
+- 缺一个触发词把「已发布 + review」这个组合硬绑到这个 skill
+
+**F. 我自己的写作工作流有问题**
+
+- 默认习惯：research → chat 里铺长计划 → TodoWrite → 数字数 → Edit
+- 前四步都会被系统 reminder / 新指令打断，一旦打断就全白干
+- 正确做法应该是：草稿直接 Edit 进文件（哪怕粗），原子 commit，然后再 polish
+- 这是流程习惯问题，不是 skill 问题，但 skill 可以帮我更早进入「动手」模式（比如 xhs-note-assembly 的第一条指令就是「把下面 template 贴进 post.md」）
+
+### Skills 可能的修改方式
+
+**1. `xhs-note-assembly/SKILL.md`**
+
+- 在 description 里加触发词：「生成 post.md 发布正文 / 写小红书正文 / 改文案 时必须先读这个 skill」
+- 新增 **「绝对禁区」段落**：
+  - 发布正文里禁止出现 `Page X / 第 X 图 / P1–P8 / 图组 / 图片 X` 任何一种图位标签
+  - 发布正文和图组分工必须是两个 `##` 级别的独立 section，且图组分工的首句必须写「读者看不到这部分，只是工作稿」
+- 新增 **「写作前必答」checklist**（写之前必须在脑子里过一遍）：
+  - 目标字数？（默认 150–300）
+  - 几段？（默认 3）
+  - 开头是什么 number shock？（先写出这个数字）
+  - 每段 1 个数字是什么？
+  - 二选一收口是哪两个？
+- 把当前 `post.md` 里的「本版规范自检」那一段正式写进 skill 作为**必须复制**的模板
+
+**2. `scripts/scaffold_post_folder.py`**
+
+- `post.md` 不能再是空文件，必须出生时就带骨架：
+  ```
+  ## Working Brief
+  - One-sentence story:
+  - Title direction:
+  - 格式说明：发布正文和图组分工是两件事，正文里不要写「第 X 图」
+  
+  ## 标题
+  - 主标：
+  - 封面副标：
+  - 备用标题：
+  
+  ## 发布正文（直接复制到小红书）
+  > 按 xhs-note-assembly 规范：3 段 / 150–300 字 / number shock 开头 / 二选一收口
+  ```text
+  [正文]
+  ```
+  
+  ### 本版规范自检
+  - [ ] 字数 150–300
+  - [ ] 3 段
+  - [ ] 每段 1 个数字
+  - [ ] number shock 开头
+  - [ ] 二选一收口
+  - [ ] 禁区检查：无 Page / 第 X 图 / P1–P8
+  
+  ## 图组分工（读者看不到，是工作稿）
+  - **P1 封面**：
+  - **P2**：
+  ...
+  
+  ## 来源尾注
+  ```
+- 顶部加 meta 注释：`<!-- 写正文前必须 Read skills/xhs-note-assembly/SKILL.md -->`
+- 这样即使我忘了读 skill，**文件骨架本身就在提醒规范**
+
+**3. `xhs-fact-pack/SKILL.md`**
+
+- 新增红线：**任何 WebSearch / WebFetch 的数据，必须先 Edit 进 `fact_pack.md` 的对应 section，才能被 `post.md` 引用**
+- 禁止「查完直接写正文」的 shortcut
+- 这样 230 亿这类数据不会再只活在 chat context 里
+- 理由：fact_pack 是 single source of truth，post 只是它的一次消费；数据不落盘等于没查
+
+**4. `xhs-publish-review/SKILL.md`**
+
+- description 补触发词：「用户说 `review 这篇 / 复盘 / 总结这篇怎么发的 / 线上版 vs 草稿 / 对比发出去的版本`，只要涉及**已发布**的帖子，都应触发这个 skill」
+- 特别点明：**只要用户用了过去式「发了 / 发布了 / 已经发」+ review / 看一下 / 检查**，默认进这个 skill，不要跳去产品侧文字评审
+- 并加一条「前置条件」：开始前必须先确认线上内容来源（URL / 截图 / 贴文字），**拿不到就走「截图版复盘」或「单边复盘」**，绝不用本地草稿冒充发布版
+
+**5. `notes/local-filesystem-workflow.md`**
+
+- 在 workflow 入口加一行硬规则：**新开一个 post workspace 后的第一步是 Read `xhs-note-assembly/SKILL.md`，然后才能动 `post.md`**
+- 这条规则放在 scaffold 脚本说明的正下方，让它和 scaffold 动作紧邻
+
+**6. 不做的事（避免扩面）**
+
+- **不**新建任何 `.md` 说明文件专门讲这次的坑（这正是这份文件 2026-04-03 补记里定过的原则「不再让每个问题都变成一份新 `.md`」）
+- **不**新建 entry-point skill（会和现有 8 个 skill 抢触发空间，反而增加噪音）
+- **不**把这次的失误硬写成评分表或 lint 脚本（过度工程，skill 里加几行红线就够了）
+
+### 这次最该先改的 3 件事
+
+1. **`scripts/scaffold_post_folder.py` 的 `post.md` 改成带骨架 + 禁区 + 自检 checklist 的模板**
+   — 这一条性价比最高，因为即使 skill 没触发，骨架本身就会强制我走规范
+2. **`xhs-note-assembly/SKILL.md` 加「绝对禁区」段落 + description 触发词**
+   — 堵住「第 X 图混进正文」和「skill 没主动触发」两个洞
+3. **`xhs-publish-review/SKILL.md` description 补「已发布 + review」触发词**
+   — 避免下次再把 publish review 做成 pre-publish review
+
+前两条做完，这次的 6 个具体坑里至少 4 个会在下一篇自动消失。
+
+
+
 ## 2026-04-03 补记
 
 这次调整不是要再发明一层新流程，而是把真实发布复盘里已经验证的问题，回写到现有 skill。
