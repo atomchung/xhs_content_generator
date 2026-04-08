@@ -67,6 +67,29 @@
   - 切爾西內部 Walter 個人實際投票權有多少（公開資料只到 12.8% 經濟權益這一層）。
   - PWHL 是「持有聯盟」還是「持有營運實體」的精確法律結構，公開報導講法不一。
 
+## 总资产估值（Forbes / Sportico 2025–2026 公开估值）
+
+| 资产 | 当前估值（美元） | Walter 持股结构 |
+|---|---|---|
+| 洛杉矶道奇 MLB | ~78 亿 | 主导股东 |
+| 洛杉矶湖人 NBA | ~100 亿 | 多数股权 2025/10 完成 |
+| 洛杉矶火花 WNBA | ~2.35 亿 | 控股股东 |
+| 切尔西 EPL（整队） | ~32.5 亿 | BlueCo 财团，个人 ~12.8% |
+| Cadillac F1 | ~10–13 亿 | TWG Motorsports 多数 |
+| PWHL 女子冰球联盟 | ~6–8 亿 | TWG Global 持有 |
+| Andretti / Spire / Wayne Taylor / Walkinshaw（IndyCar / NASCAR / IMSA / Supercars / Formula E） | 合计 ~5 亿 | TWG Motorsports |
+| **合计** | **~230 亿美元（约 1,650 亿人民币）** | |
+
+数据口径：Forbes 2026 北美球队估值榜（Dodgers / Lakers / Sparks）、Forbes 2024 全球足球俱乐部榜（Chelsea）、F1 / 赛车媒体公开估值。Walter 个人在切尔西通过 BlueCo 间接持有约 12.8%，按整队 32.5 亿计个人净敞口约 4.2 亿。本表为「他控制 / 共同控制的资产总市值」口径，不是个人净资产。
+
+## 收购历史时间线（当时价 → 现价）
+
+- 2012：道奇，~21.5 亿美元 → 现 ~78 亿（×3.6）
+- 2022：切尔西，BlueCo 财团 ~25 亿英镑 + 17.5 亿英镑投资承诺 → 整队现 ~32.5 亿美元
+- 2024：TWG Motorsports 成立，吃下 Andretti Global 全家桶（IndyCar + Formula E + IMSA + Supercars）
+- 2025/10：湖人，~100 亿美元估值，从 Buss 家族接多数股权，创全球职业球队收购估值纪录
+- 2026：Cadillac F1 作为 F1 第 11 队首次站上起跑线
+
 ## Risks and unresolved
 - 「擁有湖人」在中文社群已被講過很多次，要避免變成又一篇湖人新聞；本篇要把焦點放在「同一個人還握有哪些其他運動」。
 - Cadillac F1 嚴格說是 GM + TWG Motorsports 合資，不能寫成「Walter 個人擁有 F1 車隊」，要說「TWG 是大股東之一」。
