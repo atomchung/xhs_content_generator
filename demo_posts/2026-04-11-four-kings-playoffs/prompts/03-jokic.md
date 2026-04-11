@@ -1,102 +1,69 @@
 ## 这张图的任务
 
-让读者"突然意识到被挤出 MVP 讨论的是谁"。约基奇的 archetype 是"被挤出话筒的永恒之王"——他的武器不是爆发，是**比场上所有人都早看到三步**。所以动作必须是慢速、全看穿——背框传球、不看接球人、眼神出画。最该卖的是**动作 + 智商感 + 一串荒谬的三双数字**（27.8 / 12.9 / 10.9，目前同时领跑篮板榜 + 助攻榜）。
+让读者"突然意识到被挤出 MVP 讨论的是谁"。约基奇的 archetype 是"被挤出话筒的永恒之王"。最该卖的是**他绝对独一无二的招牌动作 + 一串荒谬的三双数字**（27.8 / 12.9 / 10.9，目前同时领跑篮板榜 + 助攻榜）。
 
-## 三种风格变体
+## 锁定风格：Blue Lock 现代日式
 
-同一个人物 + 同一个动作（背框无视线传球），分别用三套视觉语言跑出来对比。
+- 画风：Blue Lock（ブルーロック）+ First Slam Dunk 新剧场版主视觉
+- flat-shaded 数码上色、冷色调、清晰 HUD 文字层
+- 背后 ego-beast：**Rocky the Mountain Lion**（掘金蓝色咆哮山狮吉祥物）flat-shaded 剪影
 
-| 变体 | 擅长卖的点 | 身份标签处理 | 数字处理 |
-| --- | --- | --- | --- |
-| A · 港漫水墨 | "深沉老将"、气场、智者感 | 书法题字烘进图 | 次级位 |
-| B · 日系格斗 | "绝对王者"、压迫感、肌肉体量 | 留空间不烘字 | 次级位 |
-| C · Blue Lock 现代日式 | "双榜数字堆叠"、HUD、冷色 | HUD 结构化烘进图 | 数字是视觉主体 |
+## 签名动作：**Sombor Shuffle**
 
----
+以他塞尔维亚家乡 Sombor 命名的一招。非常好识别：
 
-## 变体 A · 港漫水墨
+- 接球后往一侧做一个小幅侧跳
+- **一条腿向外伸直踢开**（左右视情况，通常是左脚离地）
+- 身体同时向后 + 向侧倾斜
+- 单手在失衡状态下完成后仰跳投
+- 眼神看向篮筐，不看防守人
 
-```text
-Vertical 3:4 single-character poster in the style of a Hong Kong wuxia manhua cover — Ma Wing-shing's Storm Riders era, thick ink-brush outlines, painterly oil finish, heroic mythic aura, dense brushwork.
+这一招的关键特征是"**一腿踢开 + 身体侧倾**"，不是普通的 turn-around，不是普通的 fadeaway。全联盟只有他这么打。
 
-Subject: a tall heavyset bearded Serbian-looking NBA center in a Denver Nuggets navy-and-gold jersey #15, posting up with his back to the defender, delivering a no-look over-the-shoulder pass with one hand, the other hand sealing off the defender behind him. Calm knowing half-smile like he saw the whole play three seconds ago. Shaggy hair, thick beard, broad shoulders, heavy frame. Half-body framing, slight high angle from the passing lane direction so the viewer IS the intended receiver.
+**注意叙事张力**：这招是他的得分武器，和正文里"他看见全场、被挤出话筒的智者"的叙事有一点错位。但用户明确要求画签名动作，Sombor Shuffle 是他视觉上最独一无二的招牌，优先服从用户指令。
 
-Aura & color: deep indigo-violet energy swirling behind him like a brushed storm cloud, threads of pale silver ink-light tracing the trajectories of a dozen ghost-passes in arcs around his body, cool cinematic rim light in electric purple and silver.
-
-Background: pitch-black arena darkness, faint Denver Nuggets court markings like cracked stone, blurred ink-brush ghost silhouettes of teammates and defenders arranged around him in a chess-board pattern (he sees everyone on the floor), rice-paper texture with ink-splash overlays.
-
-Title integration: across the top-right, huge Chinese brush-calligraphy character "永远" painted in heavy silver-outlined ink — rendered like a Hong Kong wuxia manhua chapter title. Below it smaller brush text "场均三双". Do NOT cover his face or passing arm.
-
-Secondary numeric details baked into the image:
-- Left-middle vertical brush-stroke stat block: "27.8 · 12.9 · 10.9".
-- Secondary thinner line below: "篮板榜 + 助攻榜 双料第一".
-- Bottom banner ink tagline: "他不是本届 MVP 前二 但他是场均三双".
-- Small corner tag: "02 / 04".
-
-Style notes: painterly manhua, NOT anime, NOT photorealism. Thick confident ink outlines, muted violet-silver palette with deep shadows, mythic mood. Subject occupies ~65% of frame, face clearly readable, eyes looking OUT of frame rather than at the receiver — emphasizes foresight. Aspect ratio 3:4 vertical.
-```
-
----
-
-## 变体 B · 日系格斗
+## Final Prompt
 
 ```text
-Vertical 3:4 fighting game key art in the style of Kengan Ashura / Baki the Grappler. Thick cel-shaded outlines, exaggerated heavy muscular anatomy, stark violet-silver-black cinematic lighting, absolute boss character energy.
+Vertical 3:4 single-character poster in the exact style of Blue Lock (ブルーロック) character key visuals and the First Slam Dunk 2022 movie poster — modern clean digital flat shading, thin neon outlines, cold cinematic lighting, HUD data overlays baked into the image, ego-beast aesthetic, icy desaturated base palette with saturated violet-silver neon accents.
 
-Subject: a massive heavyset bearded center in a Denver Nuggets navy #15 jersey, posting up low with his back to a defender, delivering a behind-the-back no-look pass, his frame dominating the quadrant. Calm knowing half-smile of an unbothered final-boss character. Thick beard, heavy shoulders, wide stance.
+Subject: a tall heavyset bearded Serbian-looking NBA center in a Denver Nuggets navy-and-gold jersey #15, performing his signature SOMBOR SHUFFLE fadeaway jumper — mid-air in a highly unique off-balance pose: ONE LEG (left) fully extended out to the side and kicked up, the other leg just leaving the ground, body leaning backward AND sideways simultaneously, shooting the ball one-handed from the apex of the small side-hop, eyes locked on the rim not the defender, calm knowing half-smile like he's done this thousands of times. Shaggy hair, thick beard, broad shoulders, heavy frame. Half-body framing, slight three-quarter angle so the kicked-out leg is clearly visible.
 
-Aura & color: violet shockwave rings radiating behind him, sparks of silver electricity around his passing hand, hard rim-light from above casting a strong shadow across half his face. Thin purple lightning crackling in the corners of the frame.
+CRITICAL POSE DETAIL: the kicked-out leg is the single most important visual element — it must be clearly extended to the side and up, not just a normal jump. This is the Sombor Shuffle and nothing else looks like it.
 
-Background: pitch-black arena with violet spotlight beams cutting down, distant crowd silhouettes, faint Denver Nuggets court lines as a thin silver grid, dust particles floating.
+Background ego-beast: behind him, a massive flat-shaded silhouette of ROCKY THE MOUNTAIN LION (the Denver Nuggets' official blue mountain lion mascot) rendered as a roaring ego-beast — jaws open in a silent roar, eyes glowing silver, mane flowing upward like flame, body rendered as a single bold flat-color silhouette in deep navy-blue/black. The Rocky silhouette must fill the upper half of the background behind the subject.
 
-HUD minimalism: NO large text baked into the image. Keep the top-right of the frame as deliberate dark negative space for a later Alibaba PuHuiTi Heavy "永远" label. Only allowed on-image text is a tiny "02 / 04" corner tag in the bottom-right.
-
-Subject's eyes must look OUT of the frame, NOT at the receiver of the pass — this is the only psychologically important detail in this variant, do not break it.
-
-Style notes: aggressive cel-shaded manga key art, hard outlines, flat bright color blocks with hard shadows, high-contrast violet-silver-black palette. NOT soft anime, NOT painterly. Subject occupies ~70% of frame due to his size, face clearly readable. Aspect ratio 3:4 vertical.
-```
-
----
-
-## 变体 C · Blue Lock 现代日式
-
-```text
-Vertical 3:4 modern sports anime key visual in the exact style of Blue Lock (ブルーロック) character posters. Clean digital flat shading, thin neon outlines, cold cinematic lighting, HUD data overlays baked into the image, ego-aesthetic composition, icy desaturated palette with violet-silver neon accents.
-
-Subject: a tall heavyset bearded center in a Denver Nuggets navy-and-gold #15 jersey, posting up with his back to the defender, delivering a no-look over-the-shoulder pass, his eyes looking OUT of the frame (not at the receiver). Half-body framing, slight high angle from the passing lane direction.
-
-Aura & color: behind him, a massive flat-shaded violet storm-crown silhouette (Blue Lock ego-beast aesthetic), silver neon rim-light on his silhouette, pale violet light streaks tracing his imagined passes in arcs around him, deep navy-black background for color contrast.
+Aura & color: silver neon rim-light on the subject's silhouette, pale violet light streaks tracing the arc his shot will travel, deep navy-black base background for color contrast. Violet-silver atmospheric particles.
 
 HUD overlay, Blue Lock style (all baked into the image):
-- Top-right large Chinese label "永远" in Alibaba PuHuiTi Heavy, white with thin black outline and silver drop-shadow, huge and bold like a character name plate.
-- Left-middle structured triple-stat block in white monospace, stacked like a trading card:
+- Top-right large uppercase label "JOKIC" in Alibaba PuHuiTi Heavy / bold sans-serif, white fill with thin black outline and silver drop-shadow, huge and bold like a fighting game character name plate.
+- Directly under "JOKIC", smaller white monospace subtitle: "Denver Nuggets · #15 · 3× MVP".
+- Left-middle structured triple-stat block in white monospace, stacked like a trading card, framed by thin neon grid lines:
   "PPG  27.8"
   "RPG  12.9  ← LEADS LEAGUE"
   "APG  10.9  ← LEADS LEAGUE"
-- Secondary smaller line below: "first player ever to lead both boards & dimes in the same season (on pace)".
+- Secondary smaller line below: "first player on pace to lead both boards & dimes same season".
 - Bottom banner, thin Chinese tagline: "他不是本届 MVP 前二 · 但他双榜第一".
 - Small corner tag top-left: "PLAYER 02 / 04".
-- Thin neon grid lines framing the HUD blocks.
 
-Background: deep matte-violet-black arena, thin digital grid overlay, blurred ghost silhouettes of teammates and defenders arranged around him in a chess-board pattern visible as thin neon outlines (he sees everyone). No ink textures, no paint textures — fully clean digital finish.
+Background: deep matte-navy-black arena, thin digital neon grid overlay like a game UI, blurred Denver Nuggets court lines visible in the far distance as cold silver threads. NO ink textures, NO paint textures, NO brush strokes — fully clean digital finish.
 
-Style notes: modern Japanese sports anime key visual, cold clean flat shading, thin neon outlines, sharp typography. NOT manga ink, NOT painterly. Subject occupies ~65% of frame, face clearly readable, HUD text sharp and legible. Aspect ratio 3:4 vertical.
+Style notes: this is modern Japanese sports anime key visual — Blue Lock / First Slam Dunk / ego-beast aesthetic. NOT manga ink, NOT painterly, NOT photorealism. Cold clean flat shading, thin neon outlines, sharp legible typography. Subject occupies ~70% of frame due to his size plus the extended leg, face clearly readable, the Rocky Mountain Lion silhouette behind him is clearly identifiable as a roaring big cat, HUD text sharp and legible. Aspect ratio 3:4 vertical.
 ```
 
----
+## 如果要继续改
 
-## 使用说明
+- 最容易失败的一点：生图工具把 Sombor Shuffle 画成普通跳投——这时候用 edit 单独改"his left leg must be visibly kicked out to the side at a 45-degree angle"
+- 如果 Rocky 被画得像真狮子（太写实）→ 压扁成 flat silhouette，只保留两个银色光点当眼睛
+- 如果 HUD 里两个 LEADS LEAGUE 标签不够醒目 → 用金色或红色高亮显示这两行
 
-- **目标对比点**：三个变体出来后问自己——"哪一张让人感到他比场上所有人都早看到三步？"
-- A 的强项是"智者感"（港漫很会画"胸有成竹的老者"）；B 的强项是"不可动摇的终极 BOSS 感"；C 的强项是"把两榜第一这件事本身变成视觉冲击"。
-- 如果你主打的是"被挤出 MVP 讨论"的反差钩，C 变体可能最锋利——因为数据的"双料领跑"在 HUD 里比口头说更刺眼。
+## 不要动什么
 
-## 不要动什么（三个变体共有）
-
-- 背框无视线传球动作
-- 约基奇的眼睛看向画面外、不看接球人（全图最重要的心理细节）
+- **Sombor Shuffle 的一腿踢开姿态**（这是全图最重要的视觉细节）
 - 深紫 + 银光主色
-- "永远"两字身份标签
+- Rocky the Mountain Lion 吉祥物剪影当背景 ego-beast
+- "JOKIC" 英文大号 label（不是"永远"）
 - 掘金 #15 球衣
-- 半身 + 高角度构图
+- 半身 + 三分之四角度
+- Blue Lock flat-shaded 数码画风
 - 3:4 纵向比例
