@@ -1,63 +1,101 @@
 ## 这张图的任务
 
-让读者 0.5 秒内感到"这就是现在的 NBA"。SGA 的 archetype 是"当下之巅"——要一张王座加冕式的单人卡。最该卖的是**签名动作 + 压迫式的平静脸 + 一串荒谬的数字**（连续 20+ 得分 138 场，破 Wilt 保持 63 年的 126 场纪录）。
+SGA 单人介绍卡。上方大图展示人物，下方文字模块给出身份 + 关键数据。视觉语言和封面保持同一系列（Blue Lock 风格 + OKC Thunder 盾形 watermark 背景 + 实色黑横带文字）。
 
-## 锁定风格：Blue Lock 现代日式
+## 版式结构
 
-- 画风：Blue Lock（ブルーロック）+ First Slam Dunk 新剧场版主视觉
-- flat-shaded 数码上色、冷色调、清晰 HUD 文字层
-- 背后 ego-beast：**Rumble the Bison**（雷霆橙色野牛吉祥物）flat-shaded 剪影
+```
+┌──────────────────────────────┐  3:4 竖版
+│                              │
+│     SGA 全身大图              │  ← ~70% 高度
+│     签名动作：中距离急停后仰    │
+│     背景：OKC 盾形 watermark   │
+│     金色大气粒子               │
+│                              │
+├══════════════════════════════┤  实色黑横带（同封面样式）
+│  联盟第一人 ｜ 卫冕冠军         │  ← 标签行，白色小字
+│         S G A               │  ← 人名，金色，最大
+├──────────────────────────────┤  横带下方 stat 区（黑底延伸）
+│  31.4 分 · 55.3% 命中 · 卫冕 MVP   │  ← 第 1 行
+│  连续 20+ 得分 138 场 · 破 Wilt 63 年纪录 │  ← 第 2 行
+└──────────────────────────────┘
+```
 
-## 签名动作
+## 文字模块规格（和封面横带样式一致）
 
-**中距离急停后仰跳投**（mid-range pull-up fadeaway）——SGA 最 iconic 的得分武器。
+**横带区（solid #0a0a0a 黑底 + 上边 2px 金色细线）**：
+- 第 1 行（标签行）：`联盟第一人 ｜ 卫冕冠军` — Alibaba PuHuiTi Heavy，白色，小字
+- 第 2 行（人名）：`SGA` — Alibaba PuHuiTi Heavy，纯金色，最大字号
 
-- 身体重心轻微后倾
-- 持球肘部抬到 release point
-- 冷峻沉静的脸
-- 已经知道球会进的表情
-- 半身 + 低角度仰视（让观众感觉像是防守者在他面前）
+**横带下方 stat 区（黑底延伸，白色 monospace，两行内）**：
+- 第 1 行：`31.4 分  ·  55.3% 命中  ·  卫冕 MVP`
+- 第 2 行：`连续 20+ 得分 138 场  ·  破 Wilt 63 年纪录`
+
+## 人物动作：中距离急停后仰跳投（全身）
+
+- **全身**——单人卡空间充足，不用半身
+- 身体重心轻微后倾，右肘抬至出手点
+- 球刚刚离指尖（或指尖正在送球）
+- 冷峻沉静的脸，嘴角极轻微的笑
+- 短发，身形修长
+- 低角度仰拍，全身从画面底部撑到顶部
 
 ## Final Prompt
 
 ```text
-Vertical 3:4 single-character poster in the exact style of Blue Lock (ブルーロック) character key visuals and the First Slam Dunk 2022 movie poster — modern clean digital flat shading, thin neon outlines, cold cinematic lighting, HUD data overlays baked into the image, ego-beast aesthetic, icy desaturated base palette with saturated neon gold accents.
+Vertical 3:4 single-character INTRODUCTION CARD in the exact style of Blue Lock (ブルーロック) character key visuals and the First Slam Dunk 2022 movie poster — modern clean digital flat shading, thin neon outlines, cold cinematic lighting, icy desaturated base palette with saturated gold neon accents.
 
-Subject: a sleek lean NBA point guard in an Oklahoma City Thunder blue-and-orange jersey #2, captured at the apex of his signature MID-RANGE PULL-UP FADEAWAY — body slightly fading back, shooting elbow cocked at release point, ball just leaving his fingertips, cold emotionless face with the faintest smirk of a man who already knows the ball is going in, short dark hair. Half-body framing, slight low angle looking up as if the viewer is the defender being shot over.
+LAYOUT: two strict zones. ZONE 1 (top ~70% of total height): full-body character illustration, no text. ZONE 2 (bottom ~30%): solid black text panel. A clear hard line separates the two — Zone 2 is a completely opaque black block, nothing from Zone 1 bleeds through.
 
-Background ego-beast: behind him, a massive flat-shaded silhouette of RUMBLE THE BISON (the Oklahoma City Thunder's official orange bison mascot) rendered as a cold roaring ego-beast — horns glowing with gold neon rim-light, eyes glowing gold, mouth open in a silent roar, body rendered as a single bold flat-color silhouette in dark orange/black. The bison silhouette must be large enough to fill the upper half of the background behind the subject.
+ZONE 1 — FULL-BODY CHARACTER ILLUSTRATION:
+A lean sleek NBA point guard in an Oklahoma City Thunder blue-and-orange jersey #2, FULL-BODY portrait (head to foot, both feet visible at the bottom of Zone 1), captured at the apex of his signature MID-RANGE PULL-UP FADEAWAY — body slightly fading back, right shooting elbow cocked at release point, ball just leaving his fingertips, left arm trailing for balance, cold emotionless face with the faintest knowing smirk of a man who already knew it was going in, short dark hair, long athletic limbs. Camera: low angle looking UP from below his waist so his full body fills Zone 1 from bottom to top. He is the brightest, most saturated element on the card.
 
-Aura & color: gold neon rim-light on the subject's silhouette, atmospheric golden particles floating around him, deep teal-black base background for maximum color contrast against the gold accents. Thin warm-gold light streaks tracing the arc his shot will travel.
+Behind him: a faint watermark-level silhouette of the OKLAHOMA CITY THUNDER PRIMARY SHIELD LOGO (shield outline with a basketball inside, NO "OKC" text, NO "THUNDER" text, bare shield+ball symbol only), rendered in deeply muted dark teal-charcoal, low saturation — clearly behind the subject, never competing with him. Gold neon rim-light traces his silhouette. Thin warm-gold atmospheric particles. Deep teal-charcoal base. NO ego-beast. NO mascot. NO HUD overlays inside Zone 1 — the illustration is clean.
 
-HUD overlay, Blue Lock style (all baked into the image):
-- Top-right large uppercase label "SGA" in Alibaba PuHuiTi Heavy / bold sans-serif, white fill with thin black outline and gold drop-shadow, huge and bold like a fighting game character name plate.
-- Directly under "SGA", smaller white monospace subtitle: "Oklahoma City Thunder · #2".
-- Left-middle structured stat block in white monospace, each line on its own row, framed by thin neon grid lines:
-  "PPG      31.4"
-  "FG%      55.3"
-  "STREAK   138   ← LEADS WILT 126"
-- Secondary line below the stat block, smaller: "reigning MVP · MVP odds -2000".
-- Bottom banner, thin Chinese tagline in white sans-serif: "连续 20+ 138 场仍在续".
-- Small corner tag top-left: "PLAYER 01 / 04".
+ZONE 2 — SOLID BLACK TEXT PANEL (bottom ~30% of poster):
+Fill: pure solid black (#0a0a0a), fully opaque, no transparency, no gradient. Top edge has a thin 2px gold pinstripe border line — same style as the cover series title band.
 
-Background: deep matte-teal-black arena, thin digital neon grid overlay like a game UI, blurred OKC Thunder court lines visible in the far distance as cold gold threads. NO ink textures, NO paint textures, NO brush strokes — fully clean digital finish.
+Three rows of text inside Zone 2:
 
-Style notes: this is modern Japanese sports anime key visual — Blue Lock / First Slam Dunk / ego-beast aesthetic. NOT manga ink, NOT painterly, NOT photorealism. Cold clean flat shading, thin neon outlines, sharp legible typography. Subject occupies ~65% of frame, face clearly readable, the Rumble the Bison silhouette behind him is clearly identifiable as a bison (not a generic bull), HUD text sharp and legible. Aspect ratio 3:4 vertical.
+ROW A — TAG LINE (small, white, top of Zone 2):
+"联盟第一人 ｜ 卫冕冠军"
+Alibaba PuHuiTi Heavy, pure white, no outline, horizontally centered. ~15% of Zone 2 height.
+
+ROW B — PLAYER NAME (largest text on the entire card):
+"SGA"
+Alibaba PuHuiTi Heavy, pure GOLD (#FFD700), thin 1px black outline, horizontally centered, generous letter-spacing. ~45% of Zone 2 height. This must be the single largest text element on the card — noticeably bigger than the tag line and stats.
+
+ROW C — STAT BLOCK (small, white monospace, exactly 2 lines):
+Line 1: "31.4 分  ·  55.3% 命中  ·  卫冕 MVP"
+Line 2: "连续 20+ 得分 138 场  ·  破 Wilt 63 年纪录"
+Horizontally centered. ~30% of Zone 2 height. Exactly two lines — no more.
+
+Style notes: Blue Lock / First Slam Dunk aesthetic. NOT manga ink, NOT painterly, NOT photorealism. Clean flat shading, thin neon outlines, sharp legible typography. Zone 1 has zero text — all text lives in Zone 2. Zone 2 text hierarchy is strict: tag line small → player name large gold → stats small. Aspect ratio 3:4 vertical.
 ```
 
 ## 如果要继续改
 
-- 背景优先改什么：如果 Rumble 剪影被画得像一只真实牛（太写实）→ 把它压成更扁平的 silhouette + 只保留两个金色光点当眼睛
-- 如果 SGA 的脸不够"冷"→ 把眉毛放平、把嘴抿紧、去掉任何微笑线条
-- 如果 HUD 里的 STREAK 138 数字不够醒目 → 把它从 stat block 里拉出来单独一行，字号放大一倍
+- Zone 1 / Zone 2 不够清晰，文字和图混在一起 → 强调 "Zone 2 is a COMPLETELY SOLID OPAQUE BLACK panel, no illustration bleeds through"
+- SGA 被画成半身 → 强调 "FULL BODY from head to foot, both feet visible"
+- "SGA" 字号不够大 → 强调 "SGA must be 3× taller than the tag line above it"
+- Stat 第 2 行被截断 → 缩短为 "138 场连续 20+ · 刷新历史纪录"
+- 背景出现 RUMBLE 吉祥物 → 强调 "NO mascot, only the bare OKC shield symbol as a watermark"
 
 ## 不要动什么
 
-- 中距离急停后仰的签名动作
-- 金色主色 + 深 teal 背景对比
-- Rumble the Bison 吉祥物剪影当背景 ego-beast
-- "SGA" 英文大号 label（不是"当下"）
-- 雷霆 #2 球衣
-- 半身 + 低角度构图
-- Blue Lock flat-shaded 数码画风
 - 3:4 纵向比例
+- 两区版式（上图下字）
+- Zone 2 实色黑底 + 金色上边线
+- 标签行白色 / 人名金色 / stat 白色的三层字号层级
+- OKC 盾形 watermark（不是吉祥物，不带文字）
+- SGA 全身中距离急停后仰
+- Blue Lock flat-shaded 数码画风
+- Stat 控制在两行内
+
+## 事实校正
+
+- ✅ 31.4 PPG / 55.3 FG%
+- ✅ 138 场连续 20+ 得分（打破 Wilt 的 126 场纪录）
+- ✅ 卫冕 MVP（2025 赛季获奖）
+- ✅ MVP 赔率 -2000
+- ❌ 不要写 SGA 是"首次进季后赛"（他之前进过）
