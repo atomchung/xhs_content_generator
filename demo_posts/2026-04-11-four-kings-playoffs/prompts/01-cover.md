@@ -19,16 +19,29 @@
 | **主标位置** | 横跨中央 + 打破分割线 | **专属横带**（solid 黑底 + 金边），不和球员标签挤 |
 | **底排名字位置** | quadrant 顶部（撞标题）| quadrant **底部**（让出中央带）|
 
-## 签名动作 + 队徽背景表
+## 动作 + 镜头差异化（v4 重点改动）
 
-**关键妥协**：半身构图意味着 Jokic 的踢腿、Wemby 的水平飞身、Tatum 的撤步横向 gap **都看不到了**。签名动作只能靠**上半身姿态 + 手臂位置**暗示。脸的辨识度优先于全身招牌动作。
+**v3 失败的地方**：4 个人都是"正面 + 双手举球投篮"，长得像四张同模板换头像。**v4 强制差异化**：4 个人 4 种情绪 + 4 种动作类型 + 4 种镜头视角，都不允许是"正面投篮"。
 
-| 位置 | 球员 | 半身姿态 | 背景纯 logo（无文字）| 主色（去饱和）| 夺冠 |
-| --- | --- | --- | --- | --- | --- |
-| 左上 | **SGA** | 持球举至出手点的瞬间，胸以上，冷脸微笑 | OKC Thunder 盾形剪影（**纯盾型 + 篮球**，无 OKC 文字）| 深 teal + 暗橙 | **2025** |
-| 右上 | **JOKIC** | 单手出手 follow-through，肩膀侧倾，络腮胡正脸 | Denver Nuggets **山峰剪影**（无 Nuggets 文字）| 暗 navy + 暗金 | **2023** |
-| 左下 | **WEMBY** | 仰拍胸以上，一只手从画面上方往下伸要扇球，冷眼锁定下方 | San Antonio Spurs **单只马刺剪影**（无 SPURS 文字）| 暗 charcoal + 暗银 | （空白）|
-| 右下 | **TATUM** | 出手 follow-through，胸以上，专注脸 | Boston Celtics **纯三叶草剪影**（无 CELTICS 文字）| 暗 forest green + 暗白 | **2024** |
+| 球员 | 动作类型 | 情绪 | 镜头视角 | 关键视觉锚点 |
+| --- | --- | --- | --- | --- |
+| **SGA** | **投篮后冷脸回防**（不是投篮）| 冰冷猎手 | **3/4 侧脸**，水平 | 嘴角一丝若有若无的笑、眼神冷、球已经不在画面里 |
+| **JOKIC** | **No-look 跨场传球**（不是投篮）| 看穿全场的智者 | **正侧面**，肩膀和脸朝向相反方向 | 头朝左但传球臂朝右、calm half-smile |
+| **WEMBY** | **张开双臂展示翼展**（不是投篮）| 防守恐怖 | **低角度仰拍**，正面对称 | 双臂横向铺满 quadrant 显示翼展、冷眼俯视镜头 |
+| **TATUM** | **怒吼庆祝**（不是投篮）| 复出战神 | **略低 3/4 仰角** | 嘴张开嘶吼、拳头握紧拍胸 |
+
+**4 种动作类型**：回防 / 传球 / 防守站姿 / 庆祝 ——零重叠
+**4 种情绪**：冷漠 / 智者 / 恐怖 / 燃 ——零重叠
+**4 种镜头**：3/4 水平 / 正侧 / 低仰对称 / 低 3/4 ——零重叠
+
+## 队徽背景（保持 v3 不变）
+
+| 位置 | 背景纯 logo（无文字）| 主色（去饱和）| 夺冠 |
+| --- | --- | --- | --- |
+| 左上 SGA | OKC Thunder 盾形 + 篮球（无文字）| 深 teal + 暗橙 | **2025** |
+| 右上 JOKIC | Denver Nuggets 山峰剪影（无文字）| 暗 navy + 暗金 | **2023** |
+| 左下 WEMBY | 单只马刺剪影（无文字）| 暗 charcoal + 暗银 | （空白）|
+| 右下 TATUM | 纯三叶草剪影（无文字）| 暗 forest green + 暗白 | **2024** |
 
 ## 中央文字：实色横带（重点改动）
 
@@ -70,21 +83,36 @@ Vertical 3:4 key visual poster in the exact style of Blue Lock (ブルーロッ�
 
 Composition: a 2x2 grid character select screen, but with two important modifications. (1) Each player is rendered HALF-BODY / CHEST-UP, with the FACE as the absolute dominant element of each quadrant — face occupies roughly 40% of each quadrant's area, easily recognizable at thumbnail scale in a social media feed. (2) A solid horizontal TITLE BAND cuts across the image at the vertical midpoint, replacing the 2x2 horizontal divider. The 2x2 grid retains only its vertical center divider; the horizontal divider IS the title band.
 
-CRITICAL FRAMING RULE: half-body chest-up portrait of each player. NO full-body shots. NO leg-kick poses. NO horizontal flying poses. The face is king. Signature shooting motions are conveyed only through upper-body posture, head angle, and arm position visible above the chest line.
+CRITICAL FRAMING RULE: half-body chest-up portrait of each player. NO full-body shots. The face is king and must occupy ~40% of each quadrant.
+
+CRITICAL POSE DIFFERENTIATION RULE: the four players must NOT all be doing the same action. The previous version failed because all four were rendered as frontal jumpshooters with arms raised holding a ball — they looked like four versions of the same template. In THIS version, the four poses are deliberately split across four DIFFERENT action types, four DIFFERENT emotions, and four DIFFERENT camera angles. Do not draw any of them in a frontal-shooting pose. Do not show any of them holding a ball above their head.
+
+Action assignment:
+- SGA: post-make COLD WALK-OFF (not shooting)
+- JOKIC: NO-LOOK PASS (not shooting)
+- WEMBY: WINGSPAN INTIMIDATION POSE (not shooting)
+- TATUM: ROARING CELEBRATION (not shooting)
 
 CRITICAL BACKGROUND RULE: each team logo behind the player is rendered as a PURE SYMBOL silhouette — NO team wordmarks, NO "OKC", NO "Nuggets", NO "SPURS", NO "CELTICS" text anywhere in the background. Just the bare iconic shape of each team's logo, in a deeply DESATURATED dark version of the team color, sitting like a faint watermark behind the player. The player must be visually brighter and more saturated than the background logo at all times.
 
-TOP-LEFT QUADRANT — SGA (chest-up portrait):
-A lean handsome NBA point guard in an Oklahoma City Thunder blue-and-orange jersey #2, captured CHEST-UP at the release point of his mid-range jumper — shooting arm fully extended upward into the top of the frame, ball just leaving his fingertips at the very top edge, body upright facing roughly 3/4 toward the camera, cold emotionless face with the faintest knowing smirk, calm killer eyes, short dark hair. The face is the brightest, sharpest element in the quadrant. Behind him: faint dark silhouette of the OKLAHOMA CITY THUNDER PRIMARY SHIELD LOGO (the shield outline with a basketball inside, NO "OKC" text, NO "THUNDER" text, just the bare shield+ball symbol), rendered in deeply muted dark teal-charcoal, low saturation, almost a watermark. Subject pops bright. Background tint: deep desaturated teal-charcoal.
+TOP-LEFT QUADRANT — SGA (3/4 angle, cold walk-off, NO shooting):
+A lean handsome Canadian NBA point guard in an Oklahoma City Thunder blue-and-orange jersey #2, captured CHEST-UP in a 3/4 SIDE ANGLE — head turned slightly toward the camera, body angled away as if mid-stride walking calmly back up the court after just hitting a shot. NO ball in frame. NO arms raised in shooting motion. Both arms relaxed at his sides or one hand low at hip. The defining element is his FACE: cold dead-eyed expression with the faintest hint of a knowing smirk at one corner of his mouth — the look of a killer who already knew it was going in. Short dark hair, sharp jawline. Camera at level eye height. This is the only quadrant where the player is NOT in any active basketball motion — he's the calm one. Behind him: faint dark silhouette of the OKLAHOMA CITY THUNDER PRIMARY SHIELD LOGO (the shield outline with a basketball inside, NO "OKC" text, NO "THUNDER" text, just the bare shield+ball symbol), rendered in deeply muted dark teal-charcoal, watermark-like. Background tint: deep desaturated teal-charcoal.
 
-TOP-RIGHT QUADRANT — JOKIC (chest-up portrait):
-A heavyset bearded Serbian-looking NBA center in a Denver Nuggets navy-and-gold jersey #15, captured CHEST-UP at the follow-through of a one-handed fadeaway shot — shooting hand frozen in follow-through pose extended toward the upper-right corner of the frame, shoulders visibly twisted from the side-leaning Sombor Shuffle motion, head turned slightly with a calm knowing half-smile, eyes locked forward past the camera, shaggy hair, thick full beard. The beard and the smirk are the recognition anchors. Behind him: faint dark silhouette of the DENVER NUGGETS PRIMARY MOUNTAIN LOGO (just the angular mountain peak skyline silhouette, NO "Denver" text, NO "Nuggets" text, just the bare mountain shape), rendered in deeply muted dark navy with very subtle gold edge accents, low saturation, watermark-like. Background tint: deep desaturated navy.
+TOP-RIGHT QUADRANT — JOKIC (profile + head turn, no-look pass, NO shooting):
+A heavyset bearded Serbian-looking NBA center in a Denver Nuggets navy-and-gold jersey #15, captured CHEST-UP in a STRONG SIDE PROFILE — body and torso facing the LEFT side of the frame, shoulders rotated to the left, ONE arm extended to the left across the frame in a passing motion (palm open like a one-handed bullet pass that just released), but his HEAD is turned the OPPOSITE direction (looking to the RIGHT, away from where he's passing) — this is the iconic NO-LOOK PASS, the misdirection that defines his game. NO ball in frame (it just left his hand). NO shooting motion. Calm knowing half-smile, eyes scanning right while his arm threads a pass left. Shaggy hair, thick full beard. Camera at level eye height, capturing the contradiction between body direction and gaze direction. Behind him: faint dark silhouette of the DENVER NUGGETS PRIMARY MOUNTAIN LOGO (just the angular mountain peak skyline silhouette, NO "Denver" text, NO "Nuggets" text, just the bare mountain shape), rendered in deeply muted dark navy with subtle gold edge accents, watermark-like. Background tint: deep desaturated navy.
 
-BOTTOM-LEFT QUADRANT — WEMBY (chest-up portrait, low angle up):
-An ultra-tall lanky 22-year-old French center in a San Antonio Spurs black-and-silver jersey #1, captured CHEST-UP from a slight LOW angle looking up at him so he feels impossibly tall, ONE arm (right) reaching DOWN from the top of the frame across the upper portion of the quadrant as if swatting an unseen ball away below the bottom edge of the frame, the other shoulder squared, cold piercing eyes locked on a target below the frame, calm killer expression, elongated anime-proportioned facial features (long jaw, wide forehead, cool alien-handsome look). The downward-reaching arm and the cold downward gaze are the recognition anchors. Behind him: faint dark silhouette of a SINGLE SPUR (the iconic spur from the San Antonio Spurs logo, just the bare spur shape, NO "SPURS" text, NO wordmarks), rendered in deeply muted dark charcoal-silver, low saturation, watermark-like. Background tint: deep desaturated charcoal-black, the coldest of all four quadrants.
+BOTTOM-LEFT QUADRANT — WEMBY (low-angle frontal, wingspan intimidation, NO shooting):
+An ultra-tall lanky 22-year-old French center in a San Antonio Spurs black-and-silver jersey #1, captured CHEST-UP from a noticeable LOW ANGLE looking UP at him, BOTH arms spread WIDE horizontally to either side of the frame in a wingspan-display defensive stance — both arms straight, palms open, the wingspan stretching nearly the full width of the quadrant to emphasize his impossible reach. NO ball in frame. NO shooting motion. NO downward swat. Body squared frontally toward the camera, face tilted slightly down to look at the viewer with cold piercing dead eyes, calm killer expression (not angry, not yelling — coldly intimidating). Elongated anime-proportioned facial features: long jaw, wide forehead, cool alien-handsome look. The horizontal wingspan + the downward cold stare are the recognition anchors — this is the only quadrant with arms spread WIDE horizontally. Behind him: faint dark silhouette of a SINGLE SPUR (the iconic spur from the San Antonio Spurs logo, just the bare spur shape, NO "SPURS" text), rendered in deeply muted dark charcoal-silver, watermark-like. Background tint: deep desaturated charcoal-black, the coldest of all four quadrants.
 
-BOTTOM-RIGHT QUADRANT — TATUM (chest-up portrait):
-A wing forward in a Boston Celtics green-and-white jersey #0, captured CHEST-UP at the follow-through of his step-back jumper — shooting arm fully extended into the upper-right of the frame at the apex of the release, body upright with a slight backward lean from the just-completed step-back, eyes locked forward on the rim, focused intense expression, short twist braids. The shooting follow-through and the focused face are the recognition anchors. Behind him: faint dark silhouette of a SINGLE BOSTON CELTICS SHAMROCK (just the bare three-leaf shamrock shape, NO "CELTICS" text, NO wordmarks, NO leprechaun, NO Lucky), rendered in deeply muted dark forest-green, low saturation, watermark-like. Background tint: deep desaturated forest-green.
+BOTTOM-RIGHT QUADRANT — TATUM (slight low 3/4 angle, roaring celebration, NO shooting):
+A wing forward in a Boston Celtics green-and-white jersey #0, captured CHEST-UP from a slight LOW 3/4 angle, mid-ROARING CELEBRATION after a big bucket — mouth wide open in a fierce primal shout (teeth visible, intense not silly), one fist clenched and pulled back to chest level in a power-pump gesture, the other arm bent slightly at his side, eyes locked forward with raw fired-up intensity, veins-visible-on-neck level of emotion. NO ball in frame. NO shooting motion. NO calm face. This is the ONLY quadrant with an open-mouth shout and an explicit emotional outburst — the comeback warrior in full release. Short twist braids, broad shoulders. The roaring face and the clenched fist are the recognition anchors. Behind him: faint dark silhouette of a SINGLE BOSTON CELTICS SHAMROCK (just the bare three-leaf shamrock shape, NO "CELTICS" text, NO leprechaun), rendered in deeply muted dark forest-green, watermark-like. Background tint: deep desaturated forest-green.
+
+POSE DIFFERENTIATION ENFORCEMENT (must hold across the four quadrants):
+- SGA: 3/4 side angle, NO ball, hands DOWN, COLD smirk, walking calmly
+- JOKIC: profile angle with body and head facing OPPOSITE directions, ONE arm across frame in pass motion, NO ball, calm half-smile
+- WEMBY: low-angle frontal, BOTH arms spread WIDE horizontally, NO ball, cold downward stare
+- TATUM: slight low 3/4 angle, mouth OPEN in roar, fist clenched chest-high, NO ball, fired-up
+None of the four are in a shooting pose. None of the four are holding a ball above their head. Each face shows a clearly different emotion (cold / cerebral / intimidating / fired-up). Each arm position is unique (down / across / spread wide / fist at chest).
 
 CENTER OF THE FRAME — SOLID TITLE BAND (replaces the horizontal grid divider):
 
@@ -126,6 +154,11 @@ Style notes: this is modern Japanese sports anime key visual — Blue Lock / Fir
   7. TATUM 的 M 是不是没被画面右边裁掉（8% safe margin）
   8. 4 个名字标签都在该在的位置（上排在顶 / 下排在底）
 - **常见失败模式**：
+  - 4 个人又被画成"四张投篮像" → **这是最关键的失败**。重跑时单独强调 "NO BALL in any quadrant. NO shooting motion. SGA walks, JOKIC passes, WEMBY spreads arms, TATUM roars."
+  - SGA 又被画成手举球的投篮姿势 → 强调 "no ball, no raised arms, just chest-up cold walk-off"
+  - JOKIC 没有 head-turn 错位 → 强调 "head looks RIGHT while arm passes LEFT, opposite directions"
+  - WEMBY 双臂没张开 → 强调 "both arms extended HORIZONTALLY, wingspan stretches across full quadrant width"
+  - TATUM 没有嘶吼 → 强调 "mouth wide open, teeth visible, fierce shout, fist clenched at chest"
   - 球员被画成全身 / 站姿 → 强调 "CHEST-UP HALF-BODY portrait, face dominant, NO full body"
   - 背景 logo 还是带文字 → 强调 "PURE SYMBOL only, no wordmark, no team name"
   - 黑色横带变成半透明渐变 → 强调 "solid opaque #0a0a0a black, no transparency, no gradient"
