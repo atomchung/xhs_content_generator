@@ -34,22 +34,27 @@
 
 每個 prompt 控制在 **40-60 個英文單字**。太短 AI 會亂猜，太長會互相干擾。
 
-## 小紅薯角色卡（Character Bible）
+## 角色卡（Character Bible）
+
+基於倉庫 `mascot_q` 風格（Power-Pro 豆形角色 × 小紅書薯隊長）。
+完整設計見 `character-design.md`，三視圖 prompt 見 `character-turnaround.md`。
 
 以下描述在每個 prompt 中**原封不動複製**，只改動作和場景。
 
 ```
-A cute, round, red-orange potato-shaped character with small black dot eyes,
-a tiny cheerful smile, stubby little arms and legs, smooth matte skin texture.
-The character is roughly 2 heads tall (chibi proportions).
+A cute baseball mascot character with a rounded bean-shaped body, oversized head,
+very short stubby limbs, thick clean dark outline, simple dot eyes, small curved smile,
+subtle pink blush marks on cheeks, warm red-orange skin color.
+The character is roughly 2 heads tall with Xiaohongshu mascot charm
+and Power-Pro-like (Jikkyou Pawafuru Puroyakyu) proportions.
 ```
 
 ### 角色規則
 
 - **不改外觀**：每個 prompt 都複製同一段角色描述
 - **只改動作**：動作用獨立句子寫在角色描述之後
-- **不加服裝**：小紅薯就是裸薯，不穿衣服不戴帽子（除非特定集需要）
-- **表情靠描述**：用 `cheerful` / `curious` / `surprised` 等詞控制表情
+- **不加服裝**：裸薯就是完整角色，道具靠手持或頭戴，不穿在身上
+- **表情靠替換**：替換 `small curved smile` → `curious expression with head tilted slightly` 等（完整表見 character-design.md）
 
 ## 鏡頭選擇指南
 
@@ -104,13 +109,17 @@ Style: 3D animated, Pixar-inspired, cheerful and educational mood, clean render
 
 ```
 Close-up shot, static camera.
-A cute, round, red-orange potato-shaped character with small black dot eyes,
-a tiny cheerful smile, stubby little arms and legs, smooth matte skin texture.
-The character is roughly 2 heads tall (chibi proportions).
-Holding a white baseball with red stitching in both hands, looking at it curiously.
+A cute baseball mascot character with a rounded bean-shaped body, oversized head,
+very short stubby limbs, thick clean dark outline, simple dot eyes, small curved smile,
+subtle pink blush marks on cheeks, warm red-orange skin color.
+The character is roughly 2 heads tall with Xiaohongshu mascot charm
+and Power-Pro-like (Jikkyou Pawafuru Puroyakyu) proportions.
+Holding a white baseball with red stitching in both hands,
+looking at it with a curious expression, head tilted slightly.
 On a clean pastel yellow background.
 Soft diffused studio lighting, warm tone, no harsh shadows.
-3D animated, Pixar-inspired, cheerful and educational mood, clean render.
+Flat clean coloring, thick outline, non-photoreal mascot illustration,
+cheerful educational mood, no readable text, no logos, no watermarks.
 ```
 
 ### 不好的 prompt：
@@ -121,7 +130,7 @@ Soft diffused studio lighting, warm tone, no harsh shadows.
 （太短、沒有鏡頭、沒有場景、沒有風格、中文可能不被支持）
 
 ```
-A potato character in a huge baseball stadium with fans cheering,
+A mascot character in a huge baseball stadium with fans cheering,
 holding a bat while also catching a ball, the camera does a 360 orbit
 around them while zooming in, dramatic cinematic lighting with lens flares.
 ```

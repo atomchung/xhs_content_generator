@@ -1,7 +1,7 @@
 # 01 — 棒球有什麼東西？
 
 時長：30 秒（3 段 × ~10 秒）
-角色：小紅薯
+角色：小薯（mascot_q 風格）
 目標：認識棒球的三樣東西 — 球、棒子、場地。不講規則。
 
 ---
@@ -14,14 +14,18 @@
 
 ```text
 Close-up shot, static camera.
-A cute, round, red-orange potato-shaped character with small black dot eyes,
-a tiny cheerful smile, stubby little arms and legs, smooth matte skin texture.
-The character is roughly 2 heads tall (chibi proportions).
+A cute baseball mascot character with a rounded bean-shaped body, oversized head,
+very short stubby limbs, thick clean dark outline, simple dot eyes,
+curious expression with head tilted slightly,
+subtle pink blush marks on cheeks, warm red-orange skin color.
+The character is roughly 2 heads tall with Xiaohongshu mascot charm
+and Power-Pro-like (Jikkyou Pawafuru Puroyakyu) proportions.
 Holding a white baseball with red stitching in both hands,
-looking at it with curiosity, tilting its head slightly.
-On a clean pastel yellow background.
+looking at the ball with curiosity.
+On a clean pastel yellow background, no other objects.
 Soft diffused studio lighting, warm tone, no harsh shadows.
-3D animated, Pixar-inspired, cheerful and educational mood, clean render.
+Flat clean coloring, thick outline, non-photoreal mascot illustration,
+cheerful educational mood, no readable text, no logos, no watermarks.
 ```
 
 ---
@@ -34,14 +38,18 @@ Soft diffused studio lighting, warm tone, no harsh shadows.
 
 ```text
 Medium shot, static camera.
-A cute, round, red-orange potato-shaped character with small black dot eyes,
-a tiny cheerful smile, stubby little arms and legs, smooth matte skin texture.
-The character is roughly 2 heads tall (chibi proportions).
+A cute baseball mascot character with a rounded bean-shaped body, oversized head,
+very short stubby limbs, thick clean dark outline, simple dot eyes,
+excited big D-shaped open mouth smile,
+subtle pink blush marks on cheeks, warm red-orange skin color.
+The character is roughly 2 heads tall with Xiaohongshu mascot charm
+and Power-Pro-like (Jikkyou Pawafuru Puroyakyu) proportions.
 Gripping a wooden baseball bat that is taller than itself,
-resting the bat on its shoulder with a proud excited expression.
-On a clean pastel yellow background.
+resting the bat on its shoulder with a proud pose.
+On a clean pastel yellow background, no other objects.
 Soft diffused studio lighting, warm tone, no harsh shadows.
-3D animated, Pixar-inspired, cheerful and educational mood, clean render.
+Flat clean coloring, thick outline, non-photoreal mascot illustration,
+cheerful educational mood, no readable text, no logos, no watermarks.
 ```
 
 ---
@@ -56,13 +64,16 @@ Soft diffused studio lighting, warm tone, no harsh shadows.
 ```text
 Bird's eye view, slow zoom out.
 A simplified baseball diamond field with bright green grass and light brown dirt infield.
-Four white bases at each corner of the diamond shape.
-Five cute, round, red-orange potato-shaped characters with small black dot eyes
-and stubby limbs standing on the field — one on the pitcher's mound in the center,
-one at each base.
-Clean minimal style, no stadium or audience, just the diamond and characters.
+Four white square bases at each corner of the diamond shape.
+Five cute baseball mascot characters with rounded bean-shaped bodies, oversized heads,
+very short stubby limbs, thick clean dark outline, warm red-orange skin color,
+standing on the field — one on the pitcher's mound in the center,
+one at each of the four bases.
+Clean minimal style, no stadium, no audience, just the diamond and characters.
+Simple panel-like composition, large cream breathing room around the field.
 Soft diffused lighting from above, warm tone, no harsh shadows.
-3D animated, Pixar-inspired, cheerful and educational mood, clean render.
+Flat clean coloring, thick outline, non-photoreal mascot illustration,
+cheerful educational mood, no readable text, no logos, no watermarks.
 ```
 
 ---
