@@ -1,4 +1,4 @@
-# 圖 1 — 封面：選秀四大天王 v3
+# 圖 1 — 封面：選秀四大天王 v5
 
 ## 風格錨點
 - 畫風：Blue Lock（ブルーロック）/ First Slam Dunk 新劇場版主視覺
@@ -11,7 +11,7 @@
 
 ## 動作 + 鏡頭差異化
 
-v2 失敗的地方：4 個人都是全身站姿 + 能量特效，生出來像四個換色的同一個人。v3 強制差異化：4 人 4 種動作類型 + 4 種情緒 + 4 種鏡頭視角。
+v2 失敗的地方：4 個人都是全身站姿 + 能量特效，生出來像四個換色的同一個人。v3 強制差異化：4 人 4 種動作類型 + 4 種情緒 + 4 種鏡頭視角。v5 加入真人特徵參照。
 
 | 球員 | 動作類型 | 情緒 | 鏡頭視角 | 關鍵視覺錨點 |
 | --- | --- | --- | --- | --- |
@@ -19,6 +19,17 @@ v2 失敗的地方：4 個人都是全身站姿 + 能量特效，生出來像四
 | **PETERSON** | **持球突破急停瞬間**（不是投籃）| 冰冷殺手 | **3/4 側臉**，水平 | 重心極低、球護在腰側、眼神鎖死前方、表情冷漠零波動 |
 | **BOOZER** | **雙手抱球收板後仰頭**（不是投籃）| 自信從容 | **略仰的正面**，微微仰角 | 球抱在胸前、下巴微抬、眼神平靜帶一絲笑意、最放鬆的一個 |
 | **WILSON** | **火鍋上升中——單臂高舉封阻**（不是投籃）| 無聲恐怖 | **正側面 profile** | 右臂垂直向上衝出畫面頂部、身體扭轉上升中、側臉朝向鏡頭、招牌辮子甩動 |
+
+## 真人特徵參照（v5 新增）
+
+| 球員 | 血統/膚色 | 髮型（關鍵辨識點）| 體型 | 臉部 |
+| --- | --- | --- | --- | --- |
+| **DYBANTSA** | 剛果 + 牙買加混血，**最深的深棕色皮膚** | **短 mini twists**——頭頂密集、短小、繩狀扭轉，兩側和後方 fade 剃短，頂部與側面形成銳利對比。這是他的「DYMANSTA」新造型 | 6'9" 210 lbs，蜘蛛型長肢、窄腰寬肩、7 尺臂展 | 稜角分明、高顴骨、深邃眼窩 |
+| **PETERSON** | 非裔美國人（俄亥俄），**深棕色皮膚** | **中長垂掛式個人辮（individual braids）**——從 dreads 轉型而來，粗繩狀辮子垂過耳朵。不是貼頭皮的 cornrows，是有體積感的垂掛辮 | 6'6" 195 lbs，線條分明的肌肉型後衛、寬肩低重心 | 年輕但眼神銳利老練 |
+| **BOOZER** | 非裔美國人（NBA 球星 Carlos Boozer 之子），**中棕色皮膚帶暖色調** | **簡單短髮**——乾淨短 crop，無辮無 twists，四人中唯一的簡約髮型 | 6'9" 250 lbs，四人中**最重最壯**，厚實手臂、寬闊軀幹、已具 NBA 體格 | 對稱帥氣臉龐、強壯下顎線 |
+| **WILSON** | 非裔美國人（亞特蘭大），**深棕色皮膚** | **精緻 cornrow 編髮花紋**——貼頭皮的玉米辮，編成幾何圖案（菱形 argyle、鋸齒 zig-zag、磚牆 brick wall）。不是垂掛辮——是壓平貼頭的圖案型 cornrows，末端有辮尾延伸。每場比賽換新花樣，這是他的招牌 | 6'10" 7 尺臂展，彈性長肢型 | 骨骼結構突出、側臉輪廓銳利 |
+
+**四種完全不同的髮型**：短 twists（Dybantsa） / 垂掛辮（Peterson） / 簡約短髮（Boozer） / 貼頭 cornrow 花紋（Wilson）——零重疊，縮圖剪影也能分辨
 
 **4 種動作**：扣籃收臂 / 持球急停 / 收板仰頭 / 起跳封阻 ——零重疊
 **4 種情緒**：霸氣 / 冰冷 / 從容 / 恐怖 ——零重疊
@@ -70,26 +81,34 @@ CRITICAL BACKGROUND RULE: each school logo behind the player is rendered as a PU
 CRITICAL STYLE RULE: NO energy auras, NO fire effects, NO lightning, NO frost, NO shockwaves, NO speed lines emanating from players, NO glowing particle effects around bodies. The players are rendered cleanly with flat shading and subtle rim lighting only. Visual drama comes from COMPOSITION and EXPRESSION, not from special effects layered on top.
 
 TOP-LEFT QUADRANT — DYBANTSA (low angle, post-dunk arm retraction, NOT shooting):
-A tall lean 6'9" athletic forward, age 19, dark brown skin, with spider-like long limbs, narrow waist, and a 7-foot wingspan that makes his arms look disproportionately long. Short cropped hair or very short buzz cut, clean and tight to the scalp. Strong jawline, high cheekbones, intense deep-set eyes. In a dark navy college basketball jersey. Captured CHEST-UP from a LOW ANGLE looking UP at him. He has just finished a one-handed slam dunk — his right arm is retracting downward with wrist snapped in the follow-through position, fingers still splayed from releasing the rim. NO ball in frame. His face dominates the upper portion of the quadrant: looking DOWN at the camera with a dominant, commanding expression — mouth slightly open as if exhaling a low growl after the dunk, brow furrowed, eyes intense. This is the ALPHA of the group. The low-angle framing and his very long neck make him look imposing and impossibly tall, emphasizing his elongated spider-limbed build — he should look like a different species from the compact guard in the opposite quadrant.
+A tall lean 6'9" athletic forward, age 19, DEEP DARK BROWN SKIN (Congolese-Jamaican heritage — the darkest complexion of the four), with spider-like long limbs, narrow waist, broad shoulders, and a 7-foot wingspan that makes his arms look disproportionately long. HAIR: short MINI TWISTS on top — tightly coiled, upright, rope-like twisted strands densely covering the crown of his head, while the sides and back are FADED much shorter, creating a sharp textural contrast between the twisted top and the clean fade. This is NOT a buzz cut and NOT long braids — it is short upright twists with a fade, his signature "DYMANSTA" look. Chiseled angular face with high cheekbones, deep-set intense eyes, strong sharp jawline. In a dark navy college basketball jersey. Captured CHEST-UP from a LOW ANGLE looking UP at him. He has just finished a one-handed slam dunk — his right arm is retracting downward with wrist snapped in the follow-through position, fingers still splayed from releasing the rim. NO ball in frame. His face dominates the upper portion of the quadrant: looking DOWN at the camera with a dominant, commanding expression — mouth slightly open as if exhaling a low growl after the dunk, brow furrowed, eyes intense. This is the ALPHA of the group. The low-angle framing and his very long neck make him look imposing and impossibly tall, emphasizing his elongated spider-limbed build — he should look like a different species from the compact guard in the opposite quadrant.
 Behind him: faint dark silhouette of the BYU OVAL SHIELD LOGO (just the oval shield shape, NO "BYU" text, NO "Cougars" text), rendered in deeply muted dark navy, watermark-like. Background tint: deep desaturated navy-charcoal.
 
 TOP-RIGHT QUADRANT — PETERSON (3/4 side angle, ball-handling freeze, NOT shooting):
-A compact, athletically built guard, age 19, 6'6" but reads shorter than the forwards because of his thicker, denser frame and low center of gravity. Dark brown skin, lean but sneaky-strong build with broad shoulders that look wider than his height suggests. Clean short hair, neat and close-cropped. Youthful face but with sharp, focused eyes that read older than 19. In a college basketball jersey with crimson and blue accents. Captured CHEST-UP at a 3/4 SIDE ANGLE at eye level — head turned slightly toward the camera, body angled away. He is frozen in a ball-handling stance: ball held low at his hip with one hand, body coiled like a spring about to explode into a crossover drive. NO ball above head. NO shooting motion. His face: COLD, emotionless, dead-eyed killer focus — zero expression, jaw set, lips closed, eyes locked forward like a predator tracking prey. This is the most DANGEROUS-looking of the four. The 3/4 angle shows his broad shoulders and compact, coiled-spring build.
+A compact, athletically built guard, age 19, 6'6" but reads shorter than the forwards because of his thicker, denser frame and low center of gravity. DARK BROWN SKIN, cut-up and defined muscular build with broad shoulders that look wider than his height suggests — a coiled-spring physique. HAIR: medium-length INDIVIDUAL BRAIDS (box braids / plaits) that hang down past his ears — thick rope-like braided strands, some falling forward to partially frame his face, others swept back. These are NOT flat cornrows against the scalp — they are individual hanging braids with visible volume and weight, a style he transitioned to from his previous dreadlocks. Youthful face but with sharp, focused eyes that read older than 19. In a college basketball jersey with crimson and blue accents. Captured CHEST-UP at a 3/4 SIDE ANGLE at eye level — head turned slightly toward the camera, body angled away. He is frozen in a ball-handling stance: ball held low at his hip with one hand, body coiled like a spring about to explode into a crossover drive. NO ball above head. NO shooting motion. His face: COLD, emotionless, dead-eyed killer focus — zero expression, jaw set, lips closed, eyes locked forward like a predator tracking prey. This is the most DANGEROUS-looking of the four. The 3/4 angle shows his broad shoulders and compact, coiled-spring build. The hanging braids add a sense of stillness and weight that contrasts with his coiled-ready-to-strike posture.
 Behind him: faint dark silhouette of the KANSAS JAYHAWK BIRD SHAPE (just the bird silhouette, NO "Kansas" text, NO "Jayhawks" text), rendered in deeply muted dark crimson-charcoal, watermark-like. Background tint: deep desaturated crimson-navy.
 
 BOTTOM-LEFT QUADRANT — BOOZER (slight low angle frontal, rebound hold, NOT shooting):
-A balanced, powerfully built forward, age 19, 6'9" and 250 lbs — the HEAVIEST and most physically mature of the four, with the build of a player who is already NBA-ready. Medium-brown skin with a warm undertone, noticeably lighter complexion than the other three players. Clean-cut appearance: short neat hair, clean-shaven, handsome symmetrical face with a strong jaw — he looks like the son of a former NBA player (which he is). Broad shoulders, thick arms, solid torso. In a royal blue college basketball jersey. Captured CHEST-UP from a SLIGHT LOW ANGLE, nearly frontal. He has just grabbed a rebound and is holding the ball firmly against his chest with both hands, chin tilted slightly UPWARD, looking out past the camera with a CALM, COMPOSED expression — the faintest hint of a confident half-smile, relaxed brow, eyes steady. While the other three radiate intensity or aggression, this one radiates QUIET CONFIDENCE and poise. He looks like he already knows he belongs. His lighter skin, heavier build, and relaxed expression make him instantly distinguishable — this is the only quadrant that feels calm.
+A balanced, powerfully built forward, age 19, 6'9" and 250 lbs — the HEAVIEST and most physically mature of the four, with brute physical strength and the build of a player who is already NBA-ready. MEDIUM-DARK BROWN SKIN with a warm undertone — slightly lighter complexion than the other three, creating visual contrast. HAIR: simple SHORT CROP — clean-cut, close to the scalp, no braids, no twists, no texture styling. He is the ONLY one of the four with a plain, clean haircut, which immediately sets him apart from the three players with braids/twists. Clean-shaven, handsome symmetrical face with a strong jaw and warm features — he looks like the son of a former NBA all-star (which he is — son of Carlos Boozer). Broad shoulders, THICK ARMS, solid powerful torso — the widest and most muscular upper body of the four. In a royal blue college basketball jersey. Captured CHEST-UP from a SLIGHT LOW ANGLE, nearly frontal. He has just grabbed a rebound and is holding the ball firmly against his chest with both hands, chin tilted slightly UPWARD, looking out past the camera with a CALM, COMPOSED expression — the faintest hint of a confident half-smile, relaxed brow, eyes steady. While the other three radiate intensity or aggression, this one radiates QUIET CONFIDENCE and poise. He looks like he already knows he belongs. His clean short hair (vs. everyone else's braids/twists), heavier build, and relaxed expression make him instantly distinguishable — this is the only quadrant that feels calm.
 Behind him: faint dark silhouette of the DUKE BLUE DEVIL (just the devil mascot silhouette shape, NO "Duke" text), rendered in deeply muted dark royal blue, watermark-like. Background tint: deep desaturated royal blue-charcoal.
 
 BOTTOM-RIGHT QUADRANT — WILSON (side profile, rising to block, NOT shooting):
-An ultra-long, wide-shouldered power forward, age 19, 6'10" with a 7-foot wingspan and an elastic, rangy body — his defining physical trait is LENGTH and REACH. Dark brown skin. His most distinctive visual feature: INTRICATE BRAIDS — medium-length cornrow braids pulled back and flowing behind his head, some strands whipping upward with the motion of his jump. This hairstyle is his signature and must be clearly visible in the side profile. Strong facial bone structure with a sharp profile silhouette. In a light blue college basketball jersey. Captured CHEST-UP in a SIDE PROFILE view — but this is NOT a static pose. He is RISING to block a shot: his body is coiling UPWARD, torso twisting as he elevates, RIGHT arm reaching VERTICALLY up and piercing the top edge of the quadrant — fingers splayed wide to reject an invisible shot at the highest point. His left arm trails behind for balance. NO ball in frame. The upward explosion of his arm + the whip of his braids create a powerful sense of VERTICAL MOTION and athletic tension. His side-profile expression: jaw clenched, eye visible in profile locked upward at his target, cold and predatory — the look of a shot-blocker who owns the paint. The vertical reaching arm + flying braids + side profile are the instant recognition anchors — no other quadrant has this upward explosive energy.
+An ultra-long, wide-shouldered power forward, age 19, 6'10" with a 7-foot wingspan and an elastic, rangy body — his defining physical trait is LENGTH and REACH. DARK BROWN SKIN. His most distinctive visual feature: INTRICATE CORNROW BRAIDS — precision-styled cornrows pressed FLAT against his scalp in elaborate GEOMETRIC PATTERNS (diamond/argyle shapes and zig-zag lines woven into the braiding). These are NOT individual hanging braids like Peterson's — they are tight, flat-to-the-head cornrow designs with visible pattern work, his signature look that he changes to a new design every game. Some braided tails extend from the back of his head, whipping upward with the motion of his jump. The flat geometric cornrow pattern on top of his head should be clearly visible in the side profile. Strong facial bone structure with a sharp, angular profile silhouette — prominent brow ridge, defined cheekbones. In a light blue college basketball jersey. Captured CHEST-UP in a SIDE PROFILE view — but this is NOT a static pose. He is RISING to block a shot: his body is coiling UPWARD, torso twisting as he elevates, RIGHT arm reaching VERTICALLY up and piercing the top edge of the quadrant — fingers splayed wide to reject an invisible shot at the highest point. His left arm trails behind for balance. NO ball in frame. The upward explosion of his arm + the whip of his braided tails create a powerful sense of VERTICAL MOTION and athletic tension. His side-profile expression: jaw clenched, eye visible in profile locked upward at his target, cold and predatory — the look of a shot-blocker who owns the paint. The vertical reaching arm + geometric cornrow patterns + side profile are the instant recognition anchors — no other quadrant has this upward explosive energy.
 Behind him: faint dark silhouette of the UNC INTERLOCKING NC LETTERS (just the overlapping N and C letter shapes, NO "North Carolina" text, NO "Tar Heels" text), rendered in deeply muted dark Carolina blue, watermark-like. Background tint: deep desaturated Carolina blue-charcoal.
 
 POSE DIFFERENTIATION ENFORCEMENT (must hold across the four quadrants):
-- DYBANTSA: low-angle looking UP, right arm retracting from dunk, looking DOWN at camera, dominant growl, short buzz cut, darkest skin, longest limbs
-- PETERSON: 3/4 side eye-level, ball at hip in handling stance, cold dead-eyed killer, short neat hair, compact broad-shouldered build
-- BOOZER: slight low-angle frontal, ball held at chest with both hands, chin up, calm confident half-smile, lighter skin tone, heaviest/most muscular build, clean-cut
-- WILSON: side profile, right arm reaching VERTICALLY UP to block, braids whipping with motion, fierce upward gaze, longest wingspan
+- DYBANTSA: low-angle looking UP, right arm retracting from dunk, looking DOWN at camera, dominant growl. APPEARANCE: deepest dark brown skin, SHORT MINI TWISTS on top with faded sides, longest/leanest spider limbs, chiseled angular face.
+- PETERSON: 3/4 side eye-level, ball at hip in handling stance, cold dead-eyed killer. APPEARANCE: dark brown skin, MEDIUM HANGING INDIVIDUAL BRAIDS past ears, compact broad-shouldered muscular build, youthful face with old-soul eyes.
+- BOOZER: slight low-angle frontal, ball held at chest with both hands, chin up, calm confident half-smile. APPEARANCE: medium-dark brown skin (warmest/lightest of the four), SIMPLE SHORT CROP hair (the ONLY one without braids or twists — this is critical for differentiation), heaviest/most muscular build at 250 lbs, handsome symmetrical face.
+- WILSON: side profile, right arm reaching VERTICALLY UP to block, braided tails whipping with motion, fierce upward gaze. APPEARANCE: dark brown skin, FLAT GEOMETRIC CORNROW PATTERNS against scalp (diamond/zig-zag designs visible on top of head), longest wingspan, sharp angular profile bone structure.
+
+HAIR DIFFERENTIATION IS CRITICAL — four completely different hairstyles:
+1. DYBANTSA: short upright TWISTS (textured top, faded sides)
+2. PETERSON: medium hanging INDIVIDUAL BRAIDS (volume, falling past ears)
+3. BOOZER: simple SHORT CROP (clean-cut, no texture — the outlier)
+4. WILSON: flat GEOMETRIC CORNROW PATTERNS (pressed to scalp, visible designs)
+If any two players end up with the same hairstyle, the image has FAILED.
+
 None of the four are in a shooting pose. None are holding a ball above their head. Each face shows a clearly different emotion (dominant / cold / calm / fierce). Each arm position is unique (one arm down from dunk / one hand on ball at hip / both hands on ball at chest / one arm reaching vertically up). Each camera angle is different (low-up / 3/4 level / slight-low frontal / side profile). Each player has visually distinct physical features (skin tone, hair style, build proportion) that help differentiate them beyond just pose.
 
 HUD LABELS in each quadrant (minimal — no stats):
@@ -114,7 +133,9 @@ Style notes: modern Japanese sports anime key visual — Blue Lock / First Slam 
   1. 縮到 thumbnail 看一眼——4 張臉是不是都能認出不同的人？
   2. 4 個人的動作是不是全部不同（收臂 / 持球 / 抱球 / 起跳封阻）？
   3. 4 張臉的情緒是不是全部不同（霸氣 / 冰冷 / 從容 / 恐怖）？
-  3.5 4 個人的外貌是不是有明顯差異（膚色深淺、髮型、體型胖瘦）？BOOZER 是不是最壯最白？WILSON 有沒有辮子？
+  3.5 4 個人的髮型是不是全部不同？DYBANTSA 短 twists + fade？PETERSON 垂掛辮？BOOZER 簡約短髮（唯一沒辮子的）？WILSON 貼頭 cornrow 花紋？
+  3.6 膚色有沒有差異？DYBANTSA 最深？BOOZER 稍淺偏暖？
+  3.7 體型有沒有差異？BOOZER 是不是最壯最寬？DYBANTSA 是不是最瘦最長？PETERSON 是不是最矮最密實？
   4. 有沒有任何一個人被畫成投籃姿勢？→ 失敗，重跑
   5. 背景校徽是不是都沒有文字？
   6. 有沒有能量特效 / 火焰 / 閃電 / 衝擊波？→ 失敗，重跑
@@ -133,7 +154,11 @@ Style notes: modern Japanese sports anime key visual — Blue Lock / First Slam 
 - 人物被畫成全身 → 強調 "CHEST-UP HALF-BODY, face ~40% of quadrant, NO legs visible, NO full body"
 - 出現能量特效 → 強調 "NO auras, NO fire, NO lightning, NO particles, NO speed lines on players"
 - 背景校徽帶文字 → 強調 "PURE SYMBOL silhouette only, NO school names, NO text in backgrounds"
-- 四個人長得一模一樣 → 強調 "DYBANTSA: darkest skin, longest/leanest limbs, buzz cut. PETERSON: compact broad shoulders, short neat hair. BOOZER: LIGHTER skin tone, heaviest build at 250 lbs, clean-cut handsome. WILSON: intricate BRAIDS, widest wingspan, rangy elastic body."
+- 四個人長得一模一樣 → 強調 "DYBANTSA: darkest skin, SHORT MINI TWISTS with faded sides, longest/leanest spider limbs. PETERSON: dark skin, MEDIUM HANGING INDIVIDUAL BRAIDS past ears, compact broad shoulders. BOOZER: slightly lighter/warmer skin, SIMPLE SHORT CROP (the ONLY one without braids/twists), heaviest build at 250 lbs. WILSON: dark skin, FLAT GEOMETRIC CORNROW PATTERNS on scalp (diamond/zig-zag designs), widest wingspan, rangy elastic body."
+- DYBANTSA 被畫成光頭或 buzz cut → 強調 "NOT a buzz cut — he has SHORT MINI TWISTS, tightly coiled upright rope-like strands on top with faded sides. There is visible hair texture on top."
+- PETERSON 被畫成 cornrows（貼頭辮）→ 強調 "NOT cornrows. INDIVIDUAL HANGING BRAIDS with volume, falling past his ears. These are box braids / plaits that HANG DOWN, not pressed flat to the scalp."
+- BOOZER 被畫成有辮子 → 強調 "NO braids, NO twists. Simple SHORT CROP close to scalp. He is the ONLY one of the four with a clean plain haircut — this is critical for differentiation."
+- WILSON 的辮子和 PETERSON 的一樣 → 強調 "Wilson has FLAT CORNROWS against scalp with geometric PATTERNS (diamond/zig-zag shapes). Peterson has INDIVIDUAL HANGING BRAIDS with volume. They are completely different styles — Wilson's are flat and patterned, Peterson's hang down with weight."
 
 ## 不要動什麼
 
