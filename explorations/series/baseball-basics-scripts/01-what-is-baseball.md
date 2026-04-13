@@ -1,7 +1,7 @@
 # 01 — 棒球有什麼東西？
 
 時長：30 秒（3 段 × ~10 秒）
-角色：小薯（mascot_q 風格）
+角色：小 Din
 目標：認識棒球的三樣東西 — 球、棒子、場地。不講規則。
 
 ---
@@ -14,18 +14,17 @@
 
 ```text
 Close-up shot, static camera.
-A cute baseball mascot character with a rounded bean-shaped body, oversized head,
-very short stubby limbs, thick clean dark outline, simple dot eyes,
-curious expression with head tilted slightly,
-subtle pink blush marks on cheeks, warm red-orange skin color.
-The character is roughly 2 heads tall with Xiaohongshu mascot charm
-and Power-Pro-like (Jikkyou Pawafuru Puroyakyu) proportions.
-Holding a white baseball with red stitching in both hands,
-looking at the ball with curiosity.
-On a clean pastel yellow background, no other objects.
-Soft diffused studio lighting, warm tone, no harsh shadows.
-Flat clean coloring, thick outline, non-photoreal mascot illustration,
-cheerful educational mood, no readable text, no logos, no watermarks.
+A cute round cream-colored dumpling-shaped mascot with a small green sprout
+poking out from the top of a deep red baseball cap, big round sparkling black
+eyes with a white highlight dot, tiny dot nostrils, soft pink blush on both
+cheeks, smooth egg-shaped body with no neck, tiny stubby arms and legs.
+Soft plush toy texture with gentle gradient shading.
+Wearing a deep crimson red baseball jersey with bold white letters "Din"
+on the chest, white baseball pants, red round-toed cleats.
+Holding a white baseball with red stitching in both tiny hands,
+curious expression, head tilted slightly, eyes looking at the ball.
+Clean pastel yellow background. Soft even lighting.
+3D kawaii mascot style, Xiaohongshu mascot aesthetic.
 ```
 
 ---
@@ -38,18 +37,17 @@ cheerful educational mood, no readable text, no logos, no watermarks.
 
 ```text
 Medium shot, static camera.
-A cute baseball mascot character with a rounded bean-shaped body, oversized head,
-very short stubby limbs, thick clean dark outline, simple dot eyes,
-excited big D-shaped open mouth smile,
-subtle pink blush marks on cheeks, warm red-orange skin color.
-The character is roughly 2 heads tall with Xiaohongshu mascot charm
-and Power-Pro-like (Jikkyou Pawafuru Puroyakyu) proportions.
-Gripping a wooden baseball bat that is taller than itself,
-resting the bat on its shoulder with a proud pose.
-On a clean pastel yellow background, no other objects.
-Soft diffused studio lighting, warm tone, no harsh shadows.
-Flat clean coloring, thick outline, non-photoreal mascot illustration,
-cheerful educational mood, no readable text, no logos, no watermarks.
+A cute round cream-colored dumpling-shaped mascot with a small green sprout
+poking out from the top of a deep red baseball cap, big round sparkling black
+eyes with a white highlight dot, tiny dot nostrils, soft pink blush on both
+cheeks, smooth egg-shaped body with no neck, tiny stubby arms and legs.
+Soft plush toy texture with gentle gradient shading.
+Wearing a deep crimson red baseball jersey with bold white letters "Din"
+on the chest, white baseball pants, red round-toed cleats.
+Gripping a wooden baseball bat taller than itself, resting the bat
+on its shoulder, excited expression with a big open smile.
+Clean pastel yellow background. Soft even lighting.
+3D kawaii mascot style, Xiaohongshu mascot aesthetic.
 ```
 
 ---
@@ -63,17 +61,16 @@ cheerful educational mood, no readable text, no logos, no watermarks.
 
 ```text
 Bird's eye view, slow zoom out.
-A simplified baseball diamond field with bright green grass and light brown dirt infield.
-Four white square bases at each corner of the diamond shape.
-Five cute baseball mascot characters with rounded bean-shaped bodies, oversized heads,
-very short stubby limbs, thick clean dark outline, warm red-orange skin color,
-standing on the field — one on the pitcher's mound in the center,
-one at each of the four bases.
-Clean minimal style, no stadium, no audience, just the diamond and characters.
-Simple panel-like composition, large cream breathing room around the field.
-Soft diffused lighting from above, warm tone, no harsh shadows.
-Flat clean coloring, thick outline, non-photoreal mascot illustration,
-cheerful educational mood, no readable text, no logos, no watermarks.
+A simplified baseball diamond field with bright green grass and light brown
+dirt infield. Four white bases at each corner of the diamond.
+Five cute round cream-colored dumpling-shaped mascots, each with a small
+green sprout from a deep red baseball cap, big sparkling black eyes,
+soft pink blush, egg-shaped body, tiny stubby limbs, wearing deep crimson
+baseball jerseys with white letters "Din", white pants, red cleats.
+One mascot standing on the pitcher's mound in the center, one at each base.
+Clean minimal style, no stadium, no audience, just the diamond on a
+soft pastel green background. Soft even lighting from above.
+3D kawaii mascot style, Xiaohongshu mascot aesthetic.
 ```
 
 ---
