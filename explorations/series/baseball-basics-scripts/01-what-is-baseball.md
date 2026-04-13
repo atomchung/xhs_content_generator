@@ -1,81 +1,83 @@
 # 01 — 棒球有什麼東西？
 
-時長：30 秒（3 段 × ~10 秒）
+時長：30 秒（3 段 × 5-10 秒）
 角色：小 Din
-目標：認識棒球的三樣東西 — 球、棒子、場地。不講規則。
+故事：小 Din 第一次發現棒球 — 撿到球 → 找到棒子 → 走進球場
+工具：Gemini (Veo) 生成影片
 
 ---
 
-## Prompt 1 — 球（0-10s）
+## 故事弧線
 
-旁白：
+```
+Clip 1  撿到一顆球        好奇     「這是什麼？」
+Clip 2  找到一根棒子      興奮     「這個可以配那個！」
+Clip 3  走進球場          期待     「原來要在這裡玩。」
+```
 
-> 這是棒球。白色的，上面有紅色縫線，大概跟你拳頭一樣大。
+---
+
+## Clip 1 — 撿到球（~8 秒）
 
 ```text
-Close-up shot, static camera.
 A cute round cream-colored dumpling-shaped mascot with a small green sprout
-poking out from the top of a deep red baseball cap, big round sparkling black
-eyes with a white highlight dot, tiny dot nostrils, soft pink blush on both
-cheeks, smooth egg-shaped body with no neck, tiny stubby arms and legs.
-Soft plush toy texture with gentle gradient shading.
-Wearing a deep crimson red baseball jersey with bold white letters "Din"
-on the chest, white baseball pants, red round-toed cleats.
-Holding a white baseball with red stitching in both tiny hands,
-curious expression, head tilted slightly, eyes looking at the ball.
-Clean pastel yellow background. Soft even lighting.
-3D kawaii mascot style, Xiaohongshu mascot aesthetic.
+poking out from a deep red baseball cap, big sparkling black eyes, soft pink
+blush, wearing a crimson baseball jersey with "Din" on the chest, white pants,
+red cleats. The character is walking on bright green grass, notices something
+on the ground, bends down and picks up a white baseball with red stitching.
+It holds the ball up with both tiny hands and tilts its head curiously,
+examining the ball closely. The camera starts as a medium shot and slowly
+dollies in as the character picks up the ball, ending on a close-up of the
+character holding the ball near its face. Soft warm sunlight, shallow depth
+of field. 3D kawaii animation style, gentle and curious mood. No text,
+no subtitles, no watermarks.
 ```
 
 ---
 
-## Prompt 2 — 棒子（10-20s）
-
-旁白：
-
-> 這是球棒。木頭做的，一頭粗一頭細。用它把球打出去。
+## Clip 2 — 找到棒子（~8 秒）
 
 ```text
-Medium shot, static camera.
 A cute round cream-colored dumpling-shaped mascot with a small green sprout
-poking out from the top of a deep red baseball cap, big round sparkling black
-eyes with a white highlight dot, tiny dot nostrils, soft pink blush on both
-cheeks, smooth egg-shaped body with no neck, tiny stubby arms and legs.
-Soft plush toy texture with gentle gradient shading.
-Wearing a deep crimson red baseball jersey with bold white letters "Din"
-on the chest, white baseball pants, red round-toed cleats.
-Gripping a wooden baseball bat taller than itself, resting the bat
-on its shoulder, excited expression with a big open smile.
-Clean pastel yellow background. Soft even lighting.
-3D kawaii mascot style, Xiaohongshu mascot aesthetic.
+poking out from a deep red baseball cap, big sparkling black eyes, soft pink
+blush, wearing a crimson baseball jersey with "Din" on the chest, white pants,
+red cleats. The character spots a wooden baseball bat leaning against a fence
+on green grass. It walks over, grabs the bat with both hands and lifts it up —
+the bat is taller than the character. It rests the bat on its shoulder with
+a proud excited grin, then takes a small practice swing. The camera is a
+medium shot, panning slightly to follow the character as it walks to the bat
+and picks it up. Soft warm sunlight, bright cheerful palette. 3D kawaii
+animation style, energetic playful mood. No text, no subtitles, no watermarks.
 ```
 
 ---
 
-## Prompt 3 — 場地（20-30s）
-
-旁白：
-
-> 這是球場。形狀像鑽石，四個角各有一個白色壘包。
-> 中間那個小山丘，站的是投手。記住這個形狀就好。
+## Clip 3 — 走進球場（~10 秒）
 
 ```text
-Bird's eye view, slow zoom out.
-A simplified baseball diamond field with bright green grass and light brown
-dirt infield. Four white bases at each corner of the diamond.
-Five cute round cream-colored dumpling-shaped mascots, each with a small
-green sprout from a deep red baseball cap, big sparkling black eyes,
-soft pink blush, egg-shaped body, tiny stubby limbs, wearing deep crimson
-baseball jerseys with white letters "Din", white pants, red cleats.
-One mascot standing on the pitcher's mound in the center, one at each base.
-Clean minimal style, no stadium, no audience, just the diamond on a
-soft pastel green background. Soft even lighting from above.
-3D kawaii mascot style, Xiaohongshu mascot aesthetic.
+A cute round cream-colored dumpling-shaped mascot with a small green sprout
+poking out from a deep red baseball cap, big sparkling black eyes, soft pink
+blush, wearing a crimson baseball jersey with "Din" on the chest, white pants,
+red cleats. The character walks forward carrying a wooden baseball bat,
+stepping onto a baseball diamond field. The camera follows from behind the
+character at low angle, then slowly cranes upward and zooms out to reveal
+the full diamond-shaped field with bright green grass, brown dirt infield,
+and white bases at each corner. The character stops at home plate and looks
+out at the wide open field with a sense of wonder. Golden hour warm sunlight,
+wide open sky. 3D kawaii animation style, hopeful awe-inspired mood.
+No text, no subtitles, no watermarks.
 ```
 
 ---
 
-## 字數統計
+## 為什麼這樣拆
 
-旁白總字數：約 70 字
-中文語速約 3 字/秒 → 約 23 秒旁白 + 7 秒留白/轉場 = 30 秒
+| | Clip 1 | Clip 2 | Clip 3 |
+|---|---|---|---|
+| **故事** | 發現 | 裝備 | 舞台 |
+| **情緒** | 好奇 | 興奮 | 期待 |
+| **鏡頭** | dolly in（靠近 = 好奇） | pan follow（跟著走 = 行動） | crane up + zoom out（打開 = 世界展開） |
+| **動作** | 走 → 彎腰撿 → 舉起看 | 走過去 → 拿起 → 扛肩揮棒 | 走進場 → 停在本壘 → 望向全場 |
+| **結束幀** | 臉 + 球的特寫 | 扛棒的帥氣姿勢 | 俯瞰鑽石全景 |
+
+三段合在一起的感覺：一個小角色從「不知道這是什麼」到「準備好要開始玩了」。
