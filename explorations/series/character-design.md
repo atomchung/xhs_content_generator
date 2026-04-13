@@ -1,84 +1,106 @@
 # 棒球小白系列 — 角色設計
 
 日期：2026-04-13
-基於：倉庫 `mascot_q` 風格（Style 5 - Mascot Q）
 
 ## 角色概念
 
-**名稱：** 小薯（暫定）
-**原型：** 小紅書薯隊長 × パワプロ（實況野球）豆形球員
+**名稱：** 小 Din（暫定）
+**原型：** 奶白色糰子造型，頭頂棒球帽冒出小綠芽
 **定位：** 棒球小白系列的固定講解員 / 主角
 
-不是寫實球員，不是普通 chibi，是**帶運動語義的吉祥物角色** — 看一眼就知道「這是在講棒球」。
+## 角色基準描述（Master Prompt）
 
-## 角色規格
+以下為角色的完整描述，所有 prompt 以此為基準：
+
+```text
+A cute round cream-colored dumpling-shaped mascot with a small green sprout
+poking out from the top of a deep red baseball cap, big round sparkling black
+eyes with a white highlight dot, tiny dot nostrils, soft pink blush on both
+cheeks, smooth egg-shaped body with no neck, tiny stubby arms and legs.
+Soft plush toy texture with gentle gradient shading.
+Wearing a deep crimson red baseball jersey with bold white letters "Din"
+on the chest, white baseball pants, red round-toed cleats.
+Standing upright facing the camera, arms slightly out.
+Clean white studio background. Soft even lighting.
+3D kawaii mascot style, Xiaohongshu mascot aesthetic.
+```
+
+## 角色規格拆解
 
 ### 身體
 
 | 部位 | 描述 |
 |------|------|
-| 體型 | 圓潤豆形（bean-shaped），像一顆站起來的紅薯 |
-| 頭身比 | 約 2 頭身（oversized head），頭佔身體 50% |
-| 四肢 | 極短的手腳（very short limbs, stubby），沒有明顯關節 |
-| 輪廓 | 粗黑色描邊（thick clean outline），乾淨不毛糙 |
+| 體型 | 圓潤蛋形 / 糰子形（dumpling-shaped, egg-shaped body） |
+| 膚色 | 奶白色（cream-colored） |
+| 質感 | 軟絨毛絨玩具感（soft plush toy texture），帶柔和漸層陰影 |
+| 脖子 | 無（no neck），頭和身體一體 |
+| 四肢 | 極短粗手腳（tiny stubby arms and legs） |
 
-### 臉部
+### 頭部 / 臉部
 
 | 部位 | 描述 |
 |------|------|
-| 眼睛 | 大圓黑點眼（simple dot eyes），間距略寬，在臉部中下方 |
-| 嘴巴 | 小弧線嘴，預設微笑。可變化：驚訝（O 嘴）、興奮（D 嘴）、認真（一字嘴） |
-| 臉頰 | 兩團淡粉色腮紅（subtle blush marks） |
-| 表情系統 | 靠嘴型 + 眼睛大小 + 腮紅深淺控制，不用眉毛 |
+| 眼睛 | 大圓亮黑眼，帶白色高光點（big round sparkling black eyes with a white highlight dot） |
+| 鼻子 | 兩個小點（tiny dot nostrils） |
+| 臉頰 | 兩團柔粉色腮紅（soft pink blush on both cheeks） |
+| 嘴巴 | 預設不畫，需要時可加小弧線 |
 
-### 顏色
+### 帽子 + 綠芽
 
-| 部位 | 色值參考 | 描述 |
-|------|---------|------|
-| 身體主色 | 暖紅橘色 | 小紅書品牌色系，飽和但不刺眼 |
-| 身體陰影 | 稍深的暖紅色 | 簡單一層陰影，不要複雜光影 |
-| 描邊 | 深棕黑色 | 粗線條，統一寬度 |
-| 腮紅 | 淡粉色 | 半透明圓形 |
-| 眼睛 | 純黑 | 無高光（保持簡潔） |
+| 部位 | 描述 |
+|------|------|
+| 帽子 | 深紅色棒球帽（deep red baseball cap） |
+| 綠芽 | 帽頂冒出一小株綠色嫩芽（small green sprout poking out from the top） |
 
-### 服裝 / 道具
+綠芽是角色的**視覺識別核心**，每個 prompt 都必須保留。
 
-- **預設狀態：** 不穿衣服，裸薯就是完整角色
-- **棒球系列道具：** 依場景添加，一次最多一個
-  - 棒球手套（褐色）
-  - 球棒（木色）
-  - 棒球帽（紅色，可加 logo）
-  - 棒球（白色紅縫線）
-- **規則：** 道具是拿在手上或戴在頭上，不是穿在身上
+### 服裝
 
-## Prompt 用角色描述（Character Block）
+| 部位 | 描述 |
+|------|------|
+| 上衣 | 深紅色棒球球衣，胸前白色粗體字「Din」（deep crimson red baseball jersey with bold white letters "Din"） |
+| 褲子 | 白色棒球褲（white baseball pants） |
+| 鞋子 | 紅色圓頭球鞋（red round-toed cleats） |
 
-以下文字在每個影片 prompt 中**逐字複製**，不改動：
+### 風格
+
+| 項目 | 描述 |
+|------|------|
+| 渲染風格 | 3D kawaii mascot style |
+| 平台調性 | Xiaohongshu mascot aesthetic（小紅書吉祥物感） |
+| 質感 | 柔和漸層陰影（gentle gradient shading），不是硬邊平塗 |
+| 光線 | 柔和均勻光（soft even lighting） |
+| 背景 | 預設乾淨白色（clean white studio background） |
+
+## 表情變體
+
+角色表情靠眼睛大小 + 嘴型 + 身體姿態控制：
+
+| 表情 | 描述修改 |
+|------|---------|
+| 預設 | 不加嘴巴描述，靠大眼 + 腮紅自帶可愛感 |
+| 好奇 | `curious expression, head tilted slightly, eyes looking at [object]` |
+| 驚訝 | `surprised expression, small round open mouth, eyes widened` |
+| 興奮 | `excited expression, big open smile, arms raised slightly` |
+| 認真 | `focused determined expression, slight forward lean` |
+
+## 影片 Prompt 用角色描述（簡化版）
+
+完整 master prompt 太長時，可用以下簡化版（保留所有關鍵辨識特徵）：
 
 ```text
-A cute baseball mascot character with a rounded bean-shaped body, oversized head,
-very short stubby limbs, thick clean dark outline, simple dot eyes, small curved smile,
-subtle pink blush marks on cheeks, warm red-orange skin color.
-The character is roughly 2 heads tall with Xiaohongshu mascot charm
-and Power-Pro-like (Jikkyou Pawafuru Puroyakyu) proportions.
+A cute round cream-colored dumpling-shaped mascot with a small green sprout
+from the top of a deep red baseball cap, big sparkling black eyes with white
+highlight, soft pink blush, smooth egg-shaped body, tiny stubby limbs.
+Soft plush toy texture. Wearing a deep crimson baseball jersey with white
+letters "Din", white pants, red cleats.
+3D kawaii mascot style, Xiaohongshu mascot aesthetic.
 ```
 
-### 表情變體（替換 `small curved smile` 部分）
+## 道具規則
 
-| 表情 | 替換詞 |
-|------|--------|
-| 開心（預設） | `small curved smile` |
-| 好奇 | `curious expression with head tilted slightly` |
-| 驚訝 | `surprised wide-open round mouth` |
-| 興奮 | `excited big D-shaped open mouth smile` |
-| 認真 | `focused determined straight-line mouth` |
-| 困惑 | `confused expression with a small squiggle mouth` |
-
-## 風格規則（從 mascot_q 繼承）
-
-- **Flat clean coloring** — 平塗填色，不要漸層渲染
-- **Thick outline** — 粗描邊是視覺識別核心
-- **Non-photoreal** — 不要寫實、不要光澤 anime 感
-- **No mature body proportions** — 永遠保持豆形 2 頭身
-- **No cluttered background** — 背景永遠乾淨
-- **No readable text / logos / watermarks** — prompt 裡不加文字
+- 角色自帶服裝（球衣 + 球褲 + 球鞋 + 帽子），不需要額外穿搭
+- 道具靠手持：棒球、球棒、手套
+- 一個 prompt 最多加一個手持道具
+- 綠芽永遠從帽頂冒出，不被道具遮擋
