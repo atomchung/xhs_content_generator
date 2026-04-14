@@ -1,4 +1,4 @@
-# 圖 1 — 封面：選秀四大天王 v5
+# 圖 1 — 封面：選秀四大天王 v6
 
 ## 風格錨點
 - 畫風：Blue Lock（ブルーロック）/ First Slam Dunk 新劇場版主視覺
@@ -26,10 +26,10 @@ v2 失敗的地方：4 個人都是全身站姿 + 能量特效，生出來像四
 | --- | --- | --- | --- | --- |
 | **DYBANTSA** | 剛果 + 牙買加混血，**最深的深棕色皮膚** | **短 mini twists**——頭頂密集、短小、繩狀扭轉，兩側和後方 fade 剃短，頂部與側面形成銳利對比。這是他的「DYMANSTA」新造型 | 6'9" 210 lbs，蜘蛛型長肢、窄腰寬肩、7 尺臂展 | 稜角分明、高顴骨、深邃眼窩 |
 | **PETERSON** | 非裔美國人（俄亥俄），**深棕色皮膚** | **中長垂掛式個人辮（individual braids）**——從 dreads 轉型而來，粗繩狀辮子垂過耳朵。不是貼頭皮的 cornrows，是有體積感的垂掛辮 | 6'6" 195 lbs，線條分明的肌肉型後衛、寬肩低重心 | 年輕但眼神銳利老練 |
-| **BOOZER** | 非裔美國人（NBA 球星 Carlos Boozer 之子），**中棕色皮膚帶暖色調** | **簡單短髮**——乾淨短 crop，無辮無 twists，四人中唯一的簡約髮型 | 6'9" 250 lbs，四人中**最重最壯**，厚實手臂、寬闊軀幹、已具 NBA 體格 | 對稱帥氣臉龐、強壯下顎線 |
+| **BOOZER** | 非裔美國人（NBA 球星 Carlos Boozer 之子），**中棕色皮膚帶暖色調** | **花椰菜頭（broccoli cut）**——頂部蓬鬆密集捲髮，體積感大、輪廓圓潤突出，兩側和後方 fade 剃短。不是辮子也不是 twists——是高聳的捲髮蓬頂。四人中唯一的捲髮造型 | 6'9" 250 lbs，四人中**最重最壯**，厚實手臂、寬闊軀幹、已具 NBA 體格 | 對稱帥氣臉龐、強壯下顎線 |
 | **WILSON** | 非裔美國人（亞特蘭大），**深棕色皮膚** | **精緻 cornrow 編髮花紋**——貼頭皮的玉米辮，編成幾何圖案（菱形 argyle、鋸齒 zig-zag、磚牆 brick wall）。不是垂掛辮——是壓平貼頭的圖案型 cornrows，末端有辮尾延伸。每場比賽換新花樣，這是他的招牌 | 6'10" 7 尺臂展，彈性長肢型 | 骨骼結構突出、側臉輪廓銳利 |
 
-**四種完全不同的髮型**：短 twists（Dybantsa） / 垂掛辮（Peterson） / 簡約短髮（Boozer） / 貼頭 cornrow 花紋（Wilson）——零重疊，縮圖剪影也能分辨
+**四種完全不同的髮型**：短 twists（Dybantsa） / 垂掛辮（Peterson） / 花椰菜頭捲髮（Boozer） / 貼頭 cornrow 花紋（Wilson）——零重疊，縮圖剪影也能分辨
 
 **4 種動作**：扣籃收臂 / 持球急停 / 收板仰頭 / 起跳封阻 ——零重疊
 **4 種情緒**：霸氣 / 冰冷 / 從容 / 恐怖 ——零重疊
@@ -89,7 +89,7 @@ A compact, athletically built guard, age 19, 6'6" but reads shorter than the for
 Behind him: faint dark silhouette of the KANSAS JAYHAWK BIRD SHAPE (just the bird silhouette, NO "Kansas" text, NO "Jayhawks" text), rendered in deeply muted dark crimson-charcoal, watermark-like. Background tint: deep desaturated crimson-navy.
 
 BOTTOM-LEFT QUADRANT — BOOZER (slight low angle frontal, rebound hold, NOT shooting):
-A balanced, powerfully built forward, age 19, 6'9" and 250 lbs — the HEAVIEST and most physically mature of the four, with brute physical strength and the build of a player who is already NBA-ready. MEDIUM-DARK BROWN SKIN with a warm undertone — slightly lighter complexion than the other three, creating visual contrast. HAIR: simple SHORT CROP — clean-cut, close to the scalp, no braids, no twists, no texture styling. He is the ONLY one of the four with a plain, clean haircut, which immediately sets him apart from the three players with braids/twists. Clean-shaven, handsome symmetrical face with a strong jaw and warm features — he looks like the son of a former NBA all-star (which he is — son of Carlos Boozer). Broad shoulders, THICK ARMS, solid powerful torso — the widest and most muscular upper body of the four. In a royal blue college basketball jersey. Captured CHEST-UP from a SLIGHT LOW ANGLE, nearly frontal. He has just grabbed a rebound and is holding the ball firmly against his chest with both hands, chin tilted slightly UPWARD, looking out past the camera with a CALM, COMPOSED expression — the faintest hint of a confident half-smile, relaxed brow, eyes steady. While the other three radiate intensity or aggression, this one radiates QUIET CONFIDENCE and poise. He looks like he already knows he belongs. His clean short hair (vs. everyone else's braids/twists), heavier build, and relaxed expression make him instantly distinguishable — this is the only quadrant that feels calm.
+A balanced, powerfully built forward, age 19, 6'9" and 250 lbs — the HEAVIEST and most physically mature of the four, with brute physical strength and the build of a player who is already NBA-ready. MEDIUM-DARK BROWN SKIN with a warm undertone — slightly lighter complexion than the other three, creating visual contrast. HAIR: a prominent BROCCOLI CUT — voluminous, tightly curled black hair piled HIGH on top of his head with significant volume and a rounded silhouette, while the sides and back are FADED much shorter. The curly top rises noticeably above his head, creating an instantly recognizable rounded shape. This is NOT short crop, NOT braids, NOT twists — it is a HIGH-VOLUME CURLY TOP with a fade, commonly called a "broccoli cut" or "zoomer perm." He is the ONLY one of the four with curly hair (the others have twists, braids, or cornrows), which immediately sets him apart. Clean-shaven, handsome symmetrical face with a strong jaw and warm features — he looks like the son of a former NBA all-star (which he is — son of Carlos Boozer). Broad shoulders, THICK ARMS, solid powerful torso — the widest and most muscular upper body of the four. In a royal blue college basketball jersey. Captured CHEST-UP from a SLIGHT LOW ANGLE, nearly frontal. He has just grabbed a rebound and is holding the ball firmly against his chest with both hands, chin tilted slightly UPWARD, looking out past the camera with a CALM, COMPOSED expression — the faintest hint of a confident half-smile, relaxed brow, eyes steady. While the other three radiate intensity or aggression, this one radiates QUIET CONFIDENCE and poise. He looks like he already knows he belongs. His distinctive curly broccoli-cut hair (vs. everyone else's braids/twists), heavier build, and relaxed expression make him instantly distinguishable — this is the only quadrant that feels calm.
 Behind him: faint dark silhouette of the DUKE BLUE DEVIL (just the devil mascot silhouette shape, NO "Duke" text), rendered in deeply muted dark royal blue, watermark-like. Background tint: deep desaturated royal blue-charcoal.
 
 BOTTOM-RIGHT QUADRANT — WILSON (side profile, rising to block, NOT shooting):
@@ -99,13 +99,13 @@ Behind him: faint dark silhouette of the UNC INTERLOCKING NC LETTERS (just the o
 POSE DIFFERENTIATION ENFORCEMENT (must hold across the four quadrants):
 - DYBANTSA: low-angle looking UP, right arm retracting from dunk, looking DOWN at camera, dominant growl. APPEARANCE: deepest dark brown skin, SHORT MINI TWISTS on top with faded sides, longest/leanest spider limbs, chiseled angular face.
 - PETERSON: 3/4 side eye-level, ball at hip in handling stance, cold dead-eyed killer. APPEARANCE: dark brown skin, MEDIUM HANGING INDIVIDUAL BRAIDS past ears, compact broad-shouldered muscular build, youthful face with old-soul eyes.
-- BOOZER: slight low-angle frontal, ball held at chest with both hands, chin up, calm confident half-smile. APPEARANCE: medium-dark brown skin (warmest/lightest of the four), SIMPLE SHORT CROP hair (the ONLY one without braids or twists — this is critical for differentiation), heaviest/most muscular build at 250 lbs, handsome symmetrical face.
+- BOOZER: slight low-angle frontal, ball held at chest with both hands, chin up, calm confident half-smile. APPEARANCE: medium-dark brown skin (warmest/lightest of the four), HIGH-VOLUME BROCCOLI CUT curly hair (the ONLY one with curls — everyone else has twists/braids/cornrows), heaviest/most muscular build at 250 lbs, handsome symmetrical face.
 - WILSON: side profile, right arm reaching VERTICALLY UP to block, braided tails whipping with motion, fierce upward gaze. APPEARANCE: dark brown skin, FLAT GEOMETRIC CORNROW PATTERNS against scalp (diamond/zig-zag designs visible on top of head), longest wingspan, sharp angular profile bone structure.
 
 HAIR DIFFERENTIATION IS CRITICAL — four completely different hairstyles:
 1. DYBANTSA: short upright TWISTS (textured top, faded sides)
 2. PETERSON: medium hanging INDIVIDUAL BRAIDS (volume, falling past ears)
-3. BOOZER: simple SHORT CROP (clean-cut, no texture — the outlier)
+3. BOOZER: high-volume BROCCOLI CUT CURLS (rounded curly top, faded sides — the only curly hair)
 4. WILSON: flat GEOMETRIC CORNROW PATTERNS (pressed to scalp, visible designs)
 If any two players end up with the same hairstyle, the image has FAILED.
 
@@ -133,7 +133,7 @@ Style notes: modern Japanese sports anime key visual — Blue Lock / First Slam 
   1. 縮到 thumbnail 看一眼——4 張臉是不是都能認出不同的人？
   2. 4 個人的動作是不是全部不同（收臂 / 持球 / 抱球 / 起跳封阻）？
   3. 4 張臉的情緒是不是全部不同（霸氣 / 冰冷 / 從容 / 恐怖）？
-  3.5 4 個人的髮型是不是全部不同？DYBANTSA 短 twists + fade？PETERSON 垂掛辮？BOOZER 簡約短髮（唯一沒辮子的）？WILSON 貼頭 cornrow 花紋？
+  3.5 4 個人的髮型是不是全部不同？DYBANTSA 短 twists + fade？PETERSON 垂掛辮？BOOZER 花椰菜頭捲髮（唯一的捲髮）？WILSON 貼頭 cornrow 花紋？
   3.6 膚色有沒有差異？DYBANTSA 最深？BOOZER 稍淺偏暖？
   3.7 體型有沒有差異？BOOZER 是不是最壯最寬？DYBANTSA 是不是最瘦最長？PETERSON 是不是最矮最密實？
   4. 有沒有任何一個人被畫成投籃姿勢？→ 失敗，重跑
@@ -154,10 +154,10 @@ Style notes: modern Japanese sports anime key visual — Blue Lock / First Slam 
 - 人物被畫成全身 → 強調 "CHEST-UP HALF-BODY, face ~40% of quadrant, NO legs visible, NO full body"
 - 出現能量特效 → 強調 "NO auras, NO fire, NO lightning, NO particles, NO speed lines on players"
 - 背景校徽帶文字 → 強調 "PURE SYMBOL silhouette only, NO school names, NO text in backgrounds"
-- 四個人長得一模一樣 → 強調 "DYBANTSA: darkest skin, SHORT MINI TWISTS with faded sides, longest/leanest spider limbs. PETERSON: dark skin, MEDIUM HANGING INDIVIDUAL BRAIDS past ears, compact broad shoulders. BOOZER: slightly lighter/warmer skin, SIMPLE SHORT CROP (the ONLY one without braids/twists), heaviest build at 250 lbs. WILSON: dark skin, FLAT GEOMETRIC CORNROW PATTERNS on scalp (diamond/zig-zag designs), widest wingspan, rangy elastic body."
+- 四個人長得一模一樣 → 強調 "DYBANTSA: darkest skin, SHORT MINI TWISTS with faded sides, longest/leanest spider limbs. PETERSON: dark skin, MEDIUM HANGING INDIVIDUAL BRAIDS past ears, compact broad shoulders. BOOZER: slightly lighter/warmer skin, HIGH-VOLUME BROCCOLI CUT CURLS (the ONLY one with curly hair), heaviest build at 250 lbs. WILSON: dark skin, FLAT GEOMETRIC CORNROW PATTERNS on scalp (diamond/zig-zag designs), widest wingspan, rangy elastic body."
 - DYBANTSA 被畫成光頭或 buzz cut → 強調 "NOT a buzz cut — he has SHORT MINI TWISTS, tightly coiled upright rope-like strands on top with faded sides. There is visible hair texture on top."
 - PETERSON 被畫成 cornrows（貼頭辮）→ 強調 "NOT cornrows. INDIVIDUAL HANGING BRAIDS with volume, falling past his ears. These are box braids / plaits that HANG DOWN, not pressed flat to the scalp."
-- BOOZER 被畫成有辮子 → 強調 "NO braids, NO twists. Simple SHORT CROP close to scalp. He is the ONLY one of the four with a clean plain haircut — this is critical for differentiation."
+- BOOZER 被畫成辮子或短 crop → 強調 "NO braids, NO twists, NO short crop. He has a BROCCOLI CUT — high-volume CURLY hair piled on top with faded sides. The curly top rises above his head with a rounded silhouette. He is the ONLY one with curly hair."
 - WILSON 的辮子和 PETERSON 的一樣 → 強調 "Wilson has FLAT CORNROWS against scalp with geometric PATTERNS (diamond/zig-zag shapes). Peterson has INDIVIDUAL HANGING BRAIDS with volume. They are completely different styles — Wilson's are flat and patterned, Peterson's hang down with weight."
 
 ## 不要動什麼
