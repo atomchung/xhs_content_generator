@@ -1,45 +1,105 @@
-# Player Reference Photos
+# Player Appearance References
 
-## 用法
+人物外貌具象化的全自動流程。AI 自己抓照片、自己看、自己描述、自己寫進 prompt。
 
-1. 把球員照片存到對應資料夾（如 `cameron-boozer/photo.jpg`）
-2. Claude Code 會用 Read tool 看圖，自動生成 `appearance.md`
-3. 封面 prompt 生成時引用 `appearance.md` 中的描述
+## 全自動流程（本地 Claude Code）
+
+```
+Step 1: 抓照片
+$ python scripts/fetch_player_photo.py --batch references/players/nba-tanking-four-kings.json
+
+Step 2: AI 看圖 → 生成描述（Claude Code 自動執行）
+Read("references/players/cameron-boozer/espn_headshot.png")
+→ AI 描述外貌特徵
+→ Write("references/players/cameron-boozer/appearance.md")
+
+Step 3: 寫 prompt 時引用 appearance.md
+Read("references/players/cameron-boozer/appearance.md")
+→ 自動寫入封面 prompt 的人物描述段落
+```
+
+零人工介入。從球員名字到完整 prompt，全自動。
+
+## 腳本用法
+
+### 單人模式
+
+```bash
+# 已知 ESPN ID（最快最穩）
+python scripts/fetch_player_photo.py "Cameron Boozer" \
+    --espn-id 5041935 \
+    --school Duke \
+    --output references/players/cameron-boozer
+
+# 不知道 ESPN ID（自動搜尋）
+python scripts/fetch_player_photo.py "AJ Dybantsa" \
+    --school BYU \
+    --output references/players/aj-dybantsa
+```
+
+### 批次模式
+
+```bash
+python scripts/fetch_player_photo.py --batch references/players/nba-tanking-four-kings.json
+```
+
+Manifest 格式：
+```json
+[
+    {
+        "name": "Cameron Boozer",
+        "school": "Duke",
+        "espn_id": "5041935",
+        "output": "references/players/cameron-boozer"
+    }
+]
+```
 
 ## 目錄結構
 
 ```
 references/players/
+  nba-tanking-four-kings.json    ← 批次下載清單
   aj-dybantsa/
-    photo.jpg          ← 你存入的參照照片（建議正面 + 側面各一張）
-    appearance.md      ← AI 看圖後自動生成的外貌描述
+    espn_headshot.png            ← fetch_player_photo.py 自動下載
+    wikipedia.jpg                ← fetch_player_photo.py 自動下載
+    appearance.md                ← Claude Code 看圖後自動生成
   cameron-boozer/
-    photo.jpg
+    espn_headshot.png
     appearance.md
-  darryn-peterson/
-    photo.jpg
-    appearance.md
-  caleb-wilson/
-    photo.jpg
-    appearance.md
+  ...
 ```
 
-## appearance.md 格式
+## Claude Code 看圖後的 appearance.md 格式
 
-AI 看完照片後會自動填寫以下欄位：
+```markdown
+# {Player Name} — 外貌參照
 
-| 欄位 | 說明 | 範例 |
-|------|------|------|
-| 髮型 | 具體描述，不能只寫「短髮」 | 花椰菜頭（頂部蓬鬆捲髮 + 兩側 fade） |
-| 髮色 | — | 黑色 |
-| 膚色 | 相對描述 + 色調 | 深棕色、中棕偏暖 |
-| 臉型 | — | 方臉、長臉、圓臉 |
-| 臉部特徵 | 最突出的 2-3 個 | 高顴骨、寬鼻、濃眉 |
-| 體型 | 身高體重 + 關鍵詞 | 6'9" 250 lbs，壯碩寬肩 |
-| 招牌標記 | 護目鏡、臂套、紋身等 | 右眼周圍傷疤（Elite Eight 受傷） |
+來源：ESPN headshot + Wikipedia（AI 自動識別）
 
-## 注意
+| 欄位 | 描述 |
+|------|------|
+| 髮型 | 花椰菜頭（頂部蓬鬆捲髮 + 兩側 fade） |
+| 髮色 | 黑色 |
+| 膚色 | 中棕色帶暖色調 |
+| 臉型 | 方臉 |
+| 臉部特徵 | 強壯下顎線、對稱五官 |
+| 體型 | 6'9" 250 lbs，壯碩寬肩 |
+| 招牌標記 | 無 |
 
-- 照片選最近的（球員會換髮型）
-- 一個球員可以存多張照片，AI 會綜合判斷
-- `appearance.md` 隨時可以重新生成（刪掉後存新照片再跑一次）
+## Prompt 用描述
+
+（AI 根據以上特徵自動生成一段可直接嵌入 image prompt 的英文描述）
+```
+
+## 圖片來源優先級
+
+1. **ESPN headshot**（最穩定，URL 格式固定，只需 player ID）
+2. **Wikipedia**（品質好，但不是每個球員都有）
+3. **學校官網 roster**（未來擴充）
+
+## 雲端環境限制
+
+在受限環境（如 Claude Code Web）中，`fetch_player_photo.py` 無法執行（egress proxy 擋外部網站）。
+此時退化為手動模式：用戶貼照片到對話中或存到目錄，AI 用 Read 看圖。
+詳見 issue #11。
