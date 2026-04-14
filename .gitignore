@@ -31,3 +31,8 @@ post.md
 qa_post.md
 prompts.md
 qa_prompts.md
+
+# Player reference photos (binary, fetched locally)
+references/players/**/*.png
+references/players/**/*.jpg
+references/players/**/*.jpeg
