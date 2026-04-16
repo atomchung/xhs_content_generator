@@ -1,0 +1,26 @@
+[
+    {
+        "name": "AJ Dybantsa",
+        "school": "BYU",
+        "espn_id": "5142718",
+        "output": "references/players/aj-dybantsa"
+    },
+    {
+        "name": "Darryn Peterson",
+        "school": "Kansas",
+        "espn_id": "5041955",
+        "output": "references/players/darryn-peterson"
+    },
+    {
+        "name": "Cameron Boozer",
+        "school": "Duke",
+        "espn_id": "5041935",
+        "output": "references/players/cameron-boozer"
+    },
+    {
+        "name": "Caleb Wilson",
+        "school": "North Carolina",
+        "espn_id": "5095151",
+        "output": "references/players/caleb-wilson"
+    }
+]
