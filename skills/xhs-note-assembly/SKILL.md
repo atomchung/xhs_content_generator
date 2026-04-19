@@ -1,6 +1,6 @@
 ---
 name: xhs-note-assembly
-description: 从已确认的故事线出发，整合 `fact_pack`、`story_spine`、正文、封面和图组，输出最终小红书成稿。这是产出主线 skill。用户提到写标题、正文、图文页内容、四张图故事、最后成稿、整理成可发布帖子时，务必使用这个 skill。默认直接交付 `publish-ready copy`，并保留人类在标题、封面方向和删改力度上的最终决定权。
+description: 从已确认的故事线出发，整合 `fact_pack`、`story_spine`、正文、封面和图组，输出最终小红书成稿。这是产出主线 skill。用户提到写标题、正文、图文页内容、四张图故事、最后成稿、整理成可发布帖子、生成 post.md 发布正文、写小红书正文、改文案、基于这个话题出一版、围绕这个事件出一篇时，务必使用这个 skill。默认直接交付 `publish-ready copy`，并保留人类在标题、封面方向和删改力度上的最终决定权。
 ---
 
 # XHS Note Assembly
@@ -25,6 +25,35 @@ description: 从已确认的故事线出发，整合 `fact_pack`、`story_spine`
 - 用户要标题、正文、图上文案一起出
 - 用户要 3-4 张图的故事板
 - 用户要把前面讨论整理成最终笔记
+- 用户说「基于这个话题出一版 / 围绕这个事件出一篇 / 给我这条的标题和正文」，即使没有显式说「成稿」
+
+## 绝对禁区（违反就是不合格稿）
+
+这几条是硬红线，不允许为了速度跳过：
+
+1. **发布正文里禁止出现 `Page X / 第 X 图 / P1-P8 / 图组 / 图上文案` 字样**
+   - 发布正文是读者看到的，图组分工是工作稿，两个必须是物理分开的 section
+   - 如果正文里蹦出了「第 1 图讲...」这种话，直接不合格，回去重写
+2. **研究数据没进 `fact_pack.md` 不准进正文**
+   - 任何 WebSearch / WebFetch 抓来的数字、报价、报道，必须先 Edit 进 `fact_pack.md` 对应 section，才能被 `post.md` 引用
+   - 「查完直接写正文」是最容易吃亏的 shortcut，不允许
+3. **没有 post workspace 不允许只在聊天里交稿**
+   - 当用户 ask 已经是「围绕 X 出一篇」级别，而 repo 里没有 `demo_posts/<date>-<slug>/` 时，**第一步必须先 scaffold 工作区**，不是直接回聊天稿
+   - 用 `python scripts/scaffold_post_folder.py --date <YYYY-MM-DD> --slug <slug> --title "..."`
+   - 聊天里的 publish-ready copy 只能当预览，repo 产物才是交付完成
+4. **封面没过四项检查不算锁定**
+   - 主角 / 动作 / 冲突 / 场景背景，四项必须逐项回答，不能跳
+
+## 写作前必答 checklist（每题一句话，写在脑中或 post.md 顶部）
+
+开始写正文之前，先把这六题答出来。没答出来就是还没准备好动笔。
+
+- [ ] 目标字数（150-300）：
+- [ ] 计划几段（3-5）：
+- [ ] 开头用 mystery 还是 number shock：
+- [ ] 每段计划塞哪个数字：
+- [ ] 收口用 hate_bait / 反转 / A-B-C / 二选一 哪一种：
+- [ ] `fact_pack.md` 是否已经落盘：
 
 ## 研究输入
 
@@ -291,11 +320,21 @@ description: 从已确认的故事线出发，整合 `fact_pack`、`story_spine`
 
 ## 存档约定
 
-如果当前已经有贴文目录，默认把成稿存到：
+成稿必须落到 `demo_posts/<date>-<slug>/text/post.md`，聊天里的输出只能当预览。
 
-- `demo_posts/<date>-<slug>/text/post.md`
+两种情况：
 
-标题候选、最终标题、正文、图组和来源都应该写进这个文件，而不是只停在聊天里。
+- **已有贴文目录**：直接 Edit 到 `demo_posts/<date>-<slug>/text/post.md`，标题候选 / 最终标题 / 发布正文 / 图组分工 / 来源都塞进同一个文件
+- **没有贴文目录**：先 scaffold，再写稿
+  ```bash
+  python scripts/scaffold_post_folder.py \
+    --date <YYYY-MM-DD> \
+    --slug <short-ascii-slug> \
+    --title "工作标题"
+  ```
+  scaffold 出来的 `post.md` 已经带骨架（Working Brief / 写作前必答 / 标题候选 / 发布正文 + 自检 checklist / 图组分工 / 来源尾注），直接在里面填就行。
+
+「没有目录时也允许聊天交稿」不是合法例外，是漏洞。任何时候只要用户的 ask 已经落到「出一篇」，就先建目录再动笔。
 
 ## 输出格式
 

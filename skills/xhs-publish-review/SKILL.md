@@ -1,6 +1,6 @@
 ---
 name: xhs-publish-review
-description: 对比真实发帖版本和草稿版本，整理差异、归因和下次要改的工作流。用户提到复盘、归因、为什么最后发成这样、发布后总结、真实帖子和草稿差异、更新创作方法时，务必使用这个 skill。输出具体可执行的规则，不写空泛总结。
+description: 对比真实发帖版本和草稿版本，整理差异、归因和下次要改的工作流。用户提到复盘、归因、为什么最后发成这样、发布后总结、真实帖子和草稿差异、更新创作方法，或说「review 这篇 / review 已发的 / 看一下我这篇 / 这篇发出去了」配合过去式（发了 / 发布了 / 已经发 / 上线了 / 贴出去了）时，务必使用这个 skill，不要走 pre-publish 产品侧评审。输出具体可执行的规则，不写空泛总结。
 ---
 
 # XHS Publish Review
@@ -19,6 +19,22 @@ description: 对比真实发帖版本和草稿版本，整理差异、归因和�
 - 用户要对比草稿和发布版
 - 用户要总结这轮循环
 - 用户要把经验写回 skill
+- 用户说「review 这篇 / 复盘一下」配合过去式（发了 / 发布了 / 已经发 / 上线了）
+
+## 前置条件（硬规则）
+
+开始任何复盘之前，必须先锁定线上版来源。绝不允许用本地草稿冒充发布版来复盘。
+
+三选一：
+
+1. **拿到公开笔记 URL** → 按 workflow 0 用 curl 抓取
+2. **拿到截图** → 走「截图版复盘」，明确标注「证据只来自可见页面」
+3. **拿到用户贴过来的真实发布文字** → 可接受，但同样要明确标注「文字来源：用户贴文 / 非抓取」
+
+如果以上三样都拿不到：
+- 先停下，明确问用户要 URL / 截图 / 贴文字其中之一
+- 不要自己从本地 `text/post.md` 往回推「他大概是这样发的」
+- 不要默认把最后一次 Edit 的 draft 当成发布版
 
 ## 如果资料不完整
 
@@ -30,6 +46,43 @@ description: 对比真实发帖版本和草稿版本，整理差异、归因和�
   先做 `单边复盘`，重点放在发布版结构和可改进点，不要假装知道修改过程
 
 ## 工作流
+
+### 0. 先拿到发布版（默认用 curl，不依赖浏览器）
+
+不要先开浏览器。默认用 curl 抓取，这比 Claude in Chrome 更快、更稳定、不需要插件。
+
+**标准流程：**
+
+```bash
+# 1. 抓 HTML（需要带 xsec_token）
+curl -L 'https://www.xiaohongshu.com/explore/<note_id>?xsec_token=...&xsec_source=pc_user' \
+  -o /tmp/xhs_<note_id>.html
+
+# 2. 从 window.__INITIAL_STATE__ 提取关键字段
+rg '"title":"|"desc":"|"tagList":' /tmp/xhs_<note_id>.html
+```
+
+**数据在哪：**
+
+HTML 里的 `window.__INITIAL_STATE__` 包含完整 JSON，路径：
+`note.noteDetailMap.<note_id>.note`
+
+可提取字段：`title`、`desc`、`tagList`、`imageList`、`interactInfo`、`type`（image/video）、`time`、`ipLocation`
+
+**图片下载（如需对比视觉）：**
+
+```bash
+# 从 imageList 的 urlDefault 下载
+curl -L '<urlDefault>' -o /tmp/xhs_pub_1.jpg
+```
+
+**什么时候才用浏览器：**
+
+- curl 被反爬拦截（返回空页面或验证码）
+- 需要从个人主页找帖子链接（不知道 note_id）
+- 需要看影片内容（curl 只能拿封面帧）
+
+详细说明见：`notes/xiaohongshu-post-and-image-reading.md`
 
 ### 1. 先对齐两份东西
 
