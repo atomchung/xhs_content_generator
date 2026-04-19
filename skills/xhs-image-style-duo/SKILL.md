@@ -5,6 +5,25 @@ description: 为已确定要生图的页面输出默认 `1` 个推荐风格和 `
 
 # XHS Image Style Duo
 
+## 开工前必读（2026-04-19 生图铁律）
+
+在产出任何生图 prompt 前，**必须**做两件事：
+
+1. **风格**：读 `explorations/visuals/2026-04-19-nba-cover-style-research.md`
+   - NBA 图组一律用 canonical comic break-out prompt（只替换 `{PLAYER_NAME}` 和 `{ACTION_PHRASE}`）
+   - 禁用词：watercolor / aura / speed lines / beams / gold leaf / Chinese ink / Pop Art / geometric / blueprint / minimal / dark / moody
+   - 必保留 `photorealistic foreground transition on the player`
+
+2. **真人辨识度 Gate**：读 `references/person-confidence-rubric.md`
+   - 对 prompt 中每个真人自评信心度 0-100（输出 JSON）
+   - 🟢 HIGH (75+)：直接用名字
+   - 🟡 MED (40-74)：加 `anchors_suggestion` 进 prompt + 对话中提示
+   - 🔴 LOW (0-39)：**暂停**，要求用户确认是否跑 photo pipeline（`python scripts/fetch_player_photo.py --player "{name}"`）
+
+违反这两条铁律前请先 stop 并询问用户。
+
+---
+
 这个 skill 只做一件事：
 
 把一个已经锁住任务的页面，变成 `可直接在网页聊天界面里使用的生图 prompt`。
