@@ -24,8 +24,8 @@ Clip 5  慶祝                狂喜     「全壘打！」
 ```text
 A cute round cream-colored dumpling-shaped mascot with a small green sprout
 poking out from a deep red baseball cap, big sparkling black eyes, soft pink
-blush, wearing a crimson baseball jersey with "Din" on the chest, white pants,
-red cleats. The character walks confidently toward home plate on a baseball
+blush, no ears, smooth egg-shaped body, wearing a crimson baseball jersey
+with "Din" on the chest, white pants, red cleats. The character walks confidently toward home plate on a baseball
 diamond, carrying a wooden bat in one hand at its side. It steps into the
 batter's box and plants both feet on the brown dirt. The camera follows from
 behind and slightly to the side at the character's height, tracking its walk
@@ -40,8 +40,8 @@ style, determined hopeful mood. No text, no subtitles, no watermarks.
 ```text
 A cute round cream-colored dumpling-shaped mascot with a small green sprout
 poking out from a deep red baseball cap, big sparkling black eyes, soft pink
-blush, wearing a crimson baseball jersey with "Din" on the chest, white pants,
-red cleats. The character stands in the batter's box at home plate in a
+blush, no ears, smooth egg-shaped body, wearing a crimson baseball jersey
+with "Din" on the chest, white pants, red cleats. The character stands in the batter's box at home plate in a
 right-handed batting stance — feet shoulder-width apart, knees slightly bent,
 both tiny hands gripping a wooden bat raised near the right shoulder. Its eyes
 are focused and determined, looking straight ahead toward the pitcher's
@@ -58,8 +58,8 @@ mood. No text, no subtitles, no watermarks.
 ```text
 A cute round cream-colored dumpling-shaped mascot with a small green sprout
 poking out from a deep red baseball cap, big sparkling black eyes, soft pink
-blush, wearing a crimson baseball jersey with "Din" on the chest, white pants,
-red cleats. The character stands at home plate in a batting stance, holding
+blush, no ears, smooth egg-shaped body, wearing a crimson baseball jersey
+with "Din" on the chest, white pants, red cleats. The character stands at home plate in a batting stance, holding
 a wooden bat raised near its right shoulder. It swings the bat through in one
 smooth powerful motion, body rotating with the swing. The motion ends with
 the character standing tall and triumphantly lifting the wooden bat high above
@@ -93,8 +93,8 @@ style, triumphant soaring mood. No text, no subtitles, no watermarks.
 ```text
 A cute round cream-colored dumpling-shaped mascot with a small green sprout
 poking out from a deep red baseball cap, big sparkling black eyes, soft pink
-blush, wearing a crimson baseball jersey with "Din" on the chest, white pants,
-red cleats. The character stands at home plate on a baseball diamond, drops
+blush, no ears, smooth egg-shaped body, wearing a crimson baseball jersey
+with "Din" on the chest, white pants, red cleats. The character stands at home plate on a baseball diamond, drops
 a wooden bat to the ground, then jumps up with both tiny arms raised high in
 celebration. Its eyes are sparkling with pure joy and its mouth is wide open
 in an excited cheer. The camera is a low angle medium shot capturing the bat

@@ -22,8 +22,8 @@ Clip 3  走進球場          期待     「原來要在這裡玩。」
 ```text
 A cute round cream-colored dumpling-shaped mascot with a small green sprout
 poking out from a deep red baseball cap, big sparkling black eyes, soft pink
-blush, wearing a crimson baseball jersey with "Din" on the chest, white pants,
-red cleats. The character is walking on bright green grass, notices something
+blush, no ears, smooth egg-shaped body, wearing a crimson baseball jersey
+with "Din" on the chest, white pants, red cleats. The character is walking on bright green grass, notices something
 on the ground, bends down and picks up a white baseball with red stitching.
 It holds the ball up with both tiny hands and tilts its head curiously,
 examining the ball closely. The camera starts as a medium shot and slowly
@@ -40,8 +40,8 @@ no subtitles, no watermarks.
 ```text
 A cute round cream-colored dumpling-shaped mascot with a small green sprout
 poking out from a deep red baseball cap, big sparkling black eyes, soft pink
-blush, wearing a crimson baseball jersey with "Din" on the chest, white pants,
-red cleats. The character spots a wooden baseball bat leaning against a fence
+blush, no ears, smooth egg-shaped body, wearing a crimson baseball jersey
+with "Din" on the chest, white pants, red cleats. The character spots a wooden baseball bat leaning against a fence
 on green grass. It walks over, grabs the bat with both hands and lifts it up —
 the bat is taller than the character. It rests the bat on its shoulder with
 a proud excited grin, then takes a small practice swing. The camera is a
@@ -57,8 +57,8 @@ animation style, energetic playful mood. No text, no subtitles, no watermarks.
 ```text
 A cute round cream-colored dumpling-shaped mascot with a small green sprout
 poking out from a deep red baseball cap, big sparkling black eyes, soft pink
-blush, wearing a crimson baseball jersey with "Din" on the chest, white pants,
-red cleats. The character walks forward carrying a wooden baseball bat,
+blush, no ears, smooth egg-shaped body, wearing a crimson baseball jersey
+with "Din" on the chest, white pants, red cleats. The character walks forward carrying a wooden baseball bat,
 stepping onto a baseball diamond field. The camera follows from behind the
 character at low angle, then slowly cranes upward and zooms out to reveal
 the full diamond-shaped field with bright green grass, brown dirt infield,

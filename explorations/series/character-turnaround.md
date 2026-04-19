@@ -17,8 +17,8 @@ Character turnaround reference sheet.
 A cute round cream-colored dumpling-shaped mascot with a small green sprout
 poking out from the top of a deep red baseball cap, big round sparkling black
 eyes with a white highlight dot, tiny dot nostrils, soft pink blush on both
-cheeks, smooth egg-shaped body with no neck, tiny stubby arms and legs.
-Soft plush toy texture with gentle gradient shading.
+cheeks, no ears, smooth egg-shaped body with no neck, tiny stubby arms and
+legs. Soft plush toy texture with gentle gradient shading.
 Wearing a deep crimson red baseball jersey with bold white letters "Din"
 on the chest, white baseball pants, red round-toed cleats.
 
@@ -33,7 +33,7 @@ Same character, same proportions, same colors in all three views.
 ```text
 Expression sheet of a cute round cream-colored dumpling-shaped mascot
 with a small green sprout from a deep red baseball cap, big sparkling black
-eyes with white highlight, soft pink blush, smooth egg-shaped body,
+eyes with white highlight, soft pink blush, no ears, smooth egg-shaped body,
 tiny stubby limbs. Wearing a deep crimson baseball jersey with white
 letters "Din", white pants, red cleats.
 
@@ -54,7 +54,7 @@ Same character in all six expressions. Soft plush toy texture.
 ```text
 Action pose sheet of a cute round cream-colored dumpling-shaped mascot
 with a small green sprout from a deep red baseball cap, big sparkling black
-eyes with white highlight, soft pink blush, smooth egg-shaped body,
+eyes with white highlight, soft pink blush, no ears, smooth egg-shaped body,
 tiny stubby limbs. Wearing a deep crimson baseball jersey with white
 letters "Din", white pants, red cleats.
 

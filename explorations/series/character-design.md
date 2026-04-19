@@ -16,8 +16,8 @@
 A cute round cream-colored dumpling-shaped mascot with a small green sprout
 poking out from the top of a deep red baseball cap, big round sparkling black
 eyes with a white highlight dot, tiny dot nostrils, soft pink blush on both
-cheeks, smooth egg-shaped body with no neck, tiny stubby arms and legs.
-Soft plush toy texture with gentle gradient shading.
+cheeks, no ears, smooth egg-shaped body with no neck, tiny stubby arms and
+legs. Soft plush toy texture with gentle gradient shading.
 Wearing a deep crimson red baseball jersey with bold white letters "Din"
 on the chest, white baseball pants, red round-toed cleats.
 Standing upright facing the camera, arms slightly out.
@@ -35,6 +35,7 @@ Clean white studio background. Soft even lighting.
 | 膚色 | 奶白色（cream-colored） |
 | 質感 | 軟絨毛絨玩具感（soft plush toy texture），帶柔和漸層陰影 |
 | 脖子 | 無（no neck），頭和身體一體 |
+| 耳朵 | **無（no ears）**，光滑的頭部曲面，避免 AI 自作主張加上動物耳朵 |
 | 四肢 | 極短粗手腳（tiny stubby arms and legs） |
 
 ### 頭部 / 臉部
@@ -92,9 +93,9 @@ Clean white studio background. Soft even lighting.
 ```text
 A cute round cream-colored dumpling-shaped mascot with a small green sprout
 from the top of a deep red baseball cap, big sparkling black eyes with white
-highlight, soft pink blush, smooth egg-shaped body, tiny stubby limbs.
-Soft plush toy texture. Wearing a deep crimson baseball jersey with white
-letters "Din", white pants, red cleats.
+highlight, soft pink blush, no ears, smooth egg-shaped body, tiny stubby
+limbs. Soft plush toy texture. Wearing a deep crimson baseball jersey with
+white letters "Din", white pants, red cleats.
 3D kawaii mascot style, Xiaohongshu mascot aesthetic.
 ```
 
