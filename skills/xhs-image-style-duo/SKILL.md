@@ -24,6 +24,49 @@ description: 为已确定要生图的页面输出默认 `1` 个推荐风格和 `
 
 ---
 
+## 交付闭环（硬规则，不允许偷步骤）
+
+每产出一个 prompt，必须走完这三步。只走一两步不算交付。
+
+### 步骤 1 — 落盘到 `demo_posts/<slug>/prompts/`
+
+- 位置：`demo_posts/<date>-<slug>/prompts/`（workspace 不存在就先用 `scripts/scaffold_post_folder.py` 建）
+- 命名：`cover_prompt.md`、`page2_prompt.md`、`page3_prompt.md` …（多版本用 `cover_prompt_v2.md` 继续往上叠）
+- 文件结构：推荐风格 / 5 项判断 / `## Final Prompt` 内含 ```` ```text ``` ```` 代码块 / 如果要继续改
+
+### 步骤 2 — 跑 `stage_prompt.py` 一次做完 commit + push + 印 URL
+
+```bash
+python scripts/stage_prompt.py demo_posts/<slug>/prompts/<name>_prompt.md
+# 多个一起也 OK：
+python scripts/stage_prompt.py path1.md path2.md -m "prompts: <自定 message>"
+```
+
+脚本会 `git add → commit → push`，并按当前 branch 印出 GitHub blob URL。**URL 必须直接从脚本输出复制进聊天**，不要手拼。
+
+### 步骤 3 — 聊天回复只给摘要 + URL，绝不贴全文
+
+格式（照着 CLAUDE.md 的示例）：
+
+```
+**<标题/图名> v<版本>**
+
+构图：<layout、分区比例、几个模块>
+动作：<镜头、姿态、关键动作瞬间>
+风格：<canonical break-out / A-E 风格包的名字；非预设要写为什么>
+改动：<和上一版的 diff 要点；首次生成就写 v1 锚点>
+
+Prompt: <从 stage_prompt.py 复制的 GitHub blob URL>
+```
+
+### 禁区
+
+- **不要把 Final Prompt 的文本贴进聊天**（哪怕只有几行）。一律让用户点 URL 进去复制 ```` ```text ``` ```` 代码块。
+- **不要在没 push 的情况下给 URL**。脚本没跑完 = 不允许说「Prompt 链接：」。
+- **不要只在聊天给 prompt**。聊天讨论出一版 prompt，下一步必然是 Write 到 `demo_posts/<slug>/prompts/<name>_prompt.md` 再走步骤 2-3。讨论稿不是交付稿。
+
+---
+
 这个 skill 只做一件事：
 
 把一个已经锁住任务的页面，变成 `可直接在网页聊天界面里使用的生图 prompt`。
@@ -174,12 +217,12 @@ description: 为已确定要生图的页面输出默认 `1` 个推荐风格和 `
 
 ## 存档约定
 
-如果当前已经有贴文目录，默认把 prompt 和后续结果写进贴文目录：
+prompt 落盘路径和命名见顶部「交付闭环」步骤 1，不再重复。
 
-- prompt 建议放在 `demo_posts/<date>-<slug>/prompts/`
-- 用户手动生成后的图片建议放在 `demo_posts/<date>-<slug>/images/`
+额外约定（不走 stage_prompt.py，手动处理）：
 
-同一篇贴文的图片实验不要散落到多个无关目录。
+- 用户手动跑出来的成图，建议放在 `demo_posts/<date>-<slug>/images/`，用 `cover.png` / `page2.png` / `cover_v2.png` 这种和 prompt 文件名能对得上的命名
+- 同一篇贴文的图片实验不要散落到多个无关目录
 
 ## 输出格式
 

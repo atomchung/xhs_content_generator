@@ -1,15 +1,52 @@
 # Claude Code 协作规则
 
-## Prompt 输出规则
+## Prompt 输出规则（硬规则，不要偷步骤）
 
-编辑完 prompt 文件后，在对话中输出：
+### 核心闭环：编辑 prompt → stage_prompt.py → 在聊天给摘要 + URL
+
+每次编辑 / 新增 prompt 文件后，**必须**立即跑：
+
+```bash
+python scripts/stage_prompt.py <文件路径>
+# 多个一起也行：
+python scripts/stage_prompt.py path1.md path2.md -m "prompts: tatum v5 defense pose"
+```
+
+脚本会自动 `git add → commit → push`，并把当前 branch 上的 GitHub blob URL 印出来。**把脚本印出的 URL 直接贴进聊天**，不要自己手拼。
+
+然后在对话中输出：
 
 1. **摘要**（不是全文）：
-   - 版式/构图概述（layout、分区比例、几个模块）
-   - 人物动作描述（什么招式、身体姿态、镜头角度）
+   - 版式 / 构图（layout、分区比例、几个模块）
+   - 人物动作（什么招式、身体姿态、镜头角度）
+   - 风格（如果非预设 canonical style，写清楚走哪个风格包和为什么）
    - 本次改了什么（和上版的 diff 要点）
-2. **GitHub 文件链接**：指向对应的 prompt .md 文件，用户自行打开复制 ```` ```text ``` ```` 代码块里的 Final Prompt
+2. **GitHub 链接（必须是 stage_prompt.py 印出的那条）**：用户点进去、拉到 ```` ```text ``` ```` 代码块复制 Final Prompt 去生图
 3. **不要贴完整 prompt 全文**：省 output tokens，完整内容通过链接查看
+
+### 落盘位置（prompt 文件命名惯例）
+
+- 位置：`demo_posts/<date>-<slug>/prompts/`
+- 命名：`cover_prompt.md`、`page2_prompt.md`、`page3_prompt.md` …
+- 文件结构（最小集）：
+  ```markdown
+  # <标题或主角> 封面 prompt
+
+  ## 推荐风格
+  - 风格：
+  - 为什么选它：
+  - 这张图最该卖什么：
+
+  ## Final Prompt
+
+  ```text
+  （能直接贴到 Midjourney / Sora / ChatGPT 的一整段 prompt）
+  ```
+
+  ## 如果要继续改
+  - 背景优先改什么：
+  - 不要动什么：
+  ```
 
 ### 示例输出格式
 
@@ -20,14 +57,22 @@
 
 动作：中距离急停后仰跳投 apex — 双脚离地、身体后仰、出手臂完全伸直、球在画面最顶边。
 
+风格：canonical comic break-out prompt（photorealistic foreground transition）。
+
 改动：把"大头照"改回完整动作，强调 scale up whole figure ≠ face close-up。
 
-Prompt 链接：https://github.com/atomchung/xhs_content_generator/blob/分支名/路径/02-sga.md
+Prompt: https://github.com/atomchung/xhs_content_generator/blob/<branch>/demo_posts/2026-04-11-four-kings-playoffs/prompts/02-sga.md
 ```
+
+### 绝对禁区
+
+- **不要把 Final Prompt 的完整文本贴进聊天**。即使只有几行也不贴，一律让用户从 GitHub 链接去复制。原因：保证单一 source of truth 是落盘版本，避免用户复制到的是聊天里某个过时片段。
+- **不要在没 push 的情况下给 URL**。stage_prompt.py 没跑完就不能说「Prompt 链接：…」，否则用户点进去是 404。
+- **不要只在聊天给 prompt 而没落盘**。如果聊天里讨论出一版 prompt，下一步就是 Write 到 `demo_posts/<slug>/prompts/<name>_prompt.md` 再跑 stage_prompt.py。讨论稿不是交付稿。
 
 ## 其他规则
 
-- 编辑完文件后必须 commit + push，确保 GitHub 链接可访问
+- 编辑 prompt 以外的一般文件后，默认也 commit + push 一次，让分支状态和聊天记录一致
 - 每次 commit message 简要说明改了什么
 - Wemby 的本季数据（得分/篮板/盖帽）为预估值，生图前需替换为实际数据
 
