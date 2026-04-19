@@ -5,6 +5,23 @@ description: 为小红书帖子锁定首图封面结构的首图检查器。默�
 
 # XHS Cover Template
 
+## 开工前必读（2026-04-19 生图铁律）
+
+做任何涉及生图的封面决策前，**必须**做两件事：
+
+1. **风格**：读 `explorations/visuals/2026-04-19-nba-cover-style-research.md`
+   - NBA 封面一律用 canonical comic break-out prompt（只替换 `{PLAYER_NAME}` 和 `{ACTION_PHRASE}`）
+   - 禁用词：watercolor / aura / speed lines / beams / gold leaf / Chinese ink / Pop Art / geometric / blueprint / minimal / dark / moody
+   - 必保留 `photorealistic foreground transition on the player`
+
+2. **真人辨识度 Gate**：读 `references/person-confidence-rubric.md`
+   - 对封面中每个真人自评信心度 0-100
+   - 🟢 HIGH (75+)：直接用名字
+   - 🟡 MED (40-74)：加外貌锚点进 prompt + 对话中提示
+   - 🔴 LOW (0-39)：**暂停**，要求用户确认是否跑 photo pipeline
+
+---
+
 这个 skill 先做一件事：在首图阶段快速确认封面有没有站住。
 
 默认要先过一次简版 `cover check`：
