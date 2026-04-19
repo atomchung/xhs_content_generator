@@ -148,6 +148,34 @@ STYLE_SPECS = {
         ),
         "mode": "mascot",
     },
+    "watercolor_ink_sketch": {
+        "label": "Style 6 - Watercolor Ink Sketch",
+        "summary": "Editorial illustration: precise black-and-white ink-drawn subject over loose pastel watercolor wash background. Slow, story-driven, hand-made feel.",
+        "keywords": [
+            "black-and-white ink sketch subject",
+            "loose pastel watercolor wash background",
+            "editorial illustration",
+            "magazine profile feel",
+            "handcrafted not digital",
+        ],
+        "anchor_prefix": (
+            "Black-and-white ink sketch subject, visible cross-hatching and fine line work, precise grayscale rendering "
+            "without color, confident but unhurried pose, editorial profile portrait energy. "
+        ),
+        "background_prefix": (
+            "Background layer of loose abstract watercolor washes in soft pastel tones — mint green, blush pink, warm peach, "
+            "pale yellow — bleeding into each other with no hard edges. No objects, no scenery, only color and bleed. "
+        ),
+        "final_prefix": (
+            "Editorial illustration combining a precise black-and-white ink-drawn subject with a loose pastel watercolor "
+            "wash background. Strong contrast between monochrome subject and colorful wash. Sports magazine profile feel. "
+        ),
+        "style_suffix": (
+            "Hand-drawn editorial illustration, not photorealistic, no digital sharpness, generous negative space, "
+            "watercolor stays as background only, subject stays grayscale, no readable text, no logos, no watermarks."
+        ),
+        "mode": "hero",
+    },
 }
 
 COMMON_ANCHOR_SUFFIX = (
@@ -409,14 +437,54 @@ def build_style_packets(raw_prompt: str) -> tuple[StoryAtoms, list[StylePacket]]
 
 
 def recommend_style_ids(raw_prompt: str) -> list[str]:
+    """Dual-axis style recommender: tonal signals first, then topic type.
+
+    The tonal axis (story / editorial / 致敬 / 系列) often carries more
+    signal than topic type — a "球星故事" brief is technically a 人物题,
+    but the story framing makes watercolor_ink_sketch fit better than
+    game_cinematic. Check tonal signals before topic-type fallbacks.
+    """
     prompt = raw_prompt.lower()
-    if has_any(prompt, ["ace of diamond", "diamond no ace", "钻石王牌", "鑽石王牌", "sports anime", "热血运动动画", "熱血運動動畫", "anime", "动画封面", "動畫封面"]):
+
+    # --- Tonal axis (takes priority when signal is strong) ---
+    # Story / editorial / profile tone → watercolor ink sketch
+    if has_any(
+        prompt,
+        [
+            "故事", "成长", "profile", "editorial sketch", "文艺", "手绘",
+            "慢读", "speciale", "personal journey", "人物介绍", "球员介绍",
+        ],
+    ):
+        return ["watercolor_ink_sketch", "game_cinematic"]
+
+    # --- Topic-type axis (existing behavior) ---
+    if has_any(
+        prompt,
+        [
+            "ace of diamond", "diamond no ace", "钻石王牌", "鑽石王牌",
+            "sports anime", "热血运动动画", "熱血運動動畫", "anime",
+            "动画封面", "動畫封面",
+        ],
+    ):
         return ["anime_cover", "game_cinematic"]
-    if has_any(prompt, ["mascot", "cute", "q版", "q 版", "chibi", "吉祥物", "可爱", "可愛"]):
+    if has_any(
+        prompt,
+        ["mascot", "cute", "q版", "q 版", "chibi", "吉祥物", "可爱", "可愛"],
+    ):
         return ["mascot_q", "anime_cover"]
-    if has_any(prompt, ["salary", "薪资", "薪水", "工资", "加薪", "broadcast", "rights", "转播", "版权", "版权费", "expansion", "扩军", "加盟费", "platform", "平台", "商业", "商業"]):
+    if has_any(
+        prompt,
+        [
+            "salary", "薪资", "薪水", "工资", "加薪", "broadcast", "rights",
+            "转播", "版权", "版权费", "expansion", "扩军", "加盟费",
+            "platform", "平台", "商业", "商業",
+        ],
+    ):
         return ["editorial_collage", "minimal_data_poster"]
-    if has_any(prompt, ["clark", "克拉克", "ohtani", "大谷", "star", "superstar", "巨星", "人物", "球星"]):
+    if has_any(
+        prompt,
+        ["clark", "克拉克", "ohtani", "大谷", "star", "superstar", "巨星", "人物", "球星"],
+    ):
         return ["game_cinematic", "anime_cover"]
     return ["game_cinematic", "editorial_collage"]
 

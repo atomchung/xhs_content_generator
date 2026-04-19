@@ -10,9 +10,9 @@ description: 为小红书帖子锁定首图封面结构的首图检查器。默�
 做任何涉及生图的封面决策前，**必须**做两件事：
 
 1. **风格**：读 `explorations/visuals/2026-04-19-nba-cover-style-research.md`
-   - NBA 封面一律用 canonical comic break-out prompt（只替换 `{PLAYER_NAME}` 和 `{ACTION_PHRASE}`）
-   - 禁用词：watercolor / aura / speed lines / beams / gold leaf / Chinese ink / Pop Art / geometric / blueprint / minimal / dark / moody
-   - 必保留 `photorealistic foreground transition on the player`
+   - NBA 球员动作封面的**默认首选**是 canonical comic break-out prompt（只替换 `{PLAYER_NAME}` 和 `{ACTION_PHRASE}`）
+   - 用 canonical 时：保留 `photorealistic foreground transition on the player`，禁加 watercolor / aura / speed lines / beams / gold leaf / Chinese ink / Pop Art / geometric / blueprint / minimal / dark / moody 这些已实验败北的修饰词
+   - **可以脱离 canonical**：非动作题（球员故事 / 致敬 / 商业结构），或用户要换调性时，走 `xhs-image-style-duo` 的双轴选风格逻辑，或出两版让用户挑
 
 2. **真人辨识度 Gate**：读 `references/person-confidence-rubric.md`
    - 对封面中每个真人自评信心度 0-100

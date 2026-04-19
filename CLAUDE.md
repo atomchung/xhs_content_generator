@@ -78,16 +78,24 @@ Prompt: https://github.com/atomchung/xhs_content_generator/blob/<branch>/demo_po
 
 ## 生图铁律（2026-04-19 研究后锁定）
 
-### 风格：一律用 canonical comic break-out prompt
+### 风格：NBA 动作题 canonical 是首选，不是唯一解
 
-任何 NBA 封面／图组生成，必须读：
-- `explorations/visuals/2026-04-19-nba-cover-style-research.md`
+NBA 球员动作封面的**默认首选**是 canonical comic break-out prompt，来源：
+- `explorations/visuals/2026-04-19-nba-cover-style-research.md`（44 个 mutation 全败的实验记录）
 
-硬性规则：
+### 两种情境
+
+**情境 1：默认走 canonical（NBA 动作题、时间紧、没有特殊调性需求）**
 - 只替换 `{PLAYER_NAME}` 和 `{ACTION_PHRASE}` 两个变量
-- **禁止**加入 watercolor / aura / speed lines / beams / gold leaf / Chinese ink / Pop Art / geometric / blueprint / minimal / dark / moody
-- **禁止**去掉 `photorealistic foreground transition on the player`
+- 保留 `photorealistic foreground transition on the player`
 - 必须含 `--ar 3:4 --stylize 250`
+- canonical prompt 内部**不要**加 watercolor / aura / speed lines / beams / gold leaf / Chinese ink / Pop Art / geometric / blueprint / minimal / dark / moody —— 这些已实验验证会让画面更乱
+
+**情境 2：脱离 canonical（非动作题、用户要换调性、或 agent 判断 canonical 不合适）**
+- 走 `xhs-image-style-duo` 的双轴选风格逻辑（题目类型 × 调性）
+- 合理的场景：球员故事 / 个人成长 → `Watercolor Ink Sketch`；致敬退役 → `Ink Wash Silhouette`（待测）；系列封面 → `Risograph Duotone`（待测）
+- 如果不确定，**agent 可以出两版让用户挑**：canonical 一版 + 双轴推荐一版
+- 口头提示用户「默认 canonical 是因为…，这次推荐脱离是因为…」
 
 ### 真人：必须先跑 Person Recognition Gate
 

@@ -10,9 +10,9 @@ description: 为已确定要生图的页面输出默认 `1` 个推荐风格和 `
 在产出任何生图 prompt 前，**必须**做两件事：
 
 1. **风格**：读 `explorations/visuals/2026-04-19-nba-cover-style-research.md`
-   - NBA 图组一律用 canonical comic break-out prompt（只替换 `{PLAYER_NAME}` 和 `{ACTION_PHRASE}`）
-   - 禁用词：watercolor / aura / speed lines / beams / gold leaf / Chinese ink / Pop Art / geometric / blueprint / minimal / dark / moody
-   - 必保留 `photorealistic foreground transition on the player`
+   - NBA 球员动作题的**默认首选**是 canonical comic break-out prompt（只替换 `{PLAYER_NAME}` 和 `{ACTION_PHRASE}`）
+   - 用 canonical 时：保留 `photorealistic foreground transition on the player`，禁加 watercolor / aura / speed lines / beams / gold leaf / Chinese ink / Pop Art / geometric / blueprint / minimal / dark / moody 这些已实验败北的修饰词
+   - **可以脱离 canonical**：题目是球员故事 / 个人成长 / 致敬题，或者用户说「这次换个调性」，就走下方「脱离 canonical 的判断」段
 
 2. **真人辨识度 Gate**：读 `references/person-confidence-rubric.md`
    - 对 prompt 中每个真人自评信心度 0-100（输出 JSON）
@@ -44,6 +44,34 @@ LOW 的处理方式不是「也许需要」，而是「必须跑完才能发 pro
 **手动 fallback**：网络受限时用户手动把照片存到 `references/players/<slug>/`，AI 一样 Read → 写 appearance.md。Step 2-4 不变。
 
 违反这两条铁律前请先 stop 并询问用户。
+
+### 脱离 canonical 的判断（双轴选风格）
+
+不走 canonical 时，用[references/style-selection-rules.md](./references/style-selection-rules.md)的双轴树：
+
+- **第一轴**：这张图卖人物还是卖结构？
+- **第二轴**：调性是什么？（热血 / 明星气场 / 故事文艺 / 致敬 / 系列设计 / 可爱）
+
+常见脱离场景：
+
+| 题目 / 用户信号 | 推荐首选 | 对照（出两版时用） |
+|---|---|---|
+| 球员故事 / 个人成长 / profile | `watercolor_ink_sketch` ✅ | canonical 或 `game_cinematic` |
+| 致敬 / 退役 / 生涯回顾 | `ink_wash_silhouette` 🟡 待测 | `watercolor_ink_sketch` |
+| 系列统一视觉 / 设计感 | `risograph_duotone` 🟡 待测 | `editorial_collage` |
+| 商业题 / 薪资 / 转播 | `editorial_collage` | `minimal_data_poster` |
+| 轻松 / 可爱 / IP 化 | `mascot_q` | `anime_cover` |
+
+### 何时出两版让用户选
+
+以下情况，agent 应主动出两版（不是一版）：
+
+- 用户说「这次换个调性试试」 / 「这人不适合 break-out」 / 「想看看备选」
+- NBA 动作题但题目调性偏故事（canonical 是一版，watercolor 是另一版）
+- 用户对当前风格结果不满意，但又没明确说要哪种方向
+- 题目方向本身有争议（agent 判断不准卖人物还是卖结构）
+
+不需要出两版的情况：标准 NBA 动作题、用户明确指定风格、节奏紧张只要出一版。
 
 ---
 
