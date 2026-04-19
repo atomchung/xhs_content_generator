@@ -31,3 +31,9 @@ post.md
 qa_post.md
 prompts.md
 qa_prompts.md
+
+# Player reference photos (binary, fetched locally by scripts/fetch_player_photo.py)
+# Keep appearance.md (text) in git; keep the raw photos out so the repo stays small.
+references/players/**/*.png
+references/players/**/*.jpg
+references/players/**/*.jpeg

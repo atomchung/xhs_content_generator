@@ -18,7 +18,30 @@ description: 为已确定要生图的页面输出默认 `1` 个推荐风格和 `
    - 对 prompt 中每个真人自评信心度 0-100（输出 JSON）
    - 🟢 HIGH (75+)：直接用名字
    - 🟡 MED (40-74)：加 `anchors_suggestion` 进 prompt + 对话中提示
-   - 🔴 LOW (0-39)：**暂停**，要求用户确认是否跑 photo pipeline（`python scripts/fetch_player_photo.py --player "{name}"`）
+   - 🔴 LOW (0-39)：**暂停**，走下面的 photo pipeline
+
+### 🔴 LOW-tier 的 4 步 photo pipeline（不允许跳步骤）
+
+LOW 的处理方式不是「也许需要」，而是「必须跑完才能发 prompt」。完整流程：
+
+1. **抓照片**
+   ```bash
+   # 运动号优先 ESPN：
+   python scripts/fetch_player_photo.py "<Player Name>" \
+     --espn-id <id> \
+     --school <team> \
+     --output references/players/<slug>
+
+   # 批次：
+   python scripts/fetch_player_photo.py --batch references/players/<manifest>.json
+   ```
+2. **Read 图**：Read `references/players/<slug>/espn_headshot.png`（+ `espn_action.png` / `wikipedia.jpg`）
+3. **写 appearance.md**：Write `references/players/<slug>/appearance.md`，按 `references/players/README.md` 的 schema（髮型 / 髮色 / 膚色 / 臉型 / 臉部特徵 / 體型 / 招牌標記 + 一段 `Prompt 用描述`），信心度标「已確認」
+4. **在 prompt 引用**：Read `appearance.md`，把「Prompt 用描述」代码块整段嵌入 Final Prompt 的人物描述段落
+
+**复用规则**：`appearance.md` 已存在就直接 Read、不重跑脚本。照片被 `.gitignore` 掉不进版控，appearance.md 是金本一人一次就够。
+
+**手动 fallback**：网络受限时用户手动把照片存到 `references/players/<slug>/`，AI 一样 Read → 写 appearance.md。Step 2-4 不变。
 
 违反这两条铁律前请先 stop 并询问用户。
 
