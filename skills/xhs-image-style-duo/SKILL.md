@@ -73,6 +73,37 @@ LOW 的处理方式不是「也许需要」，而是「必须跑完才能发 pro
 
 不需要出两版的情况：标准 NBA 动作题、用户明确指定风格、节奏紧张只要出一版。
 
+### 多角色封面硬规则（2 人以上同框）
+
+踩过的坑：同模板 `{player}` 变量 × 4 人 → AI 把四人都画成同一个正面跳投。详见 [四大天王 post-mortem](../../explorations/visuals/2026-04-11-four-kings-prompt-lessons.md) 的第 5 条。
+
+**两个工具必须一起用，缺一不可：**
+
+1. **每人写死一个独特动作类型**，不要让 AI 自己分配
+   ```
+   - {player A}: {unique action A}
+   - {player B}: {unique action B}
+   - {player C}: {unique action C}
+   ```
+2. **用排除句否定最熟的默认动作**（AI 最容易 fall back 到这些）
+   ```
+   NO ball in frame. NO arms raised in shooting motion.
+   Do not draw any of them in a frontal-shooting pose.
+   Do not show any of them holding a ball above their head.
+   ```
+
+**如果是 4 人封面，再额外加 pose differentiation enforcement 段在 prompt 尾部**：
+
+```
+POSE DIFFERENTIATION ENFORCEMENT: the four players must NOT share the same
+action type. Two attacking + two defending, four different camera angles,
+four different emotions.
+```
+
+这层 redundancy 看起来多余，实战证明是必要的。生成 prompt 时，任何「多个球员 + 同模板」场景都先检查这两条有没有放进去。
+
+动作选择规则：**动作要服务叙事**。回标题找核心矛盾（进攻 / 防守 / 归来 / 王座），再分配动作。不要谁最帅画谁。
+
 ---
 
 ## 交付闭环（硬规则，不允许偷步骤）
