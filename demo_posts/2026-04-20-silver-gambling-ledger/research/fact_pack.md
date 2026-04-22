@@ -4,6 +4,21 @@
 > Wemby 數據那條鐵律同樣適用：**任何具體金額或場次在發布前都要再核對最新口徑。**
 > ✅ = 已核實、可引用；🔲 = 仍需補
 
+## 〇、Terms to Translate（寫 post.md 前先讀）
+
+> 規則來源：`notes/simplified-chinese-name-lookup.md`。所有外國人名在進入 post.md 前，
+> 必須用**小紅書 / 微博 / 百度**實際在用的簡中名，不用 naive pinyin。
+
+| 英文 | 小紅書通用簡中 | 備註 |
+|---|---|---|
+| Adam Silver | **亚当·肖华**（後續只用 肖华）| NBA 總裁。錯誤版本：希尔弗 |
+| Jontay Porter | Jontay Porter（英文保留）| 中文圈知名度低，用英文更準 |
+| Terry Rozier | Terry Rozier（英文保留）| 同上 |
+| Chauncey Billups | Chauncey Billups（英文保留）| 有「比卢普斯」但英文更直覺 |
+| Damon Jones | Damon Jones（英文保留）| 同上 |
+| LeBron James | 勒布朗 | 小紅書統一叫法 |
+| DraftKings / FanDuel | DraftKings / FanDuel（英文保留）| 公司名不譯 |
+
 ## 一、Silver 個人軌跡（主角引擎）
 
 ### 2014.11.13 NYT op-ed "Legalize and Regulate Sports Betting"
