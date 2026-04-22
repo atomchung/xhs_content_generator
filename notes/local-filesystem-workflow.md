@@ -224,7 +224,13 @@ Good examples:
 
 Important detail:
 
-`demo_posts/` is currently ignored in `.gitignore`, so it is a local working area rather than the durable repo history.
+`demo_posts/` is ignored in `.gitignore` by default, keeping the human author's local dev box clean. In Claude Code agent sessions, `scripts/stage_prompt.py` deliberately uses `git add -f` so the current post workspace (prompt, post draft, research) can be pushed onto the **session branch** and opened from a GitHub URL.
+
+The rule is:
+
+- demo_posts files live on agent session branches only — they are a shareable working state
+- these branches are **NOT meant to merge into `main`**; scattered per-post research has no cross-post value in durable history
+- durable cross-post lessons must be mirrored separately into tracked files (`hypo.md`, `reviews/`, `notes/`)
 
 That means:
 
