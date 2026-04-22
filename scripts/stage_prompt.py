@@ -10,13 +10,18 @@ Multiple files and a custom message are also OK:
     python scripts/stage_prompt.py path1.md path2.md -m "prompts: tatum v5 defense pose"
 
 The script:
-  1. git add <files>
+  1. git add -f <files>
   2. git commit (only if there are staged changes for those files)
   3. git push -u origin <current-branch>
   4. prints one GitHub blob URL per file — paste these into the chat reply
      so the user can click straight into the ```text``` code block and copy.
 
 Design notes:
+  - `git add -f` is deliberate. `demo_posts/` is ignored in .gitignore so the
+    author's local dev box stays clean; agent sessions still need to push
+    these files to a branch so the user can open them from a GitHub URL.
+    The rule is: demo_posts files live on session branches only and are
+    NEVER merged into main. Scoped paths prevent over-force-adding.
   - Branch is whatever `git rev-parse --abbrev-ref HEAD` reports. No auto
     branch creation — if you need a feature branch, create it yourself first.
   - If nothing changed, skips commit but still pushes (in case a prior commit
@@ -144,7 +149,8 @@ def main() -> int:
             print(f"  {blob_base}/blob/{branch}/{rel}")
         return 0
 
-    run(["git", "add", "--", *rel_paths])
+    # -f is required: demo_posts/ is in .gitignore (see docstring).
+    run(["git", "add", "-f", "--", *rel_paths])
 
     if has_staged_changes(rel_paths):
         message = args.message or derive_commit_message(rel_paths)

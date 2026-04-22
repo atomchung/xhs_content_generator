@@ -12,7 +12,9 @@ python scripts/stage_prompt.py <文件路径>
 python scripts/stage_prompt.py path1.md path2.md -m "prompts: tatum v5 defense pose"
 ```
 
-脚本会自动 `git add → commit → push`，并把当前 branch 上的 GitHub blob URL 印出来。**把脚本印出的 URL 直接贴进聊天**，不要自己手拼。
+脚本会自动 `git add -f → commit → push`，并把当前 branch 上的 GitHub blob URL 印出来。**把脚本印出的 URL 直接贴进聊天**，不要自己手拼。
+
+> `demo_posts/` 整体在 `.gitignore`，stage_prompt.py 会用 `-f` 强加。设计意图：**贴文内容和研究只存活在 session 分支上，不 merge 进 main**。所以 prompt / post / research 都可以推到分支让用户从 URL 读，但不要把 `demo_posts/` 下的任何东西开 PR 进 main。跨贴的可复用经验要另外落到 `hypo.md` / `reviews/` / `notes/` 这些 tracked 文件。
 
 然后在对话中输出：
 
