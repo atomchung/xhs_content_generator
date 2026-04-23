@@ -1,93 +1,151 @@
-## Fact Pack
+# Fact Pack — 第二篇：单人数据市场为什么最脆
 
-- Topic candidate: NBA 赌博生态全景（上次合作的延伸）——现在可以赌什么、球员为什么会被拉下水、联盟和博彩平台如何反制
-- Why this is worth researching now: 2024 Jontay Porter 终身禁赛 → 2024 Terry Rozier 联邦调查 → 2025 夏天 Malik Beasley 被列入调查名单。三年里连续三位现役球员出事，勾选盘（player prop）已经被联盟定性为「整合性风险里最脆的那一环」
-- Current research status: 核心事件、赌盘类型、联盟机制有稳定来源；精确数字采用公开报道口径，生图 / 发帖前用户再核一次
+> 本篇是 `2026-04-20-silver-gambling-ledger`（Silver 的赌博帐本）的后续。
+> 前篇主线「收益账 vs 代价账」已经铺过；**这篇只展开前篇 park 的那条副线：
+> 「Prop bet 扭曲比赛机制 → 另一篇系统题」**（前篇 story_spine.md「已停放的副线」第一条）。
+> 读者画像：假设读者看过前篇，知道场边 logo、知道 Porter / Rozier / Billups 同日被捕。
+> 不重复前篇已给的 1496 亿 / 42 亿 / 8.94 亿 三个收入数字，也不重讲 Silver 的 2014 op-ed。
 
-## What happened
+## 〇、Terms to Translate（和前篇一致，不得改口径）
 
-- 2018 年美国最高法院 Murphy v. NCAA 判决推翻 PASPA 联邦禁令，各州可自行合法化体育博彩；目前全美 38 个州 + DC 开放合法体育投注
-- NBA 随后和 DraftKings、FanDuel、BetMGM 签官方合作，联盟收到 data rights 授权费——这就是「之前那次合作」的上游背景
-- 2024 年 4 月：公牛边缘内线 Jontay Porter 成为 NBA 史上第一个因下注操纵比赛被终身禁赛的球员
-- 2024 年 1 月：黄蜂后卫 Terry Rozier 被 FBI / 美国检察官调查，起因是 2023 年 3 月 23 日对 Pelicans 一场比赛异常早退 + 他个人勾选盘赛前出现大额可疑资金流入
-- 2025 年夏：活塞后卫 Malik Beasley 被美国东区联邦检察官调查，查他 2023-24 赛季个人数据勾选盘的关联下注
-- 2025 起：DraftKings / FanDuel 陆续下架部分「球员单项 under」市场（under 篮板、under 盖帽），BetMGM 收紧低薪轮换球员的勾选额度上限
+| 英文 | 小红书通用简中 | 备注 |
+|---|---|---|
+| Adam Silver | **亚当·肖华**（后续只用 肖华）| 禁用「希尔弗」，前篇已锁 |
+| Jontay Porter | Jontay Porter（英文保留）| 前篇已用英文 |
+| Terry Rozier | Terry Rozier（英文保留）| 同上 |
+| Malik Beasley | Malik Beasley（英文保留）| 本篇 scene 主角 |
+| Chauncey Billups | Chauncey Billups（英文保留）| 前篇引用口径 |
+| Damon Jones | Damon Jones（英文保留）| 同上 |
+| LeBron James | 勒布朗 | 前篇统一叫法 |
+| player prop | **球员个人数据市场**（或「单人数据市场」）| 禁用「勾选盘」单独出现；「prop」技术词只在侧注说明 |
+| under | 「低于某条线」/「低档市场」 | 避免「赌 under」「压 under」这种直译 |
+| sportsbook | 博彩平台 | 前篇口径 |
 
-## Why now
+## 一、Governing scene：Beasley 那场对开拓者（2024.1.31）
 
-- 博彩合法化满 7 年，合规赌盘规模以百亿美元计，联盟拿 data 收入的同时也要承担「整合性风险」
-- 勾选盘的门槛越低，操纵成本就越低——对一个年薪 200 万以下的轮换球员来说，「少拿两个篮板」换来 5 位数抽成就是诱惑本身
-- 三起案件一层层升级（终身禁赛 → 联邦刑事 → 现役球员同步被查），说明联盟前几年靠自查解决不了，现在已经到了必须让司法介入的阶段
+这是 prop 机制最干净的教科书案例，**前篇 fact_pack 已经有完整口径**，这篇正文开场直接用：
 
-## Terms to translate
+- ✅ 日期：2024 年 1 月 31 日，当时 Beasley 在公鹿
+- ✅ 目标盘口：**Beasley 个人篮板「低于 2.5 个」**（under 2.5 rebounds）
+- ✅ 赔率变动：开盘 +120 → 比赛临近被异常资金压到 -250
+- ✅ 实战结果：Beasley 当场拿 **6 个篮板**（远超 2.5），异常下注方输光
+- ✅ 后续：2025.6 联邦调查曝光；2025 律师称 Beasley 已「不再是 target」，但仍是 subject
 
-- Sports betting / sportsbook → 合法体育博彩 / 博彩平台（DraftKings、FanDuel、BetMGM 这些）
-- Moneyline → 独赢 / 胜负盘（赌谁赢）
-- Spread → 让分盘（强队让几分）
-- Over / Under total → 大小分（全场总得分超过或不足）
-- Parlay → 串关（多注连中才算赢，赔率叠乘）
-- Player prop → 球员勾选盘（赌单个球员的得分 / 篮板 / 助攻 / 三分 / 盖帽）
-- Same Game Parlay → 同场串关
-- Live betting → 滚球盘 / 直播盘
-- Integrity monitor → 博彩诚信监控商（Sportradar、Genius Sports、US Integrity）
-- Suspicious bet alert → 异常下注预警
+这一场说明了什么：
+- 异常资金流入被监控商实时抓到（所以这次才会成为调查线索）
+- 球员**实际表现并没有配合**那个低档市场（所以没被禁赛）
+- 但**只需要一个人、一项数据**就能让一条线从 +120 翻到 -250——这就是单人市场的脆弱点
 
-## Must-know facts
+## 二、单人数据市场到底是什么（机制级描述，不写玩法）
 
-- 勾选盘里最脆的一类是「球员 under」：只要球员少打几分钟、装个小伤退场，under 几乎稳中，操纵成本低到「投入 8k 美元换 80k 美元」这种量级（Jontay Porter 案公开口径）
-- Porter 是被自己的 under 盘出卖的：同一位用户下他的「under 得分 / 篮板 / 三分」多项数万美元，监控商实时预警，比他本人从球馆出来还快
-- NBA 球员禁赌红线三条：
-  1. 不能对任何 NBA / G League / Summer League 比赛下注
-  2. 不能把非公开的出场 / 伤病信息告诉第三方
-  3. 不能自己下注，也不能让家人、朋友、经纪人代下
-- 联盟所有「诚信预警」走两条管道：
-  1. Sportradar / Genius Sports 这类第三方做跨 sportsbook 异常下注建模
-  2. 各家合规 sportsbook 自己的风控内部报告上游
-- 球员匿名举报热线：NBA 2023 起提供 tip line，任何球员 / 教练 / 经纪人接到试探必须报告
-- 处罚阶梯从轻到重：罚款 → 停赛场次 → 长期停赛 → 终身禁赛 → 移交联邦司法（符合 wire fraud / conspiracy 要件）
+只写「这种市场和那种市场的差别」，**不写如何下注、不写赔率公式、不写哪条线划在哪**。
 
-## Key numbers and context
+| 类型 | 赌的对象 | 结果由谁决定 | 操纵成本 |
+|---|---|---|---|
+| 比赛结果市场 | 球队输赢 / 分差 / 总分 | 全队 + 教练 + 裁判 | 极高（要串通一整支球队） |
+| 单人数据市场 | 一名球员的单项数据是否到达某条线 | 这名球员本人 | 极低（一个人就能影响） |
 
-- 38：目前美国合法开放体育博彩的州数（含 DC）
-- Jontay Porter 年薪：底薪档 two-way 转标准合同，约 $411k
-- Jontay Porter 案件关联金额：同伙进账约 $1.1M，他本人被查时关联账户约 $21k
-- Jontay Porter 禁赛时间：2024 年 4 月 17 日公告，终身禁赛
-- Terry Rozier 事件日：2023 年 3 月 23 日夏洛特对 Pelicans，第一节打完就以「脚伤」退场，赛前他个人数据 under 出现异常资金流入
-- 行业共识：联盟每年因「内部信息泄露」流向赌盘的损失量级在 8-9 位数美元，但可量化部分只占极少
+**结构性脆弱点**（这是本篇真正的 nut）：
+- 门槛：只要一个人愿意「少打两分钟 / 少拿一个篮板 / 某项数据没到某条线」，结果就能反转
+- 信息链最短：不需要赌球队，只需要知道「某球员今晚是不是装个小伤早退」——这个信息在更衣室里先流通
+- 市场深度浅：一些非明星球员的单人市场，几千到几万美元的异常资金就能把赔率打到扭曲——监控反而因此容易抓出来
 
-## Source map
+## 三、联盟为什么会盯这一块（三起已公开案件的共同点）
 
-- Primary sources:
-  - NBA 官方公告（Porter 禁赛、合作公告）
-  - 美国东区联邦检察官 2024 年 4 月 Porter 起诉书
-- Strong secondary sources:
-  - ESPN 首发报道（Wojnarowski / Charania）
-  - The Athletic 调查稿（Rozier、Beasley 两篇 deep dive）
-  - Action Network、Legal Sports Report 的监管类专稿
-- Open questions:
-  - Rozier 案刑事进度（2026 年年内应有动作）
-  - Beasley 案是否会触发第二位终身禁赛
-  - DraftKings / FanDuel 是否会全面下架所有 under 类勾选
+> 引用口径：这三个案件都已经在前篇以「代价账」身份出现过，本篇**不重复人物传记**，
+> 只抽出三者共通的结构特征——它们都是单人数据市场的问题，不是比赛结果市场的问题。
 
-## Risks and unresolved
+| 案件（公开定性） | 共通点 |
+|---|---|
+| Jontay Porter（2024 永久禁赛 + wire fraud 认罪）| 操纵自己的单项数据 under |
+| Terry Rozier（2025.10 被捕，不认罪）| 赛前个人数据 under 出现 $250k+ 异常下注 |
+| Malik Beasley（2025 subject，未被禁赛）| 单项数据市场赔率被异常资金扭曲 |
 
-- 「联盟亏了 X 亿」没有官方口径，写时只说「行业估算」
-- 球员具体认罪 / 未认罪细节不写，避免越界
-- Beasley 案仍在调查阶段，不可预判结果
-- 勾选盘被下架是「部分市场 + 部分球员」，不是全盘砍掉，表述要精准
+三者共同点：
+1. 都是**单人数据市场**，不是球队胜负或大小分
+2. 都是**非顶级球星**（不是 MVP 级，更容易被异常资金盯上）
+3. 都是「某项数据没达到某条线」这种单向操作
+4. 都是**监控商先发现**，不是球队或联盟内部自查
 
-## Visual and story raw material
+**这就是为什么联盟 + 平台现在的防线都压在单人市场这一块。**
 
-- Best scenes:
-  - Porter 那场对 Kings 比赛约 3 分钟就拉伤退场的慢镜头
-  - Rozier 第一节「脚伤」坐回板凳的画面
-  - DraftKings app 下架「under rebounds」后的空市场截图
-- Strongest protagonist: Jontay Porter（案件最完整、最有戏剧性、最能解释「勾选盘为什么危险」）
-- Possible tensions:
-  - 联盟一边从博彩平台拿钱，一边要防自家球员被平台吸进去
-  - 球员年薪 40 万 vs. 一次操纵换 5-6 位数，成本收益公式畸形
-  - 监控商（Sportradar）比球队教练更早知道自家球员在赌
-- Side angles to park:
-  - 大学 NCAA 球员赌博（另开系列）
-  - 裁判赌博（Tim Donaghy 2007 老案子，时效太远）
-  - 欧洲 / 亚洲非法盘口生态（题太大，另开）
+## 四、联盟和平台现在有的三道防线
+
+### 第一道：规则层（联盟 CBA / 球员手册）
+- ✅ 禁赌红线三条（可直接引用，前篇未展开）：
+  1. 球员本人不能对任何 NBA / G League / Summer League 比赛下注
+  2. 球员不能把非公开的出场 / 伤病信息告诉第三方
+  3. 球员不能让家人、朋友、经纪人代下
+- ✅ 2023 起设置匿名 tip line：接到试探必须报告
+- ✅ 处罚阶梯：罚款 → 停赛 → 长期停赛 → 终身禁赛 → 移交联邦（Porter 案走到终点）
+
+### 第二道：监控商层（第三方技术）
+- ✅ Sportradar 持 NBA **独家 official league data** 授权（前篇已提）
+- ✅ 跨 sportsbook 做异常下注建模；同一个球员的单项数据在多个平台同步出现超额资金会触发预警
+- ✅ Porter 案就是这样挖出来的——同一位下注方在他的 under 得分 / 篮板 / 三分多项下大额，监控模型识别为「不可能是独立判断」
+- ✅ Genius Sports、US Integrity 也是同类监控商
+
+### 第三道：平台自查（合规 sportsbook 自己的风控）
+- ✅ 2025 起 DraftKings / FanDuel 陆续下架**部分**球员单项 under 市场（特别是低薪轮换球员的篮板 / 盖帽）
+- ✅ BetMGM 收紧低薪轮换球员的单人市场下注上限
+- ✅ 这是**部分市场 + 部分球员**的下架，不是全盘砍掉——精准表述
+
+### 防线的结构盲点（本篇可以点一下，不展开）
+- 三道防线全在比赛**之后**起作用（监控到异常 → 追查 → 处罚）
+- **比赛正在发生的那几分钟里**没有任何机制能阻止一个球员装个小伤退场
+- 联邦司法是最后一道——但等走到联邦法院，信任已经被消耗完了
+
+## 五、Key numbers（本篇只需要的数字，全部不重复前篇）
+
+- Beasley 那场的赔率变动：**+120 → -250**（可直接放图）
+- Beasley 实际那场篮板：**6 个**（vs 线是 2.5）
+- Rozier 那场的异常下注量级：**$250,000+**（前篇已口径，本篇可保留）
+- 监控预警发现速度：Porter 的异常被挖出来**比他走出球馆还快**（用定性描述，不给精确分钟）
+- 下架的市场类型：**部分低薪轮换球员**的篮板 / 盖帽 / 三分 under
+
+> **本篇禁止出现的数字**（为避免和前篇重复 / 避开下注诱导）：
+> - 1496 亿 / 42 亿 / 8.94 亿（前篇已讲完）
+> - 球员年薪 vs. 回扣的算账公式（审核红线：类教唆）
+> - 「投入 X 换 Y」的杠杆倍数（审核红线：类教唆）
+
+## 六、审核红线（直接继承前篇「五、审核红线」，本篇更严）
+
+- **避免**：盘口、下注教学、压哪边、稳赢、让分、推介、内线情报详细玩法、赔率公式、杠杆倍数
+- **可用**：合作夥伴、赞助、博彩、合法化、监管、公信力、整肃、代价、风险、**帐本**、**防线**、**机制**、**市场**
+- 标题避开「赌」字单用；用「这块市场」「这条防线」「这个裂缝」包裹
+- 人物案件：只陈述官方定性（永久禁赛 / 已被联邦起诉 / 不认罪 / subject），不做影射
+- 不算「球员为什么会心动」的具体经济公式——改成结构描述「单人市场门槛为什么低」
+
+## 七、Source map
+
+- 承前篇来源：NBA.com、ESPN、The Athletic、Al Jazeera、AGA、CBS Sports、NPR、CNN Business、NYT op-ed
+- 本篇新增：
+  - Action Network / Legal Sports Report 对 prop 市场下架的追踪报道
+  - Sportradar 官方 integrity services 说明
+  - DraftKings 2025 年季度报告里对 under 市场调整的表述
+- Open questions（不入文，发帖前再核）：
+  - Beasley 2026 年刑事进度
+  - Rozier 2026.11.2 审判前是否有 preview
+  - Sportradar 对 NBA 独家数据合约下一轮续约动向
+
+## 八、对前篇的引用策略
+
+- 本篇开场不做「你打开今晚 NBA 转播」——那是前篇 scene。改成 Beasley 那场赔率曲线异常的 visual。
+- 本篇可在 nut graf 一句话带过前篇：「**上一篇算了两面帐——这篇只拆其中一块，也是联盟现在最堵不住的一块。**」
+- 不重复 Silver 2014 op-ed、1496 亿 / 42 亿 / 8.94 亿、同日被捕大案编年。
+
+## 九、Visual raw material（本篇专属）
+
+- Best scenes：
+  - Beasley 那场赔率曲线从 +120 掉到 -250 的心电图式折线
+  - 比赛结束后 Beasley 拿到 6 个篮板的比分板（篮板数放大）
+  - DraftKings app 下架「low-wage bench player rebounds under」后的空市场界面
+- Strongest protagonist：**单人数据市场这个产品本身**（不是任何球员）
+- Possible tensions：
+  - 市场越精细，越能精准定价 → 也越容易被单人操纵
+  - 监控越强，越容易抓到异常 → 但已经抓到的时候比赛已经结束了
+  - 平台下架 under → 但 over 市场依然在，结构问题没真正修
+- Side angles to park（本篇也不做）：
+  - NCAA 大学层面的 player prop 禁令（留给另一篇做美中对照）
+  - 欧亚非法盘口（太大）
+  - 球员薪资与诱惑的经济学（审核红线，放弃）
