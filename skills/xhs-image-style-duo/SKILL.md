@@ -5,24 +5,27 @@ description: 为已确定要生图的页面输出默认 `1` 个推荐风格和 `
 
 # XHS Image Style Duo
 
-## 开工前必读（2026-04-19 生图铁律）
+## 开工前必读（2026-04-26 视觉宪法 + 风格池）
 
 在产出任何生图 prompt 前，**必须**做两件事：
 
-1. **风格**：读 `explorations/visuals/2026-04-19-nba-cover-style-research.md`
-   - NBA 球员动作题的**默认首选**是 canonical comic break-out prompt（只替换 `{PLAYER_NAME}` 和 `{ACTION_PHRASE}`）
-   - 用 canonical 时：保留 `photorealistic foreground transition on the player`，禁加 watercolor / aura / speed lines / beams / gold leaf / Chinese ink / Pop Art / geometric / blueprint / minimal / dark / moody 这些已实验败北的修饰词
-   - **可以脱离 canonical**：题目是球员故事 / 个人成长 / 致敬题，或者用户说「这次换个调性」，就走下方「脱离 canonical 的判断」段
+1. **视觉宪法 + 风格选择**：
+   - 读 `CLAUDE.md` 顶部「账号视觉宪法」三条（漫画优先 / 真人脸漫画化 / photo 只取文字 anchors）
+   - 读 `references/cover-style-pool.md` 风格池 + 双轴决策表选风格
+   - **默认 canonical-breakout（账号金本，全题型适用）**，按题型 / 情绪在双轴表里切换
+   - canonical 措辞：`physically-rendered manga figure with photo-accurate likeness, rendered as comic illustration (not photo)` —— **不要再写 `photorealistic foreground transition`**
+   - 禁词（绝不出现在 final prompt）：`photorealistic` / `cinematic photoreal` / `studio photo` / `8k photoreal` / `octane render` / `reference photo`
+   - canonical 内部禁加：watercolor / aura / speed lines / beams / gold leaf / Chinese ink / Pop Art / geometric / blueprint / minimal / dark / moody（44 轮实验败北）
 
 2. **真人辨识度 Gate**：读 `references/person-confidence-rubric.md`
    - 对 prompt 中每个真人自评信心度 0-100（输出 JSON）
    - 🟢 HIGH (75+)：直接用名字
-   - 🟡 MED (40-74)：加 `anchors_suggestion` 进 prompt + 对话中提示
+   - 🟡 MED (40-74)：加文字 `anchors_suggestion` 进 prompt + 对话中提示
    - 🔴 LOW (0-39)：**暂停**，走下面的 photo pipeline
 
 ### 🔴 LOW-tier 的 4 步 photo pipeline（不允许跳步骤）
 
-LOW 的处理方式不是「也许需要」，而是「必须跑完才能发 prompt」。完整流程：
+按视觉宪法第 3 条 — **photo pipeline 只用来提取文字 anchors，不 embed 照片**：
 
 1. **抓照片**
    ```bash
@@ -36,8 +39,11 @@ LOW 的处理方式不是「也许需要」，而是「必须跑完才能发 pro
    python scripts/fetch_player_photo.py --batch references/players/<manifest>.json
    ```
 2. **Read 图**：Read `references/players/<slug>/espn_headshot.png`（+ `espn_action.png` / `wikipedia.jpg`）
-3. **写 appearance.md**：Write `references/players/<slug>/appearance.md`，按 `references/players/README.md` 的 schema（髮型 / 髮色 / 膚色 / 臉型 / 臉部特徵 / 體型 / 招牌標記 + 一段 `Prompt 用描述`），信心度标「已確認」
-4. **在 prompt 引用**：Read `appearance.md`，把「Prompt 用描述」代码块整段嵌入 Final Prompt 的人物描述段落
+3. **写 appearance.md（纯文字）**：Write `references/players/<slug>/appearance.md`，按 `references/players/README.md` 的 schema（髮型 / 髮色 / 膚色 / 臉型 / 臉部特徵 / 體型 / 招牌標記 + 一段 `Prompt 用描述`），信心度标「已確認」
+4. **在 prompt 引用文字**：Read `appearance.md`，把「Prompt 用描述」**文字段落**嵌入 Final Prompt 的人物描述段
+   - **绝对不要**写 `reference photo: <path>` / `based on photo` / `照片中的人物` 这类指令
+   - **绝对不要**贴 image URL 进 prompt
+   - 只写文字外貌（broad jaw / monolid eyes / curly hair）
 
 **复用规则**：`appearance.md` 已存在就直接 Read、不重跑脚本。照片被 `.gitignore` 掉不进版控，appearance.md 是金本一人一次就够。
 
@@ -45,22 +51,19 @@ LOW 的处理方式不是「也许需要」，而是「必须跑完才能发 pro
 
 违反这两条铁律前请先 stop 并询问用户。
 
-### 脱离 canonical 的判断（双轴选风格）
+### 风格选择（双轴）
 
-不走 canonical 时，用[references/style-selection-rules.md](./references/style-selection-rules.md)的双轴树：
+不再有「canonical / 脱离 canonical」的二元划分 — canonical-breakout 是全题型默认，按题型 / 情绪在 `references/cover-style-pool.md` 双轴表里切换。简化映射：
 
-- **第一轴**：这张图卖人物还是卖结构？
-- **第二轴**：调性是什么？（热血 / 明星气场 / 故事文艺 / 致敬 / 系列设计 / 可爱）
-
-常见脱离场景：
-
-| 题目 / 用户信号 | 推荐首选 | 对照（出两版时用） |
+| 题目 / 用户信号 | 推荐首选 | 备选（出两版时用） |
 |---|---|---|
-| 球员故事 / 个人成长 / profile | `watercolor_ink_sketch` ✅ | canonical 或 `game_cinematic` |
-| 致敬 / 退役 / 生涯回顾 | `ink_wash_silhouette` 🟡 待测 | `watercolor_ink_sketch` |
-| 系列统一视觉 / 设计感 | `risograph_duotone` 🟡 待测 | `editorial_collage` |
-| 商业题 / 薪资 / 转播 | `editorial_collage` | `minimal_data_poster` |
-| 轻松 / 可爱 / IP 化 | `mascot_q` | `anime_cover` |
+| NBA / MLB 动作题（高张力）| ⭐ `canonical-breakout` | `slam-dunk-classic` |
+| 球员故事 / 个人成长 / profile | `watercolor-ink` 🟡 | `canonical-breakout` |
+| 群像 / 系列 / 多角色 | `slam-dunk-classic` 🟢 | `100m-poster` |
+| 商业题 / 薪资 / 转播（高张力）| `100m-poster` 🟡 | `canonical-breakout` |
+| 致敬 / 退役 / 生涯回顾 | `slam-dunk-movie` 🟡 / `ink-wash-silhouette` 🔬 | `watercolor-ink` |
+| 系列统一视觉 / 设计感 | `risograph-duotone` 🔬 | `100m-poster` |
+| 轻知识 / 辅助图 / 可爱 | `mascot-q` 🟢 | — |
 
 ### 何时出两版让用户选
 
