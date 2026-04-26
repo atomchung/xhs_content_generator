@@ -59,7 +59,7 @@ python scripts/stage_prompt.py path1.md path2.md -m "prompts: tatum v5 defense p
 
 动作：中距离急停后仰跳投 apex — 双脚离地、身体后仰、出手臂完全伸直、球在画面最顶边。
 
-风格：canonical comic break-out prompt（photorealistic foreground transition）。
+风格：canonical 3D comic break-out（physically-rendered manga figure with photo-accurate likeness, rendered as comic illustration — not photo）。
 
 改动：把"大头照"改回完整动作，强调 scale up whole figure ≠ face close-up。
 
@@ -78,26 +78,43 @@ Prompt: https://github.com/atomchung/xhs_content_generator/blob/<branch>/demo_po
 - 每次 commit message 简要说明改了什么
 - Wemby 的本季数据（得分/篮板/盖帽）为预估值，生图前需替换为实际数据
 
-## 生图铁律（2026-04-19 研究后锁定）
+## 账号视觉宪法（高于所有 skill 默认）
 
-### 风格：NBA 动作题 canonical 是首选，不是唯一解
+这三条凌驾于任何 skill 的默认风格：
 
-NBA 球员动作封面的**默认首选**是 canonical comic break-out prompt，来源：
-- `explorations/visuals/2026-04-19-nba-cover-style-research.md`（44 个 mutation 全败的实验记录）
+1. **账号所有封面默认走漫画 / 卷封 / 名场面风格**。canonical 3D comic break-out 是当前金本，**适用全题型**（动作 / 商业 / 故事 / 致敬 / 系列）。NBA 动作题只是当初的验证场景，不是 scope 上限。
+2. **真人题：脸要像本人，但渲染成漫画**。看得出是谁（Ohtani / Clark / Tatum），但视觉语言是漫画 / 卷封 / 名场面，不是 photoreal 照片，也不是萌系动漫脸。参考体感：灌篮高手 / 鬼灭电影版 / 100 公尺日漫海报。
+3. **ESPN 真照只用来取「文字形容词」**。Read 图 → 写进 fact_pack 的 `## Visual Anchors` → final prompt 引用文字。**永远不在 final prompt 里 embed 照片 URL / `reference photo` / `photorealistic` / `studio photo` / `8k photoreal` / `octane render` 等关键词**。
 
-### 两种情境
+## 生图铁律（2026-04-19 研究 + 2026-04-26 视觉宪法补充）
 
-**情境 1：默认走 canonical（NBA 动作题、时间紧、没有特殊调性需求）**
-- 只替换 `{PLAYER_NAME}` 和 `{ACTION_PHRASE}` 两个变量
-- 保留 `photorealistic foreground transition on the player`
-- 必须含 `--ar 3:4 --stylize 250`
-- canonical prompt 内部**不要**加 watercolor / aura / speed lines / beams / gold leaf / Chinese ink / Pop Art / geometric / blueprint / minimal / dark / moody —— 这些已实验验证会让画面更乱
+### 风格：canonical 3D comic break-out 是账号默认（全题型）
 
-**情境 2：脱离 canonical（非动作题、用户要换调性、或 agent 判断 canonical 不合适）**
-- 走 `xhs-image-style-duo` 的双轴选风格逻辑（题目类型 × 调性）
-- 合理的场景：球员故事 / 个人成长 → `Watercolor Ink Sketch`；致敬退役 → `Ink Wash Silhouette`（待测）；系列封面 → `Risograph Duotone`（待测）
-- 如果不确定，**agent 可以出两版让用户挑**：canonical 一版 + 双轴推荐一版
-- 口头提示用户「默认 canonical 是因为…，这次推荐脱离是因为…」
+**默认首选**：canonical 3D comic break-out（来源：`explorations/visuals/2026-04-19-nba-cover-style-research.md`，44 个 mutation 全败的实验记录）。
+
+虽然当时验证场景是 NBA 动作题，但符合视觉宪法第 1 条 — 适用全账号题型。
+
+### 风格池与选择
+
+封面风格池 + 双轴决策表见：`references/cover-style-pool.md`。
+
+简化逻辑：
+- 默认 → `canonical-breakout`
+- 抒情 / 个人成长 → `watercolor-ink`
+- 群像 / 90s 热血 → `slam-dunk-classic`
+- 致敬 / 退役 → `slam-dunk-movie` 或 `ink-wash-silhouette`
+- MLB / 商业题（高张力）→ `100m-poster`
+- 系列 / 设计感 → `risograph-duotone`
+- 轻知识 / 辅助图 → `mascot-q`
+
+### canonical 措辞（旧词替换 — 不要再写 photorealistic）
+
+**旧（已废）**：`photorealistic foreground transition on the player`
+**新**：`physically-rendered manga figure with photo-accurate likeness, rendered as comic illustration (not photo)`
+
+prompt 内部 **绝对不要** 出现：`photorealistic` / `cinematic photoreal` / `studio photo` / `8k photoreal` / `octane render` / `reference photo`。也不要再加 watercolor / aura / speed lines / beams / gold leaf / Chinese ink / Pop Art / geometric / blueprint / minimal / dark / moody（实验验证会让画面更乱）。
+
+必须含 `--ar 3:4 --stylize 250`。
 
 ### 真人：必须先跑 Person Recognition Gate
 
@@ -109,13 +126,14 @@ NBA 球员动作封面的**默认首选**是 canonical comic break-out prompt，
    {"person": "...", "confidence": 65, "tier": "MED", "reason": "...", "anchors_suggestion": "..."}
    ```
 3. **根据 tier 行为**：
-   - 🟢 HIGH (75+)：直接用名字
-   - 🟡 MED (40-74)：自动加 `anchors_suggestion` 进 prompt + 对话中提示用户
+   - 🟢 HIGH (75+)：直接用名字（默认会渲染成漫画，不会变 photo）
+   - 🟡 MED (40-74)：自动加 `anchors_suggestion`（文字外貌）进 prompt
    - 🔴 LOW (0-39)：**暂停**，要求用户确认是否跑 photo pipeline
-4. **LOW 的 photo pipeline**：
+4. **LOW 的 photo pipeline（按视觉宪法第 3 条）**：
    - 运动号优先 ESPN：`python scripts/fetch_player_photo.py --player "{name}"`
    - 其他领域 fallback Wikipedia API
-   - 产物 embed 进 prompt 替代 anchors
+   - **Claude 用 Read 看图 → 提取文字外貌 → 写进 fact_pack 的 `## Visual Anchors` 段**
+   - **final prompt 只引用文字 anchors，不 embed 照片本身**
 
 ### 决策参考（运动号常见）
 
@@ -123,5 +141,5 @@ NBA 球员动作封面的**默认首选**是 canonical comic break-out prompt，
 |---|---|---|
 | LeBron / Curry / Jokic 级 | 🟢 HIGH | 只写名字 |
 | Rui Hachimura | 🟢 HIGH（实测 OK） | 只写名字 |
-| Cade / Kennard 级轮换 | 🟡 MED | 加外貌锚点 |
-| 大学球员／选秀生（Flagg / Bailey 等）| 🔴 LOW | **必跑 photo pipeline** |
+| Cade / Kennard 级轮换 | 🟡 MED | 加文字 anchors |
+| 大学球员／选秀生（Flagg / Bailey 等）| 🔴 LOW | 跑 photo pipeline → 提取文字 anchors（不 embed 照片）|
