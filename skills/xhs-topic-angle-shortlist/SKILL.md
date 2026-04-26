@@ -297,3 +297,6 @@ description: 为小红书内容发想值得研究的题目和可能切角，并�
 
 - [references/angle-patterns.md](./references/angle-patterns.md)
   何时读：要把一个母题改写成更像“问题句 / 判断句”的切角时。
+
+- [references/research-validated-rules/angle-rules.md](../../references/research-validated-rules/angle-rules.md)
+  何时读：每次切角前过 7 条 checklist（audience / emotion / angle_type / specificity / social_currency / number_anchoring / contrast_framing）。来自 Pistons 30 轮 + Ohtani 跨话题 20 轮 = 50 次 A/B 验证，含 R30 后 baseline 配置和持续失败 mutation 黑名单。

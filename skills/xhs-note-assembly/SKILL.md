@@ -417,3 +417,9 @@ description: 从已确认的故事线出发，整合 `fact_pack`、`story_spine`
 
 - [references/examples.md](./references/examples.md)
   何时读：要确认正文是不是太像整理稿、太长、或没有尾钩时。
+
+- [references/research-validated-rules/body-rules.md](../../references/research-validated-rules/body-rules.md)
+  何时读：写正文骨架（3 模块顺序 / mystery arc / scene scripting / 收口选择）。来自 5 话题 × 25 轮 + Pistons v1/v2/v3 共 155 次 A/B 验证。
+
+- [references/research-validated-rules/title-rules.md](../../references/research-validated-rules/title-rules.md)
+  何时读：写标题（具体数字 / 反问句 / 护城河三元素）。来自跨 5 话题 80+ 次 A/B 验证。
