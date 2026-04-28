@@ -1,11 +1,35 @@
 ## Story Spine
 
-- One-sentence story:
-- This post answers:
-- Chosen angle:
-- Main character or focal point:
-- Central tension or conflict:
-- Why now:
-- Why the reader should care:
-- What to keep:
-- Side angles to park:
+- One-sentence story：你戴的 MLB 帽，不是美国棒球做的，是一家韩国公司在中国卖出一千多家店 — 但衣服再红也救不了这边的棒球比赛。
+- This post answers：MLB 服饰在中国凭什么独赢 NBA / NFL，「衣服红」这件事会不会反过来把棒球本体也带火？
+- Chosen angle：option B — 「同样玩 logo 服装路线，三联盟同台对照，只有 MLB 成了；同时戳破『衣服红 = 比赛会跟着红』的幻想」。把焦点压在中国读者自己的街头视角，不是首尔的设计室也不是纽约的联盟办公室。
+- Main character or focal point：在上海 / 成都 / 北京街头戴 MLB 帽的中国年轻人 — 主角不是球员，是穿衣服的人；F&F 是幕后操盘手，不是主角。
+- Central tension or conflict：
+  - 表层张力：MLB 帽满街都是 vs MLB 比赛在中国几乎没人看
+  - 深层张力：你以为你在穿「美国棒球」，其实你在穿「韩国公司给中国市场设计的 logo 潮牌」 — 三国错位
+  - 收口张力：当 logo 已经脱离运动本体独立成立，体育 IP 还能不能用衣服把比赛带回来？
+- Why now：F&F 中国门店量级到 1046+、MLB 业务占其集团营收约 30.86%（待核口径），同期棒球本体在中国仍冷 — 反差到了一个临界，再不讲就钝化了。
+- Why the reader should care：
+  - 99% 戴 MLB 帽的人不知道这三个字母的服装生意是谁在做
+  - 这是一个「IP 授权的钱怎么挣」的极端教科书案例 — 比赛在美国，设计在韩国，零售在中国，三个国家各分一段
+  - 顺带打掉一个时髦但错的直觉 — 「我穿了你的衣服，我就会爱上你的运动」
+- What to keep：
+  - 反转感：「不是美国做的」这个 punchline 必须在前 50 字内打出
+  - 三联盟对照：NBA / NFL / MLB 同跑道、不同结果，是这篇的论据骨架，不能省
+  - 「衣服红 ≠ 比赛红」的判断要写硬，不要写成开放式
+- Side angles to park：
+  - F&F 公司史 / 创始人故事（留 part 2 候选）
+  - MLB 老花包是不是抄 LV（跑题）
+  - MLB 中国官方青训计划细节（数据太薄，等明朗再写）
+  - 韩流偶像具体代言名单 / 时间表（可以做成系列 part — 「韩流 + 体育 IP」）
+
+## 写作前自检
+
+- 钩子方向：number shock（1046 家 / 30.86% / 13 倍 三选一开头），不用 mystery — 因为反转点本身就是 mystery，开头要先把热度量级砸出来才撑得住后面的反转。
+- 收口方向：hate_bait — 「衣服红救不了棒球」这个判断要敢说，不写「你怎么看」。
+- 字数目标：200-260 字（落在 150-300 区间偏中段，留出节奏感）
+- 段落数：4 段
+  - 段 1：number shock 开场 + 反转点（不是美国做的）
+  - 段 2：三联盟对照（NBA / NFL 都做过同样的事，只有 MLB 成了）
+  - 段 3：为什么是它成 — 韩流 + 中国零售 + logo 极简化 三件事的合流
+  - 段 4：hate_bait 收口 — 衣服救不了比赛
