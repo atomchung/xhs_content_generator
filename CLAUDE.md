@@ -143,3 +143,27 @@ prompt 内部 **绝对不要** 出现：`photorealistic` / `cinematic photoreal`
 | Rui Hachimura | 🟢 HIGH（实测 OK） | 只写名字 |
 | Cade / Kennard 级轮换 | 🟡 MED | 加文字 anchors |
 | 大学球员／选秀生（Flagg / Bailey 等）| 🔴 LOW | 跑 photo pipeline → 提取文字 anchors（不 embed 照片）|
+
+## Cloud 环境 Stream Idle Timeout 防呆
+
+在 Claude Code Cloud (Web) 跑这个 repo 的任务时，反复出现：
+
+```
+API Error: Stream idle timeout - partial response received
+```
+
+成因：模型生成过程中过久没产生新 token，Cloud 连线判 idle 切断。详见 [atomchung/Learning#1](https://github.com/atomchung/Learning/issues/1)。
+
+### 硬规则
+
+1. **不要在同一个 turn 内又 Write 又 commit 又 push**。先 Write 落档 → 下一个 turn 再跑 `stage_prompt.py`（或 git commit/push）。
+2. **单一 Write 内容超过 ~500 行就拆**：分 2–3 次 Write，或先 Write 骨架再用 Edit 逐段补。
+3. **Extended thinking budget 默认调低**。这个 repo 大多是文案 / prompt 编辑，不需要深度推理。Thinking 阶段没有 visible streaming output，最容易触发 idle。
+4. **遇到 partial response 不要从零重做**。指示「继续未完成的部分」，partial 已经落盘的 Write 通常是完整的，只是后续步骤断了。
+5. **大型 research / 多档改动丢 background subagent**。主 session 不会因 streaming timeout 受影响。
+6. **真的卡住时切 `/fast`**（Opus 4.6），输出 throughput 较快。
+
+### 一句话
+
+**写完 → 停一拍 → 下个 turn 再 push**，配合拆档 + 低 thinking budget，基本不会再断。
+
