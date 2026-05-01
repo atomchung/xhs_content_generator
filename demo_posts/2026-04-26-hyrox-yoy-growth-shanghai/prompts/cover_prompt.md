@@ -1,74 +1,207 @@
-# Hyrox 续集封面 prompt — 100 万人在跑 + 上海站倒数
+# Hyrox 续集封面 prompt — 4 种海报构图变体（小红薯 mascot 风）
 
 ## 推荐风格
-- 风格：Q 版健身吉祥物风（实况野球豆薯感 + Hyrox 品牌色）
-- 为什么选它：账号 2025-06-03 那篇 Hyrox 帖（2945 views / 43 分享）就是 Q 版，账号已被算法 + 老粉认 "Q 版 Hyrox" 标签；续集保留风格 = 老粉一秒认出 + 新读者继承上一篇分享惯性
-- 这张图最该卖什么：**数字"100万"的视觉冲击 + 上海站 5-16 的时效紧迫感**
+- 风格：小红薯 mascot Q 版（参考用户提供的 `LET'S HYROX` 四格漫画样本）
+- 为什么选它：上一版黑底霓虹黄 + 3 mascot 挤同一构图翻车，画面信息密度爆掉；这次锁死小红薯原型（peachy 圆豆身 + 红 T + 绿叶 + 厚黑描边 + 干净浅底），4 种海报构图同测找最稳的
+- 这张图最该卖什么：**百万人在跑 + 上海站 5.16 倒数**
 
-## Story Atoms
-- 主角：3 个 Q 版健身吉祥物（多元身形：高壮男 + 中等女 + 标准男），承担"百万人都在跑"的群像感
-- 动作瞬间：1 个奔跑中（侧面，腾空一脚）+ 1 个推黑色铁橇（弓步发力）+ 1 个壶铃高举（双手过头）
-- 情绪冲突："百万人在跑" vs "上海站还差 20 天" → 紧迫 + 热血
-- 背景符号：上海外滩剪影（东方明珠 + 陆家嘴三件套：上海中心、环球金融、金茂）+ Hyrox 品牌色（黑底 + 霓虹黄）
+## 共用风格锁（4 个变体都不动）
 
-## Generation Order
-1. Subject anchor（先锁角色 + 动作）
-2. Background layer（外滩剪影）
-3. Final cover（合成 + 加大字）
+角色四件套（一致到像同一只 mascot 的不同分身）：
+- 草莓 / 圆豆形身体，**peachy-beige 肤色**（不是红色，红色只是 T 恤）
+- 头顶一片绿色叶子（草莓蒂感）
+- 厚一致的黑描边，flat cel-shaded illustration
+- 点状黑眼 + 圆形粉色腮红 + 简单弧线嘴
+- 红色短袖 T 恤覆盖躯干，**裸臂裸腿**（不画裤子）
+- 短粗手脚，chibi 头身比约 1:1
 
-## Style 1 — Anime Cover（本案不走，仅留备份）
-- 跳过原因：Hyrox 没有单一明星主角，热血动漫名场面构图（单人英雄站姿）不适配；账号验证 Q 版 = 这条线流量基本盘
+底色规则：
+- 暖白 / 米色 / 软粉橙底
+- **禁止黑底**、**禁止霓虹黄底**（上一版翻车的来源）
+- 道具用黑色（铁橇 / 壶铃 / sandbag），**不用黄色道具**
 
-## Style 2 — Mascot Q（推荐）
-- 风格摘要：実況野球豆薯感 + 小红薯吉祥物 + Hyrox 品牌黑黄配色，圆豆身、短手短脚、厚黑描边、点状黑眼，画面干净不堆道具
-- 可爱元素：黑色铁橇、霓虹黄 Hyrox logo 背心、小汗珠、红色完赛奖牌（未上身）
+文字层：
+- 中文走阿里巴巴普惠体 Bold/Heavy
+- 英文走 HYROX 加粗 sans-serif
+- 主色：深红字 + 黑描边（在浅底上）
+- 必含：`--ar 3:4 --stylize 250`
 
-### Subject Anchor Prompt（只画人物）
+---
+
+## 走法 A — 起跑线群像（最直观传 "百万人"）
+
+### Story Atoms
+- 主角：6 个小红薯排在起跑线，朝镜头跑来
+- 动作瞬间：前排 3 个大尺寸不同跑姿 + 后排 3 个小一号略模糊（暗示 100 万人）
+- 情绪：起跑线那一刻的兴奋 + 紧张混合
+- 卖点：群像感本身 = 数字 100 万的视觉本体
+
+### Final Prompt A
+
 ```text
-3 chibi Q-style fitness race mascots in a Hyrox-style functional fitness scene, dough-round bodies, short stubby limbs, thick black outline, simple dot eyes, minimal facial features, friendly and energetic.
+Race start-line group of 6 chibi 小红薯-style mascots running toward camera in a Hyrox-style fitness race poster, 3:4 vertical magazine cover layout.
 
-Mascot 1 (left): tall muscular male character, mid-stride running pose with one leg lifted high, sweat droplet, wearing black athletic tank top with neon yellow accent, black shorts.
-Mascot 2 (center, slightly forward): average-build male character, lunging deep while pushing a heavy black sled forward with both hands, intense focused expression, neon yellow Hyrox-style tank top.
-Mascot 3 (right): female character with short ponytail, raising a black kettlebell above head with both arms, smiling determined, black tank top with neon yellow accent.
+CHARACTER LOCK (apply to all 6 mascots):
+- Round strawberry-shaped peachy-beige body with soft rounded base
+- Single green stem leaf on top of head
+- Thick consistent black outline, flat cel-shaded illustration
+- Simple dot eyes, round pink blush cheeks, small curved smiling or determined mouth
+- Red short-sleeve T-shirt covering torso, bare arms and bare short stubby legs
+- Cute chibi proportions, head-to-body ratio about 1:1
 
-Plain off-white background. Centered group composition. Clean Q-style mascot illustration, sticker-friendly, brand mascot poster aesthetic. No clutter, no extra props.
+FOREGROUND (lower 55%): 3 large mascots side by side at the start line, all mid-stride running toward camera, one leg lifted, sweat droplets flying, varied determined and excited expressions. Slight diagonal stagger, not perfectly aligned.
 
---ar 3:4 --stylize 250
-```
+MIDGROUND (mid 25%): 3 smaller mascots running behind the front row, slightly softer outline, suggesting a much larger crowd of runners.
 
-### Background Prompt（背景层，可独立替换）
-```text
-Stylized Shanghai Bund skyline silhouette in clean flat illustration style. Iconic landmarks: Oriental Pearl TV Tower (left), Lujiazui supertall trio — Shanghai Tower, Shanghai World Financial Center (the bottle opener), Jin Mao Tower (right side). Soft sunset gradient sky from warm orange at horizon to deep navy at top. Empty middle ground for subject placement. Minimal, no people, no boats, no clutter.
+BACKGROUND (upper 20%): stylized Shanghai Bund skyline silhouette in deep navy — Oriental Pearl TV Tower on the left, Lujiazui supertall trio (Shanghai Tower, World Financial Center, Jin Mao Tower) on the right. A clean black HYROX start arch frames the runners with a small red banner across.
 
---ar 3:4
-```
-
-### Final Cover Prompt（最终封面，给生图工具用）
-```text
-Magazine-style fitness race poster cover, 3:4 vertical layout.
-
-FOREGROUND (lower 60%): 3 chibi Q-style mascots from Hyrox-style fitness racing — left mascot tall muscular male mid-stride running with one leg lifted, sweat droplet; center mascot average male in deep lunge pushing a heavy black sled with both hands forward, focused expression; right mascot female with short ponytail raising a black kettlebell above her head with both arms, smiling determined. All wearing black athletic tank tops with neon yellow Hyrox-style accents and black shorts. Round dough-like bodies, short stubby limbs, thick black outlines, simple dot eyes, minimal facial features. Friendly and energetic.
-
-BACKGROUND (upper 40%): stylized Shanghai Bund skyline silhouette — Oriental Pearl TV Tower on the left, Lujiazui supertall trio (Shanghai Tower, World Financial Center, Jin Mao Tower) on the right. Soft sunset gradient from warm orange at horizon to deep navy at top.
+BACKGROUND COLOR: warm cream and off-white sky with very soft pink horizon glow.
 
 TEXT OVERLAY:
-- Top headline (massive, neon yellow Chinese text, bold sans-serif): 「100 万人在跑」occupying about 25% of canvas width at top, with subtle black outline for legibility against sky
-- Subline below headline (medium white Chinese text): 「Hyrox 上海站 5-16 倒数 20 天」
-- Bottom-right corner small mark: minimal "HYROX" wordmark in neon yellow
+- Top headline (massive bold Chinese sans-serif, deep red with black outline): 「100万人 一起跑」
+- Subline below headline (medium black Chinese sans-serif): 「HYROX 上海站 倒数 15 天」
+- Bottom-right corner: small black wordmark "HYROX 5.16"
 
-COLOR PALETTE: black + neon yellow (Hyrox brand) + soft warm sunset gradient + Bund silhouette deep navy.
-
-STYLE: official Hyrox brand chibi mascot event poster, clean composition, no random props, no extra decoration, no chibi mascots in background. Kid-book friendly Q-mascot illustration but with sport-event poster polish.
+STYLE: clean race event poster with cute mascot illustration, race-day energy, minimal clutter, sport-event poster polish. No clutter beyond the start arch. No neon yellow background. No photorealistic elements.
 
 --ar 3:4 --stylize 250
 ```
 
-## 推荐
-- 适合首图的：Final Cover Prompt（直接用）
-- 背景如果要改，优先改：`Background Prompt` → 重新合成 `Final Cover Prompt`
-- 如果"100 万"觉得不够狠，可在 `Final Cover Prompt` 里把 headline 替换为「营收 15 亿 RMB」或「8 站 → 100+ 站」试 A/B 版本
+---
 
-## 如果要继续改
-- 背景优先改什么：上海剪影是否要换更具识别度的（外白渡桥/南浦大桥）or 加渐变光效
-- 不要动什么：3 个 Q 版角色的 dough-body + dot eye + 黑底霓虹黄配色（这是和上一篇 Hyrox 帖建立的视觉锚，老粉一秒认出）
-- 数字层级要保住：100 万 > 上海站 5-16 > HYROX 标记，三层视觉权重不能乱
+## 走法 B — 8 站关卡图（知识感强）
+
+### Story Atoms
+- 主角：8 个小红薯，各自做一个 Hyrox 标志动作
+- 动作瞬间：跑 / 推橇 / 拉橇 / burpee broad jump / 划船 / sandbag / wall ball / kettlebell
+- 情绪：闯关 / 通关感
+- 卖点：一图说清 Hyrox 是什么 + 终点是上海
+
+### Final Prompt B
+
+```text
+Hyrox 8-station race-day map poster with 小红薯-style chibi mascots, 3:4 vertical layout.
+
+CHARACTER LOCK (same across all 8 mascots): round strawberry-shaped peachy-beige body, single green stem leaf on top, thick black outline, dot eyes, round pink blush cheeks, simple curved mouth, red short-sleeve T-shirt covering torso, bare arms and short stubby legs, chibi proportions.
+
+LAYOUT: a winding curving dotted-line race track threads from top-left to bottom-right of the canvas through 8 numbered stations, each station hosts 1 mascot performing one signature Hyrox movement.
+
+STATION 1 (top-left): mascot running with sweat droplets
+STATION 2: mascot in deep front lunge pushing a black sled forward
+STATION 3: mascot hauling a black sled backward by rope, leaning back
+STATION 4: mascot mid-air in a burpee broad jump
+STATION 5: mascot rowing on a black ergometer machine, leaning back
+STATION 6: mascot squatting with a black sandbag on one shoulder
+STATION 7: mascot raising a black kettlebell overhead with both arms
+STATION 8 (bottom-right, finish line): mascot crossing finish line with both arms raised, wearing a red finisher medal on red ribbon
+
+Each station has a small black-circle number badge (1 through 8) next to the mascot.
+
+BACKGROUND: clean cream off-white background with very subtle dotted grid texture. Bottom 15%: small Shanghai Bund silhouette in deep navy as the finish-line backdrop, Oriental Pearl TV Tower clearly visible.
+
+TEXT OVERLAY:
+- Top headline (massive bold Chinese sans-serif, deep red with black outline): 「8站走完 = HYROX」
+- Subline (medium black Chinese sans-serif): 「上海站 5.16 你能撑到第几站?」
+- Bottom-right corner: small black wordmark "HYROX SHANGHAI 5.16"
+
+STYLE: race-day station map illustrated as a cute mascot infographic poster, knowledge-graphic feel, clean composition, no neon yellow background, no photorealistic elements.
+
+--ar 3:4 --stylize 250
+```
+
+---
+
+## 走法 C — 官方海报致敬（hero + 群像，最像 Hyrox 官方）
+
+### Story Atoms
+- 主角：1 个大 hero 小红薯做最帅的推橇动作 + 6 个小一号小红薯散点围绕
+- 动作瞬间：hero 弓步推黑橇正对镜头，周围 6 个做其他 station 动作
+- 情绪：单英雄聚焦 + 群体陪衬，海报感最强
+- 卖点：最像 Hyrox 官方比赛海报构图
+
+### Final Prompt C
+
+```text
+Hyrox official-style race poster featuring one hero mascot surrounded by smaller station mascots, 3:4 vertical layout, 小红薯-style chibi illustration.
+
+CHARACTER LOCK (apply to hero and all 6 surrounding mascots): round strawberry-shaped peachy-beige body, single green stem leaf on top of head, thick black outline, dot eyes, round pink blush cheeks, simple curved mouth, red short-sleeve T-shirt covering torso, bare arms and bare short stubby legs.
+
+HERO (center, occupying ~50% of canvas height): 1 large mascot in a deep front-facing lunge pushing a heavy black sled forward toward camera, intense focused determined expression, sweat droplets flying, clearly the biggest figure on canvas.
+
+SURROUNDING HALO (6 smaller mascots at ~30% of hero size, balanced around the hero, none overlapping the hero):
+- Top-left: mascot mid-stride running
+- Top-right: mascot raising a black kettlebell overhead with both arms
+- Mid-left: mascot rowing on a black ergometer
+- Mid-right: mascot throwing a black wall ball upward
+- Bottom-left: mascot mid-air burpee broad jump
+- Bottom-right: mascot squatting with black sandbag on shoulder
+
+BACKGROUND: warm cream off-white background with a soft red radial gradient glow behind the hero (like a spotlight). Bottom 25%: Shanghai Bund skyline silhouette in deep navy — Oriental Pearl TV Tower, Shanghai Tower, World Financial Center, Jin Mao Tower.
+
+TEXT OVERLAY:
+- Top thin banner (black bold Chinese sans-serif on cream): 「100万人 已报名」
+- Center title behind/around hero head height (massive bold Chinese sans-serif, deep red with thick black outline): 「HYROX 上海」
+- Bottom date strip (large black bold sans-serif): 「2026.05.16 · 倒数 15 天」
+- Bottom-right corner: small black wordmark "HYROX"
+
+STYLE: official Hyrox brand event poster polish translated to chibi mascot illustration, cinematic race poster composition, clean and uncluttered. No neon yellow background. No photorealistic elements.
+
+--ar 3:4 --stylize 250
+```
+
+---
+
+## 走法 D — 终点冲线（情绪反差 — 不是备赛紧迫，是完赛喜悦）
+
+### Story Atoms
+- 主角：4 个小红薯一起冲过 HYROX 终点线 + 3 个已完赛在后
+- 动作瞬间：4 种不同冲线姿（双手举 / 跨步 / 指天 / 跪地笑），所有人挂红色完赛奖牌
+- 情绪：完赛喜悦 + 上海地标
+- 卖点：钩老粉 "上次没跑这次跑" 的逆向情绪驱动
+
+### Final Prompt D
+
+```text
+Race finish-line celebration scene with 小红薯-style chibi mascots crossing a Hyrox finish line in front of Shanghai Bund, 3:4 vertical poster layout.
+
+CHARACTER LOCK (apply to all mascots): round strawberry-shaped peachy-beige body, single green stem leaf on top of head, thick black outline, dot eyes, round pink blush cheeks, simple curved mouth, red short-sleeve T-shirt covering torso, bare arms and bare short stubby legs.
+
+FOREGROUND (lower 50%): 4 mascots crossing a black HYROX finish-line ribbon together at the same moment, each in a different finishing pose:
+- Leftmost: arms raised triumphantly overhead, mouth wide-open shouting in joy
+- Second from left: mid-stride lunging across the line, leaning forward
+- Second from right: pointing one finger to the sky, eyes closed smiling
+- Rightmost: collapsing onto knees but smiling, arms slightly back
+
+All 4 mascots wear a round red finisher medal on a red ribbon around their necks. Sweat droplets, joyful and exhausted expressions.
+
+MIDGROUND: 3 smaller mascots already past the finish line, hugging each other or sitting on the ground holding their medals up to the sky.
+
+BACKGROUND (upper 35%): stylized Shanghai Bund skyline silhouette in deep navy — Oriental Pearl TV Tower, Lujiazui supertall trio. Sky is warm sunset gradient from soft pink at horizon to cream at top. A black HYROX finish arch frames the top of the canvas, with red and black confetti / streamers falling (no yellow).
+
+TEXT OVERLAY:
+- Top headline (massive bold Chinese sans-serif, deep red with thick black outline): 「5.16 终点见」
+- Subline (medium black Chinese sans-serif): 「HYROX 上海 · 100万人陪你跑完」
+- Bottom-right corner: small black wordmark "HYROX SHANGHAI"
+
+STYLE: race finish-line celebration poster in chibi mascot illustration, emotional triumphant tone, clean composition. No neon yellow background. No photorealistic elements.
+
+--ar 3:4 --stylize 250
+```
+
+---
+
+## 推荐挑选顺序
+1. 先看 **C**（最像 Hyrox 官方海报，hero + 群像兼得）
+2. 如果 C 觉得太挤，落 **A**（起跑线最干净）
+3. 如果想做"涨知识"型，落 **B**（8 站关卡图）
+4. 如果想换情绪到完赛喜悦，落 **D**（终点线）
+
+## 不要动什么
+- 小红薯原型四件套（peachy 圆豆身 / 头顶绿叶 / 红短袖 T / 厚黑描边）— 4 个变体的视觉锚
+- 暖白 / 米色底 — **黑底霓虹黄是上一版翻车的来源**
+- 红色 + 黑色道具配色 — 不要黄色道具
+
+## 如果还想再多试
+- hero 动作可以从推橇换成跳箱 / 壶铃过头 / sandbag squat 看哪个最帅
+- 上海地标可以从外滩换成外白渡桥 / 南浦大桥（更有识别度）
+- 文字 hook 可以 A/B：「100万人」「营收 15 亿」「8 站 → 100+ 站」三选一
