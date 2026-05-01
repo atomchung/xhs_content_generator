@@ -8,19 +8,20 @@
   - **V1 投手视角**（frontal）— 从投手丘看回本垒，Judge 身体正面对画
   - **V2 侧角**（3/4 角度）— ESPN highlight 经典角度，~30-45° off-axis 从三垒 photographer pit 方向看
 
-## 海报文字（两版共用，baked-in）
+## 海报文字（v4 — 参考 100m 海报排版）
 
-| 位置 | 文字 | 备注 |
-|---|---|---|
-| 顶栏（小） | `MLB 最强打者` | 简体中文 |
-| 副标（中下，Judge 上方）| `法官` | 简体中文 2 字，做日漫海报的大字效果 |
-| 主标（大）| `JUDGE` | 英文大写 condensed bold，海报视觉中心 |
-| 数据栏（最底） | `62 HR · 11.4 WAR · 2× AL MVP` | 英文 + 数字 |
+v3 错在哪：把 JUDGE 当主标 + 法官当 accent，等于把英文当老大、中文当装饰 — 这是中文圈商业海报的逻辑，**不是 100m 海报逻辑**。100m 海报是「日文 kanji 才是主标，英文是国际副标，tag line 在上，credits 在下」。这次按 100m 模型重排：
 
-数据来源：
-- 62 HR = 2022 AL 单季 HR 纪录（破 Maris 1961 年 61 支）
-- 11.4 WAR = 2022 bWAR，自 Babe Ruth 以来位置球员单季最高级别
-- 2× AL MVP = 2022 + 2024 两届
+| 层级 | 文字 | 在 100m 海报里相当于 | 字型规格 |
+|---|---|---|---|
+| ① 主标（最大）| `法官` | 日文 kanji 主标 | brushed 厚重笔触 + 极轻微纸纹质感 + 黑墨色 |
+| ② 国际副标 | `JUDGE` | 英文国际版片名 | heavy condensed display 字型，**和「法官」同样的笔触 / 质感**（不是 clean 现代 sans，那样会和 kanji 不搭）|
+| ③ Tag line（顶）| `MLB 最强打者` | 海报顶部宣传 tag | 简单 thin sans-serif，少量字间距撑开，淡白色 |
+| ④ Credits 行（底）| `62 HR · 11.4 WAR · 2× AL MVP` | 演职员表 / 数据补充 | tabular 风格 thin sans，比 tag 还小 |
+
+**关键**：① 和 ② 必须看起来像**同一张海报的同一组排版师做的**（统一笔触 / 统一描边 / 统一磨砂质感）。不能一个走毛笔、一个走 Helvetica。
+
+数据来源：62 HR = 2022 AL 单季 HR 纪录 / 11.4 WAR = 2022 bWAR / 2× AL MVP = 2022 + 2024。
 
 ---
 
@@ -69,17 +70,23 @@ CHARACTER (Aaron Judge): towering 6'7'' frame with broad shoulders dominating th
 
 STYLE — POSTER ILLUSTRATION: hand-illustrated key art quality with thick black contour outlines on the figure, soft poster-paint cel shading, slight grain texture overlay. The figure has a noble-statue stillness rather than dynamic motion blur. Limited tonal range — each form is rendered in three values (light / mid / shadow). Subtle textured brush noise across flat color fills. Variable-weight black ink on key contours.
 
-DOMINANT COLOR: deep crimson red (vermillion / 朱) fills the entire background as a single flat field — no gradient, no detail, no horizon. The figure stands against this pure crimson plane with high-contrast separation. NO stadium, NO crowd, NO sky behind the figure.
+BACKGROUND — Yankee Stadium evening atmosphere (painterly, not photo): stylized night atmosphere of Yankee Stadium rendered as a moody poster painting. Deep navy blue sky dominating the upper half, transitioning to a warm crimson glow along the horizon line (sunset / stadium lights bleed). Across the upper third, a soft silhouette of Yankee Stadium's iconic white frieze (the scalloped upper-deck arched detail) running horizontally, rendered as a faint cream-colored architectural shape, NOT a detailed crowd. Below that, the suggestion of a deep navy outfield wall with a subtle, slightly weathered painted "NY" interlocking logo just barely visible in darker navy on the wall — present but not dominant. NO individual fans, NO scoreboard text, NO flash dots, NO photo realism. The atmosphere is painterly and moody, like a Japanese movie-poster painted backdrop. Crimson stays as an ATMOSPHERIC ACCENT (sunset / glow, ~25% of canvas), not the dominant field.
 
-POSTER TEXT LAYOUT (all text rendered as part of the poster image, baked-in, fully legible):
-- TOP BAR: the Simplified Chinese line "MLB 最强打者" rendered crisply in clean white sans-serif, centered along the top 6% of the canvas. All five Chinese characters must be fully legible and properly formed.
-- HAN CHARACTER ACCENT: the two Simplified Chinese characters "法官" rendered in a bold brushed poster-style typography (white with a thin black outline), placed prominently directly above the JUDGE wordmark — sized as a secondary headline, like a Japanese cinema poster's hand-brushed character accent. Both characters fully legible and properly formed.
-- MAIN TITLE: the single English word "JUDGE" rendered in massive condensed bold sans-serif all-caps white with a thin black outline, positioned just above the figure's helmet, occupying ~25% of canvas width — this is the visual centerpiece text.
-- BOTTOM STATS LINE: "62 HR · 11.4 WAR · 2× AL MVP" in clean white sans-serif, centered along the bottom 6% of the canvas.
+POSTER TEXT LAYOUT (v4 — modeled on Japanese cinema posters such as the 2024 Japanese film "100m" poster):
 
-All text is integral to the poster design, rendered crisply and fully legibly. The Simplified Chinese characters must be accurately formed (not garbled, not stylized into illegibility). Text hierarchy from largest to smallest: JUDGE > 法官 > MLB 最强打者 ≈ stats line.
+The text hierarchy here is the OPPOSITE of a Western banner: the Chinese characters are the dominant title, the English is the international subtitle. CRITICAL: the Chinese characters "法官" and the English word "JUDGE" must share the SAME visual treatment — same brush-textured edge, same heavy weight, same color, same slight grain/distress — so they read as one bilingual title block by the same poster designer, not two mismatched fonts pasted together.
 
-COLOR PALETTE (locked): crimson red (~60% of canvas) + Yankees navy + pinstripe white + black ink + warm skin tone + small white text. Six values total.
+- ① MAIN TITLE — the two Simplified Chinese characters "法官" rendered in massive bold brush-stroke calligraphic poster typography, off-white / cream color with subtle paper-grain distress along the edges (Japanese-poster brushed-kanji feel). This is the largest text element in the poster, occupying about 30% of canvas width. Position: upper-middle of the canvas, sitting just above the figure's helmet. Both Han characters must be accurately formed and legible.
+
+- ② INTERNATIONAL SUBTITLE — the English word "JUDGE" rendered immediately below the "法官" title, in a heavy condensed serif or chunky display typeface that VISUALLY MATCHES the "法官" treatment (same off-white color, same brush-textured / slightly distressed edges, similar visual weight per glyph). Sized at roughly 50% the width of the "法官" title above. The two together form one unified bilingual title block.
+
+- ③ TAG LINE — the Simplified Chinese phrase "MLB 最强打者" placed at the very top of the canvas (above ① ②) as a thin centered tag, in a simple light-weight sans-serif with slight letter-spacing, soft white. Functions as the "catchphrase" line at the top of a Japanese movie poster.
+
+- ④ STATS / CREDITS LINE — "62 HR · 11.4 WAR · 2× AL MVP" centered along the bottom 6% of the canvas, in a thin tabular sans-serif, soft white, smaller than the tag line above. Functions as the credits / billing block at the bottom of a Japanese movie poster.
+
+All text rendered crisply and fully legibly. Simplified Chinese characters accurately formed (not garbled). Hierarchy from most-to-least dominant: 法官 > JUDGE > MLB 最强打者 > stats line.
+
+COLOR PALETTE (locked): Yankees navy (dominant, ~50% of canvas — sky + outfield wall) + atmospheric crimson glow (~25% — sunset accent at horizon) + cream-white frieze accent + pinstripe white + black ink contours + warm skin tone + brushed off-white text. Seven values total.
 
 EMOTION: monumental, cinematic, restrained power — the quiet second AFTER the decisive moment. Like a Japanese sport-movie poster announcing the protagonist's signature move.
 
@@ -103,17 +110,23 @@ CHARACTER (Aaron Judge): towering 6'7'' frame with broad shoulders dominating th
 
 STYLE — POSTER ILLUSTRATION: hand-illustrated key art quality with thick black contour outlines on the figure, soft poster-paint cel shading, slight grain texture overlay. Noble-statue stillness rather than dynamic motion blur. Limited tonal range — each form rendered in three values (light / mid / shadow). Subtle textured brush noise across flat color fills. Variable-weight black ink on key contours.
 
-DOMINANT COLOR: deep crimson red (vermillion / 朱) fills the entire background as a single flat field — no gradient, no detail, no horizon. The figure stands against this pure crimson plane with high-contrast separation. NO stadium, NO crowd, NO sky behind the figure.
+BACKGROUND — Yankee Stadium evening atmosphere (painterly, not photo): stylized night atmosphere of Yankee Stadium rendered as a moody poster painting. Deep navy blue sky dominating the upper half, transitioning to a warm crimson glow along the horizon line (sunset / stadium lights bleed). Across the upper third, a soft silhouette of Yankee Stadium's iconic white frieze (the scalloped upper-deck arched detail) running horizontally, rendered as a faint cream-colored architectural shape, NOT a detailed crowd. Below that, the suggestion of a deep navy outfield wall with a subtle, slightly weathered painted "NY" interlocking logo just barely visible in darker navy on the wall — present but not dominant. NO individual fans, NO scoreboard text, NO flash dots, NO photo realism. The atmosphere is painterly and moody, like a Japanese movie-poster painted backdrop. Crimson stays as an ATMOSPHERIC ACCENT (sunset / glow, ~25% of canvas), not the dominant field.
 
-POSTER TEXT LAYOUT (all text rendered as part of the poster image, baked-in, fully legible):
-- TOP BAR: the Simplified Chinese line "MLB 最强打者" rendered crisply in clean white sans-serif, centered along the top 6% of the canvas. All five Chinese characters must be fully legible and properly formed.
-- HAN CHARACTER ACCENT: the two Simplified Chinese characters "法官" rendered in a bold brushed poster-style typography (white with a thin black outline), placed prominently directly above the JUDGE wordmark — sized as a secondary headline, like a Japanese cinema poster's hand-brushed character accent. Both characters fully legible and properly formed.
-- MAIN TITLE: the single English word "JUDGE" rendered in massive condensed bold sans-serif all-caps white with a thin black outline, positioned just above the figure's helmet, occupying ~25% of canvas width — this is the visual centerpiece text.
-- BOTTOM STATS LINE: "62 HR · 11.4 WAR · 2× AL MVP" in clean white sans-serif, centered along the bottom 6% of the canvas.
+POSTER TEXT LAYOUT (v4 — modeled on Japanese cinema posters such as the 2024 Japanese film "100m" poster):
 
-All text is integral to the poster design, rendered crisply and fully legibly. The Simplified Chinese characters must be accurately formed (not garbled, not stylized into illegibility). Text hierarchy from largest to smallest: JUDGE > 法官 > MLB 最强打者 ≈ stats line.
+The text hierarchy here is the OPPOSITE of a Western banner: the Chinese characters are the dominant title, the English is the international subtitle. CRITICAL: the Chinese characters "法官" and the English word "JUDGE" must share the SAME visual treatment — same brush-textured edge, same heavy weight, same color, same slight grain/distress — so they read as one bilingual title block by the same poster designer, not two mismatched fonts pasted together.
 
-COLOR PALETTE (locked): crimson red (~60% of canvas) + Yankees navy + pinstripe white + black ink + warm skin tone + small white text. Six values total.
+- ① MAIN TITLE — the two Simplified Chinese characters "法官" rendered in massive bold brush-stroke calligraphic poster typography, off-white / cream color with subtle paper-grain distress along the edges (Japanese-poster brushed-kanji feel). This is the largest text element in the poster, occupying about 30% of canvas width. Position: upper-middle of the canvas, sitting just above the figure's helmet. Both Han characters must be accurately formed and legible.
+
+- ② INTERNATIONAL SUBTITLE — the English word "JUDGE" rendered immediately below the "法官" title, in a heavy condensed serif or chunky display typeface that VISUALLY MATCHES the "法官" treatment (same off-white color, same brush-textured / slightly distressed edges, similar visual weight per glyph). Sized at roughly 50% the width of the "法官" title above. The two together form one unified bilingual title block.
+
+- ③ TAG LINE — the Simplified Chinese phrase "MLB 最强打者" placed at the very top of the canvas (above ① ②) as a thin centered tag, in a simple light-weight sans-serif with slight letter-spacing, soft white. Functions as the "catchphrase" line at the top of a Japanese movie poster.
+
+- ④ STATS / CREDITS LINE — "62 HR · 11.4 WAR · 2× AL MVP" centered along the bottom 6% of the canvas, in a thin tabular sans-serif, soft white, smaller than the tag line above. Functions as the credits / billing block at the bottom of a Japanese movie poster.
+
+All text rendered crisply and fully legibly. Simplified Chinese characters accurately formed (not garbled). Hierarchy from most-to-least dominant: 法官 > JUDGE > MLB 最强打者 > stats line.
+
+COLOR PALETTE (locked): Yankees navy (dominant, ~50% of canvas — sky + outfield wall) + atmospheric crimson glow (~25% — sunset accent at horizon) + cream-white frieze accent + pinstripe white + black ink contours + warm skin tone + brushed off-white text. Seven values total.
 
 EMOTION: monumental, cinematic, restrained power — the quiet second AFTER the decisive moment. Like a Japanese sport-movie poster announcing the protagonist's signature move.
 
@@ -129,18 +142,20 @@ EMOTION: monumental, cinematic, restrained power — the quiet second AFTER the 
 2. 评分维度：
    - 姿势是不是 bat-watching follow-through（不是 mid-swing）
    - C patch / 99 / 头盔 NY / pinstripe 是否齐全
-   - 朱红色块是不是真的占画布 ~60%（不是稀释成粉红或暗红渐变）
-   - 「JUDGE」英文主标大小 / 位置
-   - 中文「MLB 最强打者」+「法官」字形清晰、笔画完整（用户口径：完整保留简体中文，不会糊）
+   - 背景：洋基球场夜场气场 — 深 navy 天 + 朱红日落辉 + frieze 剪影 + 微弱 NY 外野墙 logo（不是纯色块、不是详细人群）
+   - 文字层级是否对：法官 最大、JUDGE 第二、MLB 最强打者 顶 tag、stats 底 credits
+   - 法官 + JUDGE 是否字型质感统一（笔触 / 描边 / 颜色 / 磨砂感一致 — 不能一个毛笔一个 Helvetica）
+   - 中文字形清晰、笔画完整（用户口径：完整保留简体中文，不会糊）
 3. 两版气质对比：
    - V1 frontal → 庄严、像球员名片 / 海报正贴
    - V2 侧角 → 力量感更强、像 ESPN highlight 截屏的设计版
 
 ### 不要动的（铁律）
 - 动作锁定 bat-watching follow-through
-- 朱红主色 ~60% 占比
-- 文字层级 JUDGE > 法官 > MLB 最强打者 ≈ stats line
-- 中文用简体（最强 / 法官，不是 最強 / 法官）
+- 文字层级（v4 修正）：法官 > JUDGE > MLB 最强打者 > stats — kanji 主导、英文衬位
+- 法官 + JUDGE 必须同笔触 / 同质感 / 同颜色（一组 bilingual title block）
+- 背景元素：navy 主 + 朱红辅 + frieze 剪影 + 远处 NY 外野墙 logo（painterly，**not photo**）
+- 中文用简体（最强 / 法官，不是 最強）
 - `--ar 3:4 --stylize 250`
 - 禁词：photoreal / photorealistic / 8k / octane / studio photo
 - 这版**允许 prompt 内含文字**（baked-in 海报）— 是用户明确要求的特例，跟账号其他封面 prompt 内 NO TEXT 的默认相反，不要把这条习惯带回去
