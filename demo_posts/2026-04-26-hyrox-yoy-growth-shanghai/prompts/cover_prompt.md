@@ -28,41 +28,49 @@
 
 ---
 
-## 走法 A — 起跑线群像（最直观传 "百万人"）
+## 走法 A — 起跑线群像（已选 · v2 动感强化版）
 
 ### Story Atoms
-- 主角：6 个小红薯排在起跑线，朝镜头跑来
-- 动作瞬间：前排 3 个大尺寸不同跑姿 + 后排 3 个小一号略模糊（暗示 100 万人）
-- 情绪：起跑线那一刻的兴奋 + 紧张混合
-- 卖点：群像感本身 = 数字 100 万的视觉本体
+- 主角：6 个小红薯排在起跑线，朝镜头爆冲
+- 动作瞬间：前排 3 个大尺寸冲刺姿（身体倾斜 / 单脚高抬 / 后脚扬尘）+ 后排 3 个小一号带 motion blur
+- 动感增强：低视角仰拍 + 速度线 + 身体倾斜 + 后脚扬尘 + 汗珠成弧
+- 文字精简：标题一句 + 副标一行，**画面里 HYROX 字样只在起跑拱门上出现一次**
+- 情绪：起跑爆冲那一刻 + 标题质问 "又过了一年，他更赚钱吗" 的反差
+- 卖点：标题是商业拷问，画面是体感冲刺，反差越强越抓人
 
 ### Final Prompt A
 
 ```text
-Race start-line group of 6 chibi 小红薯-style mascots running toward camera in a Hyrox-style fitness race poster, 3:4 vertical magazine cover layout.
+High-energy race start-line action poster with chibi 小红薯-style mascots sprinting toward camera, 3:4 vertical magazine cover layout.
 
 CHARACTER LOCK (apply to all 6 mascots):
 - Round strawberry-shaped peachy-beige body with soft rounded base
 - Single green stem leaf on top of head
 - Thick consistent black outline, flat cel-shaded illustration
-- Simple dot eyes, round pink blush cheeks, small curved smiling or determined mouth
+- Simple dot eyes (wide energetic expression), round pink blush cheeks, open shouting or determined mouths
 - Red short-sleeve T-shirt covering torso, bare arms and bare short stubby legs
 - Cute chibi proportions, head-to-body ratio about 1:1
 
-FOREGROUND (lower 55%): 3 large mascots side by side at the start line, all mid-stride running toward camera, one leg lifted, sweat droplets flying, varied determined and excited expressions. Slight diagonal stagger, not perfectly aligned.
+DYNAMIC POSES — push the energy hard:
+FOREGROUND (lower 55%): 3 large mascots side by side at the start line, each leaning aggressively forward in mid-stride sprint toward camera, one leg lifted high and bent, trailing leg pushing off behind. Bodies tilted at varying diagonal angles, NOT upright. Small dust clouds kick up from each trailing foot. Sweat droplets scatter in curved arcs around them. Mouths open in shouting / hyped expressions.
 
-MIDGROUND (mid 25%): 3 smaller mascots running behind the front row, slightly softer outline, suggesting a much larger crowd of runners.
+MIDGROUND (mid 25%): 3 smaller mascots running behind the front row with subtle motion blur and softer outlines, suggesting a much larger crowd.
 
-BACKGROUND (upper 20%): stylized Shanghai Bund skyline silhouette in deep navy — Oriental Pearl TV Tower on the left, Lujiazui supertall trio (Shanghai Tower, World Financial Center, Jin Mao Tower) on the right. A clean black HYROX start arch frames the runners with a small red banner across.
+MOTION GRAPHICS: dynamic thin black speed lines radiate outward from behind the foreground mascots toward the edges of the canvas. Light wind streaks cross the scene horizontally. Slight motion-blur trail behind each foreground mascot.
+
+CAMERA: low angle looking up at the runners — heroic perspective, exaggerated forward thrust.
+
+BACKGROUND (upper 20%): stylized Shanghai Bund skyline silhouette in deep navy — Oriental Pearl TV Tower (left), Lujiazui supertall trio of Shanghai Tower, World Financial Center, Jin Mao Tower (right). A clean black race start arch frames the runners. The bold sans-serif word "HYROX" sits on the top center of the arch — this is the ONLY in-image HYROX wordmark anywhere in the composition.
 
 BACKGROUND COLOR: warm cream and off-white sky with very soft pink horizon glow.
 
-TEXT OVERLAY:
-- Top headline (massive bold Chinese sans-serif, deep red with black outline): 「100万人 一起跑」
-- Subline below headline (medium black Chinese sans-serif): 「HYROX 上海站 倒数 15 天」
-- Bottom-right corner: small black wordmark "HYROX 5.16"
+TEXT OVERLAY (only two text blocks total, beyond the arch wordmark):
+- Top headline (massive bold Chinese sans-serif, deep red with thick black outline, slightly tilted for energy): 「又过了一年，HYROX 他更赚钱吗」
+- Subline below headline (medium black Chinese sans-serif, NO HYROX text in this line): 「上海站 5.16 倒数 15 天」
 
-STYLE: clean race event poster with cute mascot illustration, race-day energy, minimal clutter, sport-event poster polish. No clutter beyond the start arch. No neon yellow background. No photorealistic elements.
+NO other HYROX wordmark anywhere else. No bottom-corner logo. No banner repeating HYROX. No subtitle saying HYROX. The arch is the sole repeat.
+
+STYLE: high-energy race-start action poster, cute mascot illustration with explosive composition, sport-event poster polish. No clutter. No neon yellow background. No photorealistic elements.
 
 --ar 3:4 --stylize 250
 ```
