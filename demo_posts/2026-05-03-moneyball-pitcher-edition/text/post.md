@@ -38,7 +38,7 @@
 
 🧠 三刀拆下来
 
-第一刀是 2001 年的 DIPS / FIP（独立投球率）。Voros McCracken 提出：投手只对三件事 100% 负责 — 三振 (K)、保送 (BB)、全垒打 (HR)；球被打到场上就交给守备和运气。FIP 把这三个数压成一个跟 ERA 同尺度的数字。Greg Maddux 90 年代的 FIP 长年低于 ERA — 等于说他的"真本事"比账面账还恐怖，魔球派把他的合约价值拉到了第二轮。
+第一刀是 2001 年的 DIPS / FIP（独立投球率）。Voros McCracken 提出：投手只对三件事 100% 负责 — 三振 (K)、保送 (BB)、全垒打 (HR)；球被打到场上就交给守备和运气。FIP 把这三个数压成一个跟 ERA 同尺度的数字。90 年代的 Greg Maddux 是这套逻辑最直观的活样板 — 不靠球速吓人，全靠对 K / BB / HR 三件事的控制顶到联盟天花板，4 个 Cy Young 拿到手软。魔球派之后就用同一把尺去抓被传统 ERA 高估或低估的投手。
 
 第二刀是 2015 年的 Statcast。雷达加高速摄像直接量你这一球的 release point、转速 (spin rate)、横纵移动量 (movement)、出手延伸 (extension)。终于能分清"打者打不到"是因为投得快、还是因为投得刁、还是因为球种 deceive 视觉。
 
@@ -68,15 +68,17 @@
 
 ## 图组分工（读者看不到）
 
-> 图组 = 4 张投手海报系列，每张对位一个进阶指标 / 一刀演进。统一 100m-poster 风格 + bilingual title block + pitcher-pose 锁定 + painterly 球场夜景。详细 prompt 见 `prompts/` 同名文件。继承打者版 v4 海报模板（kanji 主 + 英文副同笔触 + 顶 tag + 底 stats credits）。
+> 图组 = 4 张投手海报系列，每张对位一个进阶指标 / 一刀演进。Pose 锁定 + painterly key art。详细 prompt 见 `prompts/` 同名文件。
+>
+> ⚠️ 排版状态：主封面 (Skenes) 已 v3 走「100m 海报式朱红明亮背景 + 西式 SKENES 英文主标 + 两行赛季荣誉 tag (2024 NL ROY / 2025 NL CY YOUNG)」，**脱离打者版 v4 kanji 主导模板**。其他 3 张 (Ryan / Maddux / deGrom) 写之前需跟用户确认是同步改成这套排版、还是保留打者版 kanji 主导日影海报风。
 
-### 图 1（生图封面）— 兵主 SKENES
+### 图 1（生图封面）— SKENES
 - 任务：拦停 — 一眼看到现役最炸投手 + "MLB 最强投手" 的 hook
 - 对位：综合 / 现役 / 当代 Stuff+ 王 — 镜像打者版 Judge 主封面位置
-- 数据栏：1.96 ERA · 2024 NL ROY · Stuff+ 130+
-- 调色：Pirates 黑 + 金黄 + PNC Park 夜景 + Pittsburgh skyline silhouette
-- 动作：mid-delivery 100mph release apex — 高位释放 + 招牌大块头 + mustache 锁定
-- prompt：`prompts/cover_prompt.md`
+- 海报文字：顶 tag 两行 `2024 NL ROY` / `2025 NL CY YOUNG` + 主标 `SKENES`（cream brush-edged 巨型）+ 底 stats `1.96 ERA · 170 K · Stuff+ 130`
+- 调色：100m 海报式朱红阳光主背景 (~55%) + cream 高光 (~15%) + 黑 (~20%, Pirates jersey + cap + figure outline) + 金黄 accent (~5%, jersey wordmark + cap P) — 明亮干净，无 PNC Park / 无 Pittsburgh skyline / 无 stadium
+- 动作：catcher's POV (frontal) — mid-delivery release apex（球刚离手 + 前脚 land + 后腿抬起 + 躯干前倾 + handlebar mustache 翘起锁定）
+- prompt：`prompts/cover_prompt.md` (v3)
 
 ### 图 2 — 神火 NOLAN RYAN
 - 任务：把演进起点（第 0 代 W / ERA / K）锚一个传奇名字
@@ -104,11 +106,11 @@
 
 ### 4 张差异化总览（防呆）
 
-| | 兵主 SKENES | 神火 RYAN | 教授 MADDUX | 神右 DEGROM |
+| | SKENES | 神火 RYAN | 教授 MADDUX | 神右 DEGROM |
 |---|---|---|---|---|
 | 指标 | Stuff+ / 综合 / 现役王 | W / K / ERA | FIP / WHIP / 控球 | Statcast / spin / slider |
 | 球队 | Pirates | Rangers | Braves | Mets |
-| 主色 | 黑 + 金黄 | red + navy + 德州夕阳 | navy + 红 + 白 | royal blue + 橙 |
+| 主色 | 朱红 + 黑 + 金黄（100m 海报式明亮）| red + navy + 德州夕阳 | navy + 红 + 白 | royal blue + 橙 |
 | 动作 | mid-delivery release apex | high leg kick windup | surgical follow-through | stoic high finish |
 | 表情 | jaw clenched + mustache | fierce 燃 | 冷静 + 眼镜 | stoic 冰冷 |
 | 体型 | 6'6" / 235 lbs 巨人 | 6'2" / 195 lbs 紧实 | 6'0" / 170 lbs 偏瘦 | 6'4" / 180 lbs 修长 |
@@ -118,8 +120,8 @@
 打者版用过：Yankees navy + 朱红日落 (Judge) / Mariners navy + teal + 红日 (Ichiro) / 教皇紫 + 金 (Soto) / 火焰橙红 + 黑 (Stanton)。
 
 投手版调色全部错开：
-- Skenes 黑 + 金黄 → 跟 Stanton 黑 + 火焰橙红区分（金黄不是橙红，且加 Pirates 金而非火焰）
-- Ryan red + navy + 德州夕阳 → 跟 Judge 朱红日落区分（这边是黄昏沙漠 daylight，不是夜场 stadium glow）
+- Skenes 朱红 (100m 海报阳光主背景) + 黑 + 金黄 → 跟 Judge「Yankees navy 主 + 朱红日落 accent」做硬区分：Skenes 是朱红当主背景占 ~55%、Pirates 黑 jersey 是前景 figure；Judge 是 navy 占主、朱红只是 horizon 落日 accent。两张同有朱红但层级反向，且 Skenes 是 daytime sunlit / Judge 是 dusk moody，气场反向
+- Ryan red + navy + 德州夕阳 → 跟 Judge 朱红日落 / Skenes 朱红阳光区分（Ryan 是黄昏沙漠 dusk daylight + 红土，Skenes 是日间 100m 海报式饱和朱红）
 - Maddux navy + 红 + 白 → 跟 Yankees navy 区分（Braves 是 Atlanta navy 偏蓝紫，且加红，整体偏 90s 怀旧 vintage 风）
 - deGrom royal blue + 橙 → 跟 Mariners navy + teal 区分（royal blue 比 navy 浅且更鲜，橙是 Mets 配色不是 teal）
 
