@@ -1,14 +1,14 @@
-# Hyrox 续集封面 prompt — 100 万人在跑 + 上海站倒数
+# Hyrox 续集封面 prompt — 100 万人在跑 + 营收涨 50%
 
 ## 推荐风格
 - 风格：Q 版健身吉祥物风（实况野球豆薯感 + Hyrox 品牌色）
 - 为什么选它：账号 2025-06-03 那篇 Hyrox 帖（2945 views / 43 分享）就是 Q 版，账号已被算法 + 老粉认 "Q 版 Hyrox" 标签；续集保留风格 = 老粉一秒认出 + 新读者继承上一篇分享惯性
-- 这张图最该卖什么：**数字"100万"的视觉冲击 + 上海站 5-16 的时效紧迫感**
+- 这张图最该卖什么：**数字「100 万」的视觉冲击 + 「营收一年涨 50%」的体量论点**
 
 ## Story Atoms
 - 主角：3 个 Q 版健身吉祥物（多元身形：高壮男 + 中等女 + 标准男），承担"百万人都在跑"的群像感
 - 动作瞬间：1 个奔跑中（侧面，腾空一脚）+ 1 个推黑色铁橇（弓步发力）+ 1 个壶铃高举（双手过头）
-- 情绪冲突："百万人在跑" vs "上海站还差 20 天" → 紧迫 + 热血
+- 情绪冲突：「百万人在跑」 vs 「营收一年涨 50%」 → 现象级体量 + 商业故事感
 - 背景符号：上海外滩剪影（东方明珠 + 陆家嘴三件套：上海中心、环球金融、金茂）+ Hyrox 品牌色（黑底 + 霓虹黄）
 
 ## Generation Order
@@ -53,7 +53,7 @@ BACKGROUND (upper 40%): stylized Shanghai Bund skyline silhouette — Oriental P
 
 TEXT OVERLAY:
 - Top headline (massive, neon yellow Chinese text, bold sans-serif): 「100 万人在跑」occupying about 25% of canvas width at top, with subtle black outline for legibility against sky
-- Subline below headline (medium white Chinese text): 「Hyrox 上海站 5-16 倒数 20 天」
+- Subline below headline (medium white Chinese text): 「营收一年涨 50%」
 - Bottom-right corner small mark: minimal "HYROX" wordmark in neon yellow
 
 COLOR PALETTE: black + neon yellow (Hyrox brand) + soft warm sunset gradient + Bund silhouette deep navy.
@@ -66,9 +66,9 @@ STYLE: official Hyrox brand chibi mascot event poster, clean composition, no ran
 ## 推荐
 - 适合首图的：Final Cover Prompt（直接用）
 - 背景如果要改，优先改：`Background Prompt` → 重新合成 `Final Cover Prompt`
-- 如果"100 万"觉得不够狠，可在 `Final Cover Prompt` 里把 headline 替换为「营收 15 亿 RMB」或「8 站 → 100+ 站」试 A/B 版本
+- A/B 版本：场景主导（headline 「100 万人在跑」+ 副 「营收涨 50%」）vs 数字主导（headline 「营收涨 50%」+ 副 「100 万人在跑」）。当前默认走场景主导，5-16 当天发布 = 现场感优先
 
 ## 如果要继续改
 - 背景优先改什么：上海剪影是否要换更具识别度的（外白渡桥/南浦大桥）or 加渐变光效
 - 不要动什么：3 个 Q 版角色的 dough-body + dot eye + 黑底霓虹黄配色（这是和上一篇 Hyrox 帖建立的视觉锚，老粉一秒认出）
-- 数字层级要保住：100 万 > 上海站 5-16 > HYROX 标记，三层视觉权重不能乱
+- 数字层级要保住：100 万 > 营收涨 50% > HYROX 标记，三层视觉权重不能乱
