@@ -1,6 +1,5 @@
 # NBA Cover Style Research — 2026-04-19
 
-> Source experiment: `~/Side_project/xhs_autoresearch/`
 > Subject held constant: LeBron James / tomahawk dunk
 > Total: 30 original styles + 14 mutation attempts = 44 AI image variants reviewed
 > Judge: Claude Opus 4.7 for text-level A/B, then human review on actual generated images
@@ -169,12 +168,8 @@ When any skill needs an NBA cover illustration:
 
 ## Research artifact trail
 
-Full experiment log lives in `~/Side_project/xhs_autoresearch/`:
-- `styles_catalog.md` — All 30 original styles with v1/v2 judge scores + human-verification outcomes
-- `templates/style_01_3d_break_out.md` — Full Style 01 spec with anti-duplicate technique library
-- `new_style_exploration.md` — Phase D candidates derived from web-researched viral NBA artists (Tyson Beck, Arturo Torres, Ryan Simpson)
-- `runs/nba_style_exp_v2/` — Raw 30-round A/B logs
-- `runs/nba_style_exp/` — Original 4/12 run with Gemini 2.5 Flash judge
+The original experiment logs are not part of this repository. This document
+preserves the public conclusions and production guardrails.
 
 ---
 
