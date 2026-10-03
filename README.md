@@ -1,176 +1,28 @@
-# XHS Content Generator
+# Dindin 圖文製作
 
-Skill-first Xiaohongshu workflow for sports knowledge posts.
+這個 repo 保存小紅書圖文的研究、故事、正文、prompt、圖片與單篇復盤。唯一業務目標是帳號長粉。
 
-## Current workflow
+帳號總入口在 [xhs-account](../playground/xhs-account/README.md)；圖文與影片共用 [xhs_skills](../xhs_skills/README.md) 的四項創作能力：找題目、說故事、做好內容、復盤。另有獨立觀眾 reviewer，冷啟動、不同模型家族，作者不自行簽 pass。
 
-Default user-facing flow:
+按本輪要求進入工作，已選題就不再開題池。查資料、封面、素材和生圖是按需能力，不是每篇強制八步。共同規則在共用正本，本 repo 的 CLAUDE.md 保留圖文視覺偏好、prompt 交付與 Git 邊界；使用者直接要求優先。
 
-1. Do topic ideation and maintain a reusable backlog:
-   - return `2-3` topic / possible-angle candidates
-   - pick one topic worth researching now
-   - save the other ideas back into the cross-post backlog
-2. Once one topic is worth continuing, scaffold `demo_posts/<date>-<slug>/`.
-3. Build `research/fact_pack.md` as the main per-post research file:
-   - what happened
-   - why now
-   - must-know facts
-   - key numbers
-   - source map
-   - visual and story raw material
-4. Turn the research into `research/story_spine.md`:
-   - one-sentence story
-   - governing question
-   - chosen angle
-   - core tension
-   - what to keep and what to park
-5. Turn `fact_pack + story_spine` into the publishable post with `xhs-note-assembly`:
-   - default delivery is `publish-ready copy`, not a research-sounding draft
-   - commercial posts should usually open with `result / biggest number / shortest why`
-   - decide page `1-4` duties inside the same step
-   - if an inner page does not have its own task, scene, and new information, cut the page count
-6. Run a fast cover check before image generation:
-   - `main character / action / tension / background symbol`
-   - stay in the default cover system when this is clear
-   - only expand into alternate cover exploration when the default cover system does not fit
-7. Only branch into `xhs-visual-asset-mix` when the remaining pages are genuinely unclear:
-   - real image vs official screenshot vs generated image
-   - or when inner pages still fail the minimum storyboard check
-8. Use `xhs-image-style-duo` only for the pages that truly need generated-image prompts:
-   - one recommended web-ready final prompt by default
-   - only compare multiple prompt directions when explicitly requested
-9. After publishing, run publish review and sync durable learning back into `reviews/` and `hypo.md`.
+- `demo_posts/<date>-<slug>/`：每篇唯一工作區。研究、story spine、post、prompts、images、reviews 沿用既有結構，已完成內容不重寫。
+- `explorations/`：跨篇候選、系列、視覺與流程探索。帳號待辦入口是 [BACKLOG.md](../playground/xhs-account/BACKLOG.md)，詳情仍回來源正本。
+- `hypo.md`、`reviews/`、`notes/`：原始 learning 和歷史。共通判斷回帳號 LEARNINGS，保留可追溯來源。
+- `references/`：本帳號的風格池、人物資料等；不要把它們升成全平台硬限制。
+- `scripts/`：建工作區、prompt 交付與素材工具；只使用本輪需要的腳本。
+- `skills/xhs-*`：舊路徑相容連結，正文已轉到共用新方法。七份原實體副本完整保存於帳號 archive；`sync-skills` 是獨立交付工具，仍保留。
+- `xhs_skills/`：舊巢狀 Git 歷史，不作為調用／維護正本，不加入 discovery；不能直接當垃圾刪除。
+- `runs/`、`db/`、`tmp/`：舊研究／試作資料，本輪保留。
 
-Core workflow skills:
+開新完整工作區可用：
 
-- `xhs-topic-angle-shortlist`
-  Use for topic ideation, possible-angle generation, and backlog maintenance before one topic is chosen for deep research.
-- `xhs-fact-pack`
-  Use as the main per-post research layer after one topic is chosen, before the final story line is locked.
-- `xhs-note-assembly`
-  Use after `fact_pack + story_spine` are ready and the team wants the publishable post, defaulting to `publish-ready copy`, a minimum page storyboard, and publish polish.
-- `xhs-cover-template`
-  Always do the quick `cover check` mindset for the first card; only expand this skill into alternate cover exploration when the default cover system does not fit.
+```bash
+python3 scripts/scaffold_post_folder.py --date YYYY-MM-DD --slug topic-slug --title '工作標題'
+```
 
-Optional skill branches:
+scaffolder 保留發布文字與內部圖組的分工，張數、字數、開場與數字不再硬套固定模板。舊的 `generate_images_from_post.py` 與共用 `xhs-image-style-duo/scripts/generate_style_duo.py` 功能不同，仍按需使用；不因收斂入口刪除可用工具。
 
-- `xhs-visual-asset-mix`
-  Only when `real image vs screenshot vs generated image` is genuinely unclear, or when a multi-page post still cannot explain each page's task, scene, and new information.
-- `xhs-image-style-duo`
-  Use when a page needs a generated-image prompt; default to one web-ready final prompt, and switch to two prompts only when the user explicitly wants a comparison.
-- `xhs-publish-review`
-  Only after publishing; use it to explain what changed, why it changed, and which existing skill rules should be tightened.
+貼文內容和研究保存於 session 分支；不要把 demo_posts 合進 main。Prompt 交付照 CLAUDE.md 用 stage_prompt.py，只有真正 push 成功才給 URL。`.env`、既有 ignored 內容、其他 worktree 均未搬動。
 
-## Recent workflow update
-
-2026-04-03 update:
-
-- A real publish review showed that `strong cover + short body + no weak inner pages` beat a fuller but softer multi-image draft.
-- `xhs-note-assembly` was too good at assembling research and not strict enough about outputting platform-ready copy.
-- `xhs-cover-template` was too exception-oriented; the first card still needs a default structural check even when we stay inside the account preset.
-- `xhs-visual-asset-mix` needed a harder rule: inner pages cannot be just cover-style copies with different numbers.
-- These changes were written back into existing skill docs instead of creating new process notes, to keep the workflow minimal.
-
-## Global content guardrails
-
-Apply these rules across the whole XHS workflow:
-
-1. Prefer Chinese over unnecessary English.
-   If a sports league, rule, or business term is important, explain it in Chinese the first time it appears. Do not assume the reader understands English abbreviations.
-2. Tell the story so a non-fan can follow it.
-   Every post should quickly answer three questions for a new reader:
-   - What is this?
-   - Why is it hot right now?
-   - Why should I care?
-3. Jargon must earn its place.
-   If a term only makes sense to existing fans and does not help the story, cut it or translate it into a simpler idea.
-4. One post should tell one story.
-   Before writing, decide the single question, conflict, or change the post will carry. Park the other valid angles in notes instead of letting them crowd the main draft.
-
-## Repository structure
-
-- `skills/`
-  Current XHS workflow skills.
-- `notes/skills-audit.md`
-  Durable audit table for the current skill system.
-- `demo_posts/<date>-<slug>/`
-  One folder per post being actively researched or drafted.
-- `demo_posts/<date>-<slug>/README.md`
-  Workspace metadata. Record whether the post is `draft`, `parked`, or `published`, then add the public note URL after publishing.
-- `demo_posts/<date>-<slug>/research/fact_pack.md`
-  The main per-post research file: facts, numbers, source map, visual raw material, and open questions.
-- `demo_posts/<date>-<slug>/research/story_spine.md`
-  The story-line checkpoint that turns research into one chosen story: what question the post answers, what tension carries it, and which side angles get parked.
-- `demo_posts/<date>-<slug>/reviews/`
-  Local post workspace reviews and postmortems for that specific post.
-- `explorations/`
-  Cross-post exploration space for ideas that are not yet one concrete post.
-- `explorations/backlog/`
-  Cross-post topic backlog, possible-angle backlog, and importance tracking.
-- `explorations/series/`
-  Multi-post topic systems, recurring franchises, and longer-term content lanes.
-- `explorations/visuals/`
-  Cover systems, style tests, and reusable visual directions.
-- `explorations/workflows/`
-  Process experiments, prompt-method tests, and production workflow trials.
-- `reviews/`
-  Durable publish-review archive for cross-post learning and git-tracked summaries.
-- `reviews/published-history.md`
-  Running index of posts that were actually published, linked to the public note, workspace, and review file.
-- `notes/`
-  Durable implementation notes and operating rules that should be reusable across sessions and agents.
-- `scripts/generate_images_from_post.py`
-  Export per-image prompt files and `web_prompts.md` for direct use in ChatGPT / Gemini style web UIs. It does not call image APIs.
-- `scripts/overlay_cover_text.py`
-  Add cover text overlays to finished images.
-- `scripts/scaffold_post_folder.py`
-  Create a standard post workspace with `research/`, `text/`, `prompts/`, `images/`, and `reviews/`.
-- `skills/xhs-image-style-duo/scripts/generate_style_duo.py`
-  Export one recommended final prompt by default, or two prompts in explicit compare mode, for direct use in ChatGPT / Gemini style web UIs. It does not call image APIs.
-- `hypo.md`
-  Shared hypothesis board for testing storytelling techniques across posts.
-
-## Notes
-
-- The legacy CrewAI pipeline has been removed from this repo.
-- This README is the top-level workflow source of truth for the repo.
-- Individual skills should implement the steps and exception branches defined here rather than redefining a separate default flow.
-- `xhs_content_generator` is the account-specific repo for the current sports Xiaohongshu account.
-- Local sibling repo `xhs_skills/` is the upstream, more generic skill set. A rule should only be promoted back there after it proves reusable across accounts.
-
-## Drafts vs Explorations
-
-Use `demo_posts/` when the work is already post-shaped:
-
-- there is one topic worth actively researching
-- the work now needs a fact pack or story line
-- the work may become a publishable note soon
-
-Use `explorations/` when the work is still cross-post or pre-post:
-
-- a topic or angle backlog entry
-- a theme series that may spawn many posts
-- a visual language or cover template
-- a workflow or prompt experiment
-- a creator benchmark or account-direction study
-
-Explicit trigger examples:
-
-- Send to `explorations/` when the ask sounds like:
-  - "帮我想一个系列"
-  - "先做主题规划"
-  - "探索一下这个视觉方向"
-  - "沉淀一个模板"
-  - "研究类似作者"
-  - "先别落成具体帖子"
-- Send to `demo_posts/` when the ask sounds like:
-  - "帮我做这篇"
-  - "这个题今天想发"
-  - "给我这条的标题和正文"
-  - "围绕这个事件出一篇"
-  - "先做这个题的切角"
-
-Rule of thumb:
-
-- `demo_posts/` = one post workspace
-- `explorations/` = one idea can feed many posts
+遷移與回復：[MIGRATION_PLAN.md](../playground/xhs-account/MIGRATION_PLAN.md)。本 repo 的實體 Git 路徑保留，帳號 `image` 入口連到此處。
