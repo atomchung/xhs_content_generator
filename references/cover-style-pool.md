@@ -4,7 +4,7 @@
 
 更新于：2026-04-26
 
-> **前置**：本文件不定义视觉宪法（在 `CLAUDE.md` 顶部）。这里只定义「在符合宪法的前提下，多种漫画子风格之间怎么选」。
+> **前置**：本文件不定义视觉宪法（在 `AGENTS.md` 顶部）。这里只定义「在符合宪法的前提下，多种漫画子风格之间怎么选」。
 
 ## 风格池（状态机）
 
@@ -91,7 +91,7 @@
 
 ## 相关文件
 
-- 视觉宪法：`CLAUDE.md` 顶部
+- 视觉宪法：`AGENTS.md` 顶部
 - 账号默认封面结构：`notes/account-default-cover-and-intro-style.md`
 - canonical 完整 prompt：`explorations/visuals/2026-04-19-nba-cover-style-research.md`
 - 风格 spec / prompt 模板：`skills/xhs-image-style-duo/references/style-profiles.md`
