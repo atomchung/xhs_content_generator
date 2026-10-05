@@ -25,4 +25,4 @@ scaffolder 保留發布文字與內部圖組的分工，張數、字數、開場
 
 貼文內容和研究保存於 session 分支；不要把 demo_posts 合進 main。Prompt 交付照 CLAUDE.md 用 stage_prompt.py，只有真正 push 成功才給 URL。`.env`、既有 ignored 內容和隨本 repo 的 worktree 完整搬入；未改內容，未提交其他工作。
 
-遷移與回復：[MIGRATION_PLAN.md](../MIGRATION_PLAN.md)。本 repo 現在實體位於帳號的 `image/` 子目錄；舊 `crewai_xhs` 路徑只保留相容連結。
+遷移與回復：[MIGRATION_PLAN.md](../archive/migration-2026-10-03/MIGRATION_PLAN.md)。本 repo 現在實體位於帳號的 `image/` 子目錄；舊 `crewai_xhs` 路徑已移除。
